@@ -1,30 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
-    <url>/undefined/0.html</url>
-    <content><![CDATA[<p><img src="https://gitee.com/samll_planet/drawing-bed/raw/master/img/20230922192641.png"></p>
-<p><img src="https://gitee.com/samll_planet/drawing-bed/raw/master/img/20230922204553.png"></p>
-<p><img src="https://gitee.com/samll_planet/drawing-bed/raw/master/img/20230922204711.png"></p>
-<p>成长之路：</p>
-<p><img src="https://gitee.com/samll_planet/drawing-bed/raw/master/img/20230901202029.png">OSI七层参考模型以及TCP&#x2F;IP四层模型：</p>
-<p><img src="https://gitee.com/samll_planet/drawing-bed/raw/master/img/20230901203021.png"></p>
-<p>应用层、运输层、网络层、传输层<img src="https://gitee.com/samll_planet/drawing-bed/raw/master/img/20230902144500.png"></p>
-<p>路由器：<br><img src="https://gitee.com/samll_planet/drawing-bed/raw/master/img/20230902094747.png">TCP报文：</p>
-<p><img src="https://gitee.com/samll_planet/drawing-bed/raw/master/img/20230902144214.png">TCP三次握手：</p>
-<p>主要用到 Seq、Ack以及Control三个字段，seq表示自身的第几包数据，ack是确认收到了对方第ack-1包数据并且请求第ack包数据</p>
-<p><img src="https://gitee.com/samll_planet/drawing-bed/raw/master/img/20230902145443.png">TCP四次挥手：</p>
-<p><img src="https://gitee.com/samll_planet/drawing-bed/raw/master/img/20230902150022.png"></p>
-<p>TCP滑动窗口机制：</p>
-<p><img src="https://gitee.com/samll_planet/drawing-bed/raw/master/img/20230902150620.png"></p>
-<p>IP协议：</p>
-<p><img src="https://gitee.com/samll_planet/drawing-bed/raw/master/img/20230904182708.png"></p>
-]]></content>
-      <categories>
-        <category>测试</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/undefined/3eeb.html</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
