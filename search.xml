@@ -44,4 +44,42 @@
         <category>测试</category>
       </categories>
   </entry>
+  <entry>
+    <title></title>
+    <url>/undefined/0.html</url>
+    <content><![CDATA[<p>gitee令牌：（图床）</p>
+<p>1bc526bc92f2c9070bea0f3161353667</p>
+<p>代码片段：</p>
+<p><a href="https://gitee.com/samll_planet/codes/dh1g8cy43w9nker7mut5283">vscode配置插件云同步 - 代码片段 - Gitee.com</a></p>
+<p>fba359f77a3332e3d16386046792544d</p>
+<p>家宽带：</p>
+<p><img src="/images/WEBRESOURCE85e8c2f6a568157bdcea0567e25e1a66%E6%88%AA%E5%9B%BE.png"></p>
+<p><img src="/images/WEBRESOURCE5c83b2a37673c39e84d4c747684470ba136f443086ad35eb594c123231782e6.jpg"></p>
+<p><img src="/images/WEBRESOURCE2b7ef6e85dc297a15a42bb95faa5188b3da72807633fd7f1b30ee2973b88149.jpg"></p>
+<p>ap面板：</p>
+<p>后台访问ip：192.168.168.1</p>
+<p>配置为路由、无线中继模式可以相当于信号加强器，如果为ap模式会出现ip分配错误，手机根本连不上</p>
+<p>vscode插件:</p>
+<p>1、code setting sync  通过gitee代码片段同步插件配置</p>
+<p>2、live serve	快速打开网页</p>
+<p>3、remote-ssh	ssh远程写代码</p>
+<p>4、Vue 2 Snippets	vue代码补全</p>
+<p>5、koroFileHeader</p>
+<figure class="highlight jboss-cli"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;fileheader.customMade&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;Author&quot;</span>: <span class="string">&quot;jiabao&quot;</span>,</span><br><span class="line">        <span class="string">&quot;Description&quot;</span>: <span class="string">&quot; &quot;</span>,</span><br><span class="line">        <span class="string">&quot;Date&quot;</span>: <span class="string">&quot;Do not edit&quot;</span>,</span><br><span class="line">        <span class="string">//</span> <span class="string">&quot;LastEditTime&quot;</span>: <span class="string">&quot;Do not edit&quot;</span>,</span><br><span class="line">        <span class="string">&quot;FilePath&quot;</span>: <span class="string">&quot;Do not edit&quot;</span>,</span><br><span class="line">        <span class="string">//</span><span class="string">&quot;custom_string_obkoro1&quot;</span>: <span class="string">&quot;724032931&quot;</span>,</span><br><span class="line">        <span class="string">&quot;custom_string_obkoro1_copyright&quot;</span>: <span class="string">&quot;Copyright (c) $&#123;now_year&#125; by 河南垂天科技有限公司, All Rights Reserved. &quot;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">&quot;fileheader.cursorMode&quot;</span>: &#123; <span class="string">//</span>此为函数注释</span><br><span class="line">        <span class="string">&quot;Description&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;param&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">        <span class="string">&quot;return&quot;</span>: <span class="string">&quot;&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">&quot;fileheader.configObj&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;autoAdd&quot;</span>: <span class="literal">true</span>, <span class="string">//</span> 默认开启自动添加头部注释，当文件没有设置头部注释时保存会自动添加</span><br><span class="line">        <span class="string">&quot;autoAlready&quot;</span>: <span class="literal">true</span>, <span class="string">//</span> 默认开启</span><br><span class="line">        <span class="string">&quot;moveCursor&quot;</span>: <span class="literal">true</span>, <span class="string">//</span> 移动光标到`Description :`所在行</span><br><span class="line">        <span class="string">&quot;functionTypeSymbol&quot;</span>: <span class="string">&quot;void&quot;</span>,</span><br><span class="line">        <span class="string">&quot;prohibitAutoAdd&quot;</span>: [</span><br><span class="line">            <span class="string">&quot;json&quot;</span>,</span><br><span class="line">            <span class="string">&quot;md&quot;</span></span><br><span class="line">        ], <span class="string">//</span> 禁止<span class="string">.json</span> <span class="string">.md</span>文件，自动添加头部注释</span><br><span class="line">        <span class="string">&quot;wideSame&quot;</span>: <span class="literal">true</span>, <span class="string">//</span> 设置为<span class="literal">true</span>开启</span><br><span class="line">        <span class="string">&quot;wideNum&quot;</span>: 15, <span class="string">//</span> 字段长度 默认为13</span><br><span class="line">        <span class="string">&quot;language&quot;</span>: &#123;</span><br><span class="line">            <span class="string">//</span> 一次匹配多种文件后缀文件 不用重复设置</span><br><span class="line">            <span class="string">&quot;h/hpp/cpp&quot;</span>: &#123;</span><br><span class="line">                <span class="string">&quot;head&quot;</span>: <span class="string">&quot;/***********************************************************************************************************&quot;</span>, <span class="string">//</span> 自定义注释头部</span><br><span class="line">                <span class="string">&quot;middle&quot;</span>: <span class="string">&quot; *** @&quot;</span>, <span class="string">//</span> 自定义注释中间部分<span class="params">(注意空格,这也是最终生成注释的一部分)</span></span><br><span class="line">                <span class="string">&quot;end&quot;</span>: <span class="string">&quot; ***********************************************************************************************************/&quot;</span>, <span class="string">//</span> 自定义注释尾部</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">&quot;files.maxMemoryForLargeFilesMB&quot;</span>: 9192,</span><br><span class="line">    <span class="string">&quot;diffEditor.ignoreTrimWhitespace&quot;</span>: <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<p>添加文件头注释：ctrl+alt+i</p>
+<p>添加函数注释：ctrl+alt+t</p>
+<p>gmail：</p>
+<p>mail;password;submail;passwordmail: <a href="mailto:&#98;&#x61;&#110;&#x73;&#104;&#101;&#x65;&#x63;&#114;&#117;&#x73;&#104;&#x65;&#x72;&#x33;&#50;&#49;&#x40;&#x67;&#x6d;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#x6d;">&#98;&#x61;&#110;&#x73;&#104;&#101;&#x65;&#x63;&#114;&#117;&#x73;&#104;&#x65;&#x72;&#x33;&#50;&#49;&#x40;&#x67;&#x6d;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#x6d;</a>:QOGEpU6%5&amp;3:<a href="http://bansheecrusher32199@spam4.me/">bansheecrusher32199@spam4.me</a></p>
+<p><a href="http://smallplanet7240@gmail.com/"><strong>smallplanet7240@gmail.com</strong></a></p>
+<p><strong>123456sji</strong></p>
+<p>st:</p>
+<p><a href="http://724032931@qq.com/">724032931@qq.com</a></p>
+<p>200107089636sjI.</p>
+<p>生成代码注释的工具：Doxygen</p>
+]]></content>
+      <categories>
+        <category>测试</category>
+      </categories>
+  </entry>
 </search>
