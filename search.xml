@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>操作系统</title>
+    <url>/posts/437.html</url>
+    <content><![CDATA[<p><img src="https://gitee.com/samll_planet/drawing-bed/raw/master/img/20230904181505.png"></p>
+<span id="more"></span>
+]]></content>
+  </entry>
+  <entry>
     <title>IT资源学习</title>
     <url>/posts/93b7.html</url>
     <content><![CDATA[<p>c++培训班：</p>
@@ -12,13 +19,6 @@
 <p>天下无鱼（VIP:60 SVIP:180）</p>
 <p>小猿1024（永久会员188）</p>
 <p>IT独角兽（永久188）</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>操作系统</title>
-    <url>/posts/437.html</url>
-    <content><![CDATA[<p><img src="https://gitee.com/samll_planet/drawing-bed/raw/master/img/20230904181505.png"></p>
-<span id="more"></span>
 ]]></content>
   </entry>
   <entry>
@@ -166,6 +166,283 @@
       </categories>
   </entry>
   <entry>
+    <title>BootLoader</title>
+    <url>/posts/d017.html</url>
+    <content><![CDATA[<p>指令的最低位为1：Thumb指令集	  STM32是CM3架构，使用的是这类指令集</p>
+<span id="more"></span>
+
+<p>指令的最低位为0：ARM指令集</p>
+]]></content>
+      <categories>
+        <category>嵌入式</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>自动化爬虫</title>
+    <url>/posts/903.html</url>
+    <content><![CDATA[<p><img src="https://gitee.com/samll_planet/drawing-bed/raw/master/img/20230907193331.png"><img src="https://gitee.com/samll_planet/drawing-bed/raw/master/img/20230907205050.png">爬虫如果遇到需要登录的网站：</p>
+<span id="more"></span>
+
+<p><a href="https://zhuanlan.zhihu.com/p/60365948">python爬虫19 | 爬虫遇到需要的登录的网站怎么办？用这3招轻松搞定！ - 知乎 (zhihu.com)</a></p>
+<p>获取cookie：</p>
+<p><a href="https://zmtechn.gitee.io/2021/10/05/Get_bilibili_cookie/">【教程】如何获取B站用户Cookie | Jimmy’s TechBlog (gitee.io)</a></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>W5500网卡做HTTP服务器</title>
+    <url>/posts/edf1.html</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>嵌入式</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>传感器</title>
+    <url>/posts/3ae2.html</url>
+    <content><![CDATA[<p>1、室内定位 UWB 定位：Nooploop</p>
+]]></content>
+      <categories>
+        <category>嵌入式</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>STC USB-Mini使用体验</title>
+    <url>/posts/59dc.html</url>
+    <content><![CDATA[<p>实验室购得了一批高级的STC下载工具，集普通USB转TTL、脱机下载、仿真调试多功能与一体的工具，仅仅是体验了他的所有功能，就花费了一天的时间。</p>
+<span id="more"></span>
+
+<p>引脚功能：</p>
+<p><img src="/./youdaonote/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/images/WEBRESOURCEdbc75bbd6067aa6b125bf7e74a0f3171%E6%88%AA%E5%9B%BE.png"></p>
+<p>一、在线下载（相当于普通的USB转TTL）</p>
+<p>S-Vcc给单片机供电，单片机本身不能接自己的供电电源，下载成功后如果要做串口使用（USB转串口直通模式），按下 Key1 ➔ 按下 Key2 ➔ 松开 Key2 ➔ 松开 Key1，这时就和普通的USB转TTL无差别了，若想关闭直通模式，按下Key2即可</p>
+<p>二、脱机下载模式</p>
+<p>先把程序下载到USB-Mini中，然后有几种方案进行脱机下载（只拿USB-Mini去给单片机下载程序）</p>
+<p>1、单片机本身有电源供电</p>
+<p>用User-Vcc给USB-Mini供电，USB-mini不再需要电源，单片机反过来给USB-Mini供电，在冷启动后自动下载程序，不需要按键。</p>
+<p>2、单片机无电源供电</p>
+<p>用S-Vcc给USB-Mini供电，USB-Mini给单片机供电，在按下Key1后，下载程序。</p>
+]]></content>
+      <categories>
+        <category>工具使用</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>alist网盘融合</title>
+    <url>/posts/8225.html</url>
+    <content><![CDATA[<p>手机端配置：</p>
+<span id="more"></span>
+
+<p>&#x9;可以使用CX文件管理器</p>
+<p><img src="https://gitee.com/samll_planet/drawing-bed/raw/master/img/Screenshot_2024-06-16-20-17-25-09_c2be9d5517208fe.jpg"></p>
+<p>电脑端配置：</p>
+<p>&#x9;可以使用RaiDrive</p>
+<p><img src="https://gitee.com/samll_planet/drawing-bed/raw/master/img/20240616202327.png"></p>
+]]></content>
+      <categories>
+        <category>工具使用</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>git操作</title>
+    <url>/posts/ef4.html</url>
+    <content><![CDATA[<h1 id="记一次在ubuntun上使用拉取github问题"><a href="#记一次在ubuntun上使用拉取github问题" class="headerlink" title="记一次在ubuntun上使用拉取github问题"></a>记一次在ubuntun上使用拉取github问题</h1><span id="more"></span>
+
+<p>​初始化：</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line">git <span class="keyword">init</span></span><br></pre></td></tr></table></figure>
+
+<p>添加远程仓库：</p>
+<figure class="highlight mipsasm"><table><tr><td class="code"><pre><span class="line">git remote <span class="keyword">add </span><span class="keyword">origin </span>仓库url</span><br></pre></td></tr></table></figure>
+
+<p>origin把服务器的仓库内容同步到本地仓库：</p>
+<figure class="highlight crmsh"><table><tr><td class="code"><pre><span class="line">git pull origin 分支名</span><br><span class="line"></span><br><span class="line">//如果出现这种错误：fatal: refusing to merge unrelated histories，可以这样：</span><br><span class="line">git pull origin <span class="keyword">master</span> <span class="title">--allow-unrelated-histories</span></span><br></pre></td></tr></table></figure>
+
+<p>把本地的内容更新到服务器：</p>
+<figure class="highlight armasm"><table><tr><td class="code"><pre><span class="line"><span class="comment">//将文件添加到Git的暂存区</span></span><br><span class="line"><span class="symbol">git</span> <span class="keyword">add</span> .    </span><br><span class="line"></span><br><span class="line"><span class="comment">//从Git的暂存区提交版本到仓库，参数-m后为当次提交的备注信息</span></span><br><span class="line"><span class="symbol">git</span> commit -m <span class="string">&quot;跟新过的&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//将本地的Git仓库信息推送上传到服务器</span></span><br><span class="line"><span class="symbol">git</span> <span class="keyword">push</span> origin 分支名</span><br></pre></td></tr></table></figure>
+
+<p>分支：</p>
+<figure class="highlight 1c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//查看分支 </span></span><br><span class="line">    <span class="comment">//前面加*的分支，表示当前所在分支</span></span><br><span class="line">git branch</span><br><span class="line"></span><br><span class="line"><span class="comment">//新建分支</span></span><br><span class="line">git branch 新建分支名</span><br><span class="line"></span><br><span class="line"><span class="comment">//切换分支</span></span><br><span class="line">git checkout 要切换的分支名</span><br></pre></td></tr></table></figure>
+
+<p>把仓库所有远程分支都拷贝到本地仓库一份：</p>
+<p>详细教程:<a href="https://blog.csdn.net/weixin_41287260/article/details/98987135">(130条消息) 如何使用Git克隆GitHub仓库的所有分支_git克隆所有分支_秦时明月之君临天下的博客-CSDN博客</a></p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="regexp">//</span>查看所有远程分支：</span><br><span class="line">git branch -r</span><br><span class="line"></span><br><span class="line"><span class="regexp">//</span>执行这条命令，就能把远程分支都拷贝到本地仓库一份</span><br><span class="line"><span class="keyword">for</span> b <span class="keyword">in</span> `git branch -r | grep -v -- <span class="string">&#x27;-&gt;&#x27;</span>`; <span class="keyword">do</span> git branch --track <span class="variable">$&#123;b##origin/&#125;</span> <span class="variable">$b</span>; done</span><br></pre></td></tr></table></figure>
+
+<p>迁移仓库，把原仓库所有东西移到新仓库：</p>
+<figure class="highlight jboss-cli"><table><tr><td class="code"><pre><span class="line"><span class="string">//</span>以bare的方式克隆老仓库，克隆裸库</span><br><span class="line">git clone <span class="params">--bare</span> https:<span class="string">//github.com/exampleuser/old-repository.git</span></span><br><span class="line"></span><br><span class="line"><span class="string">//push</span>到新仓库</span><br><span class="line">git push <span class="params">--mirror</span> 新仓库</span><br></pre></td></tr></table></figure>
+
+<p>直接在vscode上pull：</p>
+<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">//报错</span><br><span class="line">&gt; git pull --<span class="keyword">tags</span></span><br><span class="line">There <span class="keyword">is</span> <span class="keyword">no</span> tracking information <span class="keyword">for</span> the current branch.</span><br><span class="line">Please specify which branch you want <span class="keyword">to</span> merge with.</span><br><span class="line">See git-pull(<span class="number">1</span>) <span class="keyword">for</span> details.</span><br><span class="line"></span><br><span class="line">    git pull <span class="symbol">&lt;remote&gt;</span> <span class="symbol">&lt;branch&gt;</span></span><br><span class="line"></span><br><span class="line">If you wish <span class="keyword">to</span> <span class="keyword">set</span> tracking information <span class="keyword">for</span> this branch you can <span class="keyword">do</span> <span class="keyword">so</span> with:</span><br><span class="line"></span><br><span class="line">    git branch --<span class="keyword">set</span>-upstream-<span class="keyword">to</span>=origin/<span class="symbol">&lt;branch&gt;</span> master</span><br><span class="line">    </span><br><span class="line">//因为本地分支和远程分支没有建立联系</span><br><span class="line">git branch --<span class="keyword">set</span>-upstream-<span class="keyword">to</span>=origin/远程分支的名字  本地分支的名字</span><br></pre></td></tr></table></figure>
+
+<p>使用vscode配置完远程仓库地址后，要先在本地创建一个本地仓库，才能正常的拉取推送操作  git checkout master</p>
+<p>拉取github上的仓库一直提示我输入密码，关键怎么也输不对，我把公钥也配给github后台了，用而同样的方法gittee就没有问题。这个问题困扰我了好久，今天终于算是解决了，弄懂了背后的原因。</p>
+<p>ping github.com没有问题，ping ssh.github.com也没问题，但是：</p>
+<p>(base) jiabao@jiabao-vm:~&#x2F;.ssh$ ssh -T -p 443 <a href="mailto:&#103;&#105;&#x74;&#x40;&#115;&#x73;&#x68;&#46;&#x67;&#x69;&#x74;&#104;&#x75;&#98;&#x2e;&#x63;&#x6f;&#109;">&#103;&#105;&#x74;&#x40;&#115;&#x73;&#x68;&#46;&#x67;&#x69;&#x74;&#104;&#x75;&#98;&#x2e;&#x63;&#x6f;&#109;</a></p>
+<p>ssh: connect to host ssh.github.com port 443: Connection refused</p>
+<p>解决方案：在<a href="https://ipaddress.com/website/ssh.github.com">https://ipaddress.com/website/ssh.github.com</a>网站找到ssh.github.com对应的ip地址，ssh -T -p 443 git@对应的ip地址 应该是没问题的，以后拉取推送总不能都把ssh.github.com替换成对应的ip地址吧，那样也太low了，可以在 ~&#x2F;.ssh&#x2F; 路径下新建一个config文件，编辑以下内容：</p>
+<p>Host github.com</p>
+<p>User <a href="mailto:&#x37;&#50;&#x34;&#48;&#51;&#50;&#x39;&#51;&#x31;&#64;&#x71;&#x71;&#46;&#99;&#111;&#x6d;">&#x37;&#50;&#x34;&#48;&#51;&#50;&#x39;&#51;&#x31;&#64;&#x71;&#x71;&#46;&#99;&#111;&#x6d;</a></p>
+<p>Hostname ssh.github.com    改为  140.82.113.35</p>
+<p>PreferredAuthentications publickey</p>
+<p>IdentityFile ~&#x2F;.ssh&#x2F;id_rsa</p>
+<p>Port 443</p>
+<p>我的疑问是，看了一篇博主的文章说是域名解析被污染了，但是为什么 ping ssh.github.com 没问题， ssh -T -p 443 <a href="http://git@ssh.github.com/">git@ssh.github.com</a> 为什么会有问题？</p>
+]]></content>
+      <categories>
+        <category>工具使用</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>ida</title>
+    <url>/posts/343b.html</url>
+    <content><![CDATA[<p>按下F5可以看伪代码</p>
+<span id="more"></span>
+
+]]></content>
+      <categories>
+        <category>工具使用</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>nc网络军刀</title>
+    <url>/posts/8c99.html</url>
+    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><span id="more"></span>
+
+
+
+<p>-g&lt;网关&gt; 设置路由器跃程通信网关，最多可设置 8 个。</p>
+<p>-G&lt;指向器数目&gt; 设置来源路由指向器，其数值为 4 的倍数。</p>
+<p>-h 在线帮助。</p>
+<p>-i&lt;延迟秒数&gt; 设置时间间隔，以便传送信息及扫描通信端口。</p>
+<p>-l 使用监听模式，管控传入的资料。</p>
+<p>-n 直接使用 IP 地址，而不通过域名服务器。</p>
+<p>-o&lt;输出文件&gt; 指定文件名称，把往来传输的数据以 16 进制字码倾倒成该文件保存。</p>
+<p>-p&lt;通信端口&gt; 设置本地主机使用的通信端口。</p>
+<p>-r 乱数指定本地与远端主机的通信端口。</p>
+<p>-s&lt;来源位址&gt; 设置本地主机送出数据包的 IP 地址。</p>
+<p>-u 使用 UDP 传输协议。</p>
+<p>-v 显示指令执行过程。</p>
+<p>-w&lt;超时秒数&gt; 设置等待连线的时间。</p>
+<p>-z 使用 0字节 输入&#x2F;输出模式，只在扫描通信端口时使用。</p>
+<h2 id="实用命令"><a href="#实用命令" class="headerlink" title="实用命令"></a>实用命令</h2><h3 id="测试TCP-UDP指定端口通不通"><a href="#测试TCP-UDP指定端口通不通" class="headerlink" title="测试TCP&#x2F;UDP指定端口通不通"></a>测试TCP&#x2F;UDP指定端口通不通</h3><h4 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nc -zv ip port</span><br><span class="line"></span><br><span class="line">(base) jiabao@jiabao-vm:~/桌面$ nc -zv  192.168.73.1 8080</span><br><span class="line">Connection to 192.168.73.1 8080 port [tcp/http-alt] succeeded!</span><br></pre></td></tr></table></figure>
+
+<h4 id="UDP"><a href="#UDP" class="headerlink" title="UDP"></a>UDP</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nc -zuv ip port</span><br><span class="line"></span><br><span class="line">(base) jiabao@jiabao-vm:~/桌面$ nc -zuv  192.168.73.1 8080</span><br><span class="line">Connection to 192.168.73.1 8080 port [udp/*] succeeded!</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="作为客户端进行消息透传"><a href="#作为客户端进行消息透传" class="headerlink" title="作为客户端进行消息透传"></a>作为客户端进行消息透传</h3><p>输入消息，按下回车发送（还不清楚怎么发送换行），服务端返回的消息也可以显示</p>
+<h4 id="TCP-1"><a href="#TCP-1" class="headerlink" title="TCP"></a>TCP</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nc -v 192.168.73.1 8080</span><br></pre></td></tr></table></figure>
+
+<h4 id="UDP-1"><a href="#UDP-1" class="headerlink" title="UDP"></a>UDP</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nc -uv 192.168.7.1 8080</span><br></pre></td></tr></table></figure>
+
+<h3 id="作为服务端进行消息透传"><a href="#作为服务端进行消息透传" class="headerlink" title="作为服务端进行消息透传"></a>作为服务端进行消息透传</h3><p>输入消息，按下回车发送（还不清楚怎么发送换行），客户端返回的消息也可以显示</p>
+<h4 id="TCP-2"><a href="#TCP-2" class="headerlink" title="TCP"></a>TCP</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nc -lp 8888	<span class="comment">#-pl就不行 加-v想显示详细信息也不行</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="UDP-2"><a href="#UDP-2" class="headerlink" title="UDP"></a>UDP</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nc -ulp 8888	</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>工具使用</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>ubuntu虚拟机</title>
+    <url>/posts/6f69.html</url>
+    <content><![CDATA[<p>一、安装VMware Workstation Pro</p>
+<span id="more"></span>
+
+<p>直接去官网下载最新即可，下载速度也很快，网上也有很多密钥</p>
+<p>二、下载ununtu镜像文件</p>
+<p>ubuntu官网下载太慢，可以去清华镜像</p>
+<p>三、安装ubuntu</p>
+<p>3.1新建虚拟机</p>
+<p>Ubuntun 64位</p>
+<p>使用网络地址转换（NAT）</p>
+<p><img src="https://s2.loli.net/2024/09/21/3C5U9DtObhBrweY.png"></p>
+<p>安装Ubuntu的时候屏幕太小看不到下一步，点不到继续按钮：</p>
+<p>alt + f7</p>
+<p>sudo 不用输密码：</p>
+<ol>
+<li><p>先切换到root用户，首次切换root用户需要初始化密码 sudo passwd</p>
+</li>
+<li><p>sudo vim &#x2F;etc&#x2F;sudoers</p>
+</li>
+<li><p>在文件最后一行添加  用户名 ALL&#x3D;(ALL)	NOPASSWD:ALL</p>
+</li>
+</ol>
+<p>三种网络模式：</p>
+<ol>
+<li><p>桥接模式</p>
+</li>
+<li><p>就相当与一台实际的物理机，有实际的IP地址</p>
+</li>
+<li><p>NAT模式</p>
+</li>
+<li><p>虚拟机使用主机的网络，有一个虚拟的路由器和虚拟的IP，相当于主机是一个路由器，可以访问外网，但是外网访问不了虚拟机</p>
+</li>
+<li><p>仅主机模式</p>
+</li>
+<li><p>只有主机与虚拟机之间可以通讯</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>工具使用</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>低代码&amp;编程思维训练</title>
+    <url>/posts/c6ba.html</url>
+    <content><![CDATA[<h1 id="​shineblink"><a href="#​shineblink" class="headerlink" title="​shineblink"></a>​shineblink</h1><span id="more"></span>
+
+
+
+<p>特点：官网资料详细，用Lua编程语言（介于c与python之间），不需要开发环境，板子内置编译器，导致下载代码方便（把代码放到TF卡中就不用管了），与机智云很好的配合，联网容易上手。</p>
+<p>官网：<a href="http://www.shineblink.com/" title="shineblink">shineblink</a></p>
+<h1 id="x20-天问Block"><a href="#x20-天问Block" class="headerlink" title="&#x20;天问Block"></a>&#x20;天问Block</h1><p>51STC图形化编程，拖拉拽方式，习惯了写代码的方式后我试了下感觉不是很好</p>
+<p>官网：<a href="http://www.haohaodada.com/" title="好好搭搭在线">好好搭搭在线</a></p>
+<h1 id="原型图设计"><a href="#原型图设计" class="headerlink" title="原型图设计"></a>原型图设计</h1><p><code>axureRP</code></p>
+<h1 id="代码战争"><a href="#代码战争" class="headerlink" title="代码战争"></a>代码战争</h1><p>像过关打游戏一样，训练编程思维</p>
+<p>官网需要开会员</p>
+<p>官网：<a href="https://codecombat.cn/">CodeCombat - 玩游戏学编程|零基础Python, Javascript入门|CodeCombat 个人版 | CodeCombat</a></p>
+<h1 id="Scratch"><a href="#Scratch" class="headerlink" title="Scratch"></a>Scratch</h1><p>像搭积木一样，训练编程思维</p>
+<p>官网：<a href="https://www.scratch5.com/">Scratch编程</a></p>
+]]></content>
+      <categories>
+        <category>工具使用</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>云服务器</title>
+    <url>/posts/c933.html</url>
+    <content><![CDATA[<h1 id="frp内网穿透"><a href="#frp内网穿透" class="headerlink" title="frp内网穿透"></a>frp内网穿透</h1><span id="more"></span>
+
+<pre><code>123.56.109.110
+</code></pre>
+<p>密码：123456sji.</p>
+<p>wget <a href="https://github.com/fatedier/frp/releases/download/v0.15.1/frp_0.15.1_linux_amd64.tar.gz">https://github.com/fatedier/frp/releases/download/v0.15.1/frp_0.15.1_linux_amd64.tar.gz</a><br>tar xzvf frp_0.15.1_linux_amd64.tar.gz</p>
+<p><a href="https://github.com/fatedier/frp/releases/download/v0.58.1/frp_0.58.1_linux_arm64.tar.gz">https://github.com/fatedier/frp/releases/download/v0.58.1/frp_0.58.1_linux_arm64.tar.gz</a></p>
+<p><a href="https://github.com/fatedier/frp/releases/download/v0.58.1/frp_0.58.1_linux_amd64.tar.gz">https://github.com/fatedier/frp/releases/download/v0.58.1/frp_0.58.1_linux_amd64.tar.gz</a></p>
+<p>使用 <code>arch</code> 查看架构，下载对应版本</p>
+<p>服务端：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">bindPort = 7000</span><br><span class="line"><span class="comment">#vHostHTTPPort = 1234</span></span><br><span class="line">webServer.addr = <span class="string">&quot;0.0.0.0&quot;</span></span><br><span class="line">webServer.port = 8500</span><br><span class="line">webServer.user = <span class="string">&quot;admin&quot;</span></span><br><span class="line">webServer.password = <span class="string">&quot;200105&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>客户端：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">serverAddr = <span class="string">&quot;123.56.109.110&quot;</span></span><br><span class="line">serverPort = 7000</span><br><span class="line"></span><br><span class="line">[[proxies]]</span><br><span class="line">name = <span class="string">&quot;ssh&quot;</span></span><br><span class="line"><span class="built_in">type</span> = <span class="string">&quot;tcp&quot;</span></span><br><span class="line">localIP = <span class="string">&quot;127.0.0.1&quot;</span></span><br><span class="line">localPort = 8022</span><br><span class="line">remotePort = 1235</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="apache–web服务器"><a href="#apache–web服务器" class="headerlink" title="apache–web服务器"></a>apache–web服务器</h1><ol>
+<li>安装：pkg install apache2</li>
+<li>启动：apachectl start</li>
+<li>停止：apachectl stop</li>
+<li>重启：apachectl restart</li>
+</ol>
+<p>修改配置文件：<code>vim $PREFIX/etc/apache2/httpd.conf</code>,找到<code>ServerName</code>解开注释,<code>www.example.com</code>改为<code>127.0.0.1:8080</code></p>
+<p>&#x2F;data&#x2F;data&#x2F;com.termux&#x2F;files&#x2F;usr&#x2F;share&#x2F;apache2&#x2F;default-site&#x2F;htdocs&#x2F;</p>
+]]></content>
+      <categories>
+        <category>工具使用</category>
+      </categories>
+  </entry>
+  <entry>
     <title>c++友元</title>
     <url>/posts/933e.html</url>
     <content><![CDATA[<p>一、友元知识点</p>
@@ -216,17 +493,15 @@
       </categories>
   </entry>
   <entry>
-    <title>自动化爬虫</title>
-    <url>/posts/903.html</url>
-    <content><![CDATA[<p><img src="https://gitee.com/samll_planet/drawing-bed/raw/master/img/20230907193331.png"><img src="https://gitee.com/samll_planet/drawing-bed/raw/master/img/20230907205050.png">爬虫如果遇到需要登录的网站：</p>
+    <title>虚拟摄像头</title>
+    <url>/posts/6264.html</url>
+    <content><![CDATA[<p><a href="https://www.52pojie.cn/thread-1610562-1-1.html">Iriun Webcam 手机变成PC摄像头V2.7.2 - 『精品软件区』 - 吾爱破解 - LCG - LSG |安卓破解|病毒分析|www.52pojie.cn</a></p>
 <span id="more"></span>
 
-<p><a href="https://zhuanlan.zhihu.com/p/60365948">python爬虫19 | 爬虫遇到需要的登录的网站怎么办？用这3招轻松搞定！ - 知乎 (zhihu.com)</a></p>
-<p>获取cookie：</p>
-<p><a href="https://zmtechn.gitee.io/2021/10/05/Get_bilibili_cookie/">【教程】如何获取B站用户Cookie | Jimmy’s TechBlog (gitee.io)</a></p>
+<p><img src="https://gitee.com/samll_planet/drawing-bed/raw/master/img/20240114200553.png"></p>
 ]]></content>
       <categories>
-        <category>Python</category>
+        <category>工具使用</category>
       </categories>
   </entry>
   <entry>
@@ -425,6 +700,22 @@
       </categories>
   </entry>
   <entry>
+    <title>adb命令</title>
+    <url>/posts/771d.html</url>
+    <content><![CDATA[<h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><span id="more"></span>
+
+
+
+<h2 id="可以看是否与手机建立连接-adb-devices"><a href="#可以看是否与手机建立连接-adb-devices" class="headerlink" title="可以看是否与手机建立连接 adb devices"></a>可以看是否与手机建立连接 adb devices</h2><p>建立连接：</p>
+<p>List of devices attached<br>10AD5C2HHQ0012H device</p>
+<p>没有建立连接：</p>
+<p>List of devices attached</p>
+<h2 id="查看当前页面的包名以及活动名-adb-shell-dumpsys-window-findstr-mCurrentFocus"><a href="#查看当前页面的包名以及活动名-adb-shell-dumpsys-window-findstr-mCurrentFocus" class="headerlink" title="查看当前页面的包名以及活动名 adb shell dumpsys window | findstr mCurrentFocus"></a>查看当前页面的包名以及活动名 adb shell dumpsys window | findstr mCurrentFocus</h2>]]></content>
+      <categories>
+        <category>手机端</category>
+      </categories>
+  </entry>
+  <entry>
     <title>编译</title>
     <url>/posts/ec57.html</url>
     <content><![CDATA[<h1 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h1><span id="more"></span>
@@ -443,273 +734,6 @@
 ]]></content>
       <categories>
         <category>C++</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>alist网盘融合</title>
-    <url>/posts/8225.html</url>
-    <content><![CDATA[<p>手机端配置：</p>
-<span id="more"></span>
-
-<p>&#x9;可以使用CX文件管理器</p>
-<p><img src="https://gitee.com/samll_planet/drawing-bed/raw/master/img/Screenshot_2024-06-16-20-17-25-09_c2be9d5517208fe.jpg"></p>
-<p>电脑端配置：</p>
-<p>&#x9;可以使用RaiDrive</p>
-<p><img src="https://gitee.com/samll_planet/drawing-bed/raw/master/img/20240616202327.png"></p>
-]]></content>
-      <categories>
-        <category>工具使用</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>STC USB-Mini使用体验</title>
-    <url>/posts/59dc.html</url>
-    <content><![CDATA[<p>实验室购得了一批高级的STC下载工具，集普通USB转TTL、脱机下载、仿真调试多功能与一体的工具，仅仅是体验了他的所有功能，就花费了一天的时间。</p>
-<span id="more"></span>
-
-<p>引脚功能：</p>
-<p><img src="/./youdaonote/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/images/WEBRESOURCEdbc75bbd6067aa6b125bf7e74a0f3171%E6%88%AA%E5%9B%BE.png"></p>
-<p>一、在线下载（相当于普通的USB转TTL）</p>
-<p>S-Vcc给单片机供电，单片机本身不能接自己的供电电源，下载成功后如果要做串口使用（USB转串口直通模式），按下 Key1 ➔ 按下 Key2 ➔ 松开 Key2 ➔ 松开 Key1，这时就和普通的USB转TTL无差别了，若想关闭直通模式，按下Key2即可</p>
-<p>二、脱机下载模式</p>
-<p>先把程序下载到USB-Mini中，然后有几种方案进行脱机下载（只拿USB-Mini去给单片机下载程序）</p>
-<p>1、单片机本身有电源供电</p>
-<p>用User-Vcc给USB-Mini供电，USB-mini不再需要电源，单片机反过来给USB-Mini供电，在冷启动后自动下载程序，不需要按键。</p>
-<p>2、单片机无电源供电</p>
-<p>用S-Vcc给USB-Mini供电，USB-Mini给单片机供电，在按下Key1后，下载程序。</p>
-]]></content>
-      <categories>
-        <category>工具使用</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>git操作</title>
-    <url>/posts/ef4.html</url>
-    <content><![CDATA[<h1 id="记一次在ubuntun上使用拉取github问题"><a href="#记一次在ubuntun上使用拉取github问题" class="headerlink" title="记一次在ubuntun上使用拉取github问题"></a>记一次在ubuntun上使用拉取github问题</h1><span id="more"></span>
-
-<p>​初始化：</p>
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line">git <span class="keyword">init</span></span><br></pre></td></tr></table></figure>
-
-<p>添加远程仓库：</p>
-<figure class="highlight mipsasm"><table><tr><td class="code"><pre><span class="line">git remote <span class="keyword">add </span><span class="keyword">origin </span>仓库url</span><br></pre></td></tr></table></figure>
-
-<p>origin把服务器的仓库内容同步到本地仓库：</p>
-<figure class="highlight crmsh"><table><tr><td class="code"><pre><span class="line">git pull origin 分支名</span><br><span class="line"></span><br><span class="line">//如果出现这种错误：fatal: refusing to merge unrelated histories，可以这样：</span><br><span class="line">git pull origin <span class="keyword">master</span> <span class="title">--allow-unrelated-histories</span></span><br></pre></td></tr></table></figure>
-
-<p>把本地的内容更新到服务器：</p>
-<figure class="highlight armasm"><table><tr><td class="code"><pre><span class="line"><span class="comment">//将文件添加到Git的暂存区</span></span><br><span class="line"><span class="symbol">git</span> <span class="keyword">add</span> .    </span><br><span class="line"></span><br><span class="line"><span class="comment">//从Git的暂存区提交版本到仓库，参数-m后为当次提交的备注信息</span></span><br><span class="line"><span class="symbol">git</span> commit -m <span class="string">&quot;跟新过的&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//将本地的Git仓库信息推送上传到服务器</span></span><br><span class="line"><span class="symbol">git</span> <span class="keyword">push</span> origin 分支名</span><br></pre></td></tr></table></figure>
-
-<p>分支：</p>
-<figure class="highlight 1c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//查看分支 </span></span><br><span class="line">    <span class="comment">//前面加*的分支，表示当前所在分支</span></span><br><span class="line">git branch</span><br><span class="line"></span><br><span class="line"><span class="comment">//新建分支</span></span><br><span class="line">git branch 新建分支名</span><br><span class="line"></span><br><span class="line"><span class="comment">//切换分支</span></span><br><span class="line">git checkout 要切换的分支名</span><br></pre></td></tr></table></figure>
-
-<p>把仓库所有远程分支都拷贝到本地仓库一份：</p>
-<p>详细教程:<a href="https://blog.csdn.net/weixin_41287260/article/details/98987135">(130条消息) 如何使用Git克隆GitHub仓库的所有分支_git克隆所有分支_秦时明月之君临天下的博客-CSDN博客</a></p>
-<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="regexp">//</span>查看所有远程分支：</span><br><span class="line">git branch -r</span><br><span class="line"></span><br><span class="line"><span class="regexp">//</span>执行这条命令，就能把远程分支都拷贝到本地仓库一份</span><br><span class="line"><span class="keyword">for</span> b <span class="keyword">in</span> `git branch -r | grep -v -- <span class="string">&#x27;-&gt;&#x27;</span>`; <span class="keyword">do</span> git branch --track <span class="variable">$&#123;b##origin/&#125;</span> <span class="variable">$b</span>; done</span><br></pre></td></tr></table></figure>
-
-<p>迁移仓库，把原仓库所有东西移到新仓库：</p>
-<figure class="highlight jboss-cli"><table><tr><td class="code"><pre><span class="line"><span class="string">//</span>以bare的方式克隆老仓库，克隆裸库</span><br><span class="line">git clone <span class="params">--bare</span> https:<span class="string">//github.com/exampleuser/old-repository.git</span></span><br><span class="line"></span><br><span class="line"><span class="string">//push</span>到新仓库</span><br><span class="line">git push <span class="params">--mirror</span> 新仓库</span><br></pre></td></tr></table></figure>
-
-<p>直接在vscode上pull：</p>
-<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">//报错</span><br><span class="line">&gt; git pull --<span class="keyword">tags</span></span><br><span class="line">There <span class="keyword">is</span> <span class="keyword">no</span> tracking information <span class="keyword">for</span> the current branch.</span><br><span class="line">Please specify which branch you want <span class="keyword">to</span> merge with.</span><br><span class="line">See git-pull(<span class="number">1</span>) <span class="keyword">for</span> details.</span><br><span class="line"></span><br><span class="line">    git pull <span class="symbol">&lt;remote&gt;</span> <span class="symbol">&lt;branch&gt;</span></span><br><span class="line"></span><br><span class="line">If you wish <span class="keyword">to</span> <span class="keyword">set</span> tracking information <span class="keyword">for</span> this branch you can <span class="keyword">do</span> <span class="keyword">so</span> with:</span><br><span class="line"></span><br><span class="line">    git branch --<span class="keyword">set</span>-upstream-<span class="keyword">to</span>=origin/<span class="symbol">&lt;branch&gt;</span> master</span><br><span class="line">    </span><br><span class="line">//因为本地分支和远程分支没有建立联系</span><br><span class="line">git branch --<span class="keyword">set</span>-upstream-<span class="keyword">to</span>=origin/远程分支的名字  本地分支的名字</span><br></pre></td></tr></table></figure>
-
-<p>使用vscode配置完远程仓库地址后，要先在本地创建一个本地仓库，才能正常的拉取推送操作  git checkout master</p>
-<p>拉取github上的仓库一直提示我输入密码，关键怎么也输不对，我把公钥也配给github后台了，用而同样的方法gittee就没有问题。这个问题困扰我了好久，今天终于算是解决了，弄懂了背后的原因。</p>
-<p>ping github.com没有问题，ping ssh.github.com也没问题，但是：</p>
-<p>(base) jiabao@jiabao-vm:~&#x2F;.ssh$ ssh -T -p 443 <a href="mailto:&#103;&#105;&#116;&#x40;&#x73;&#x73;&#104;&#46;&#103;&#105;&#116;&#104;&#x75;&#98;&#x2e;&#x63;&#x6f;&#x6d;">&#103;&#105;&#116;&#x40;&#x73;&#x73;&#104;&#46;&#103;&#105;&#116;&#104;&#x75;&#98;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
-<p>ssh: connect to host ssh.github.com port 443: Connection refused</p>
-<p>解决方案：在<a href="https://ipaddress.com/website/ssh.github.com">https://ipaddress.com/website/ssh.github.com</a>网站找到ssh.github.com对应的ip地址，ssh -T -p 443 git@对应的ip地址 应该是没问题的，以后拉取推送总不能都把ssh.github.com替换成对应的ip地址吧，那样也太low了，可以在 ~&#x2F;.ssh&#x2F; 路径下新建一个config文件，编辑以下内容：</p>
-<p>Host github.com</p>
-<p>User <a href="mailto:&#x37;&#50;&#x34;&#x30;&#x33;&#50;&#57;&#x33;&#x31;&#64;&#113;&#x71;&#46;&#99;&#x6f;&#x6d;">&#x37;&#50;&#x34;&#x30;&#x33;&#50;&#57;&#x33;&#x31;&#64;&#113;&#x71;&#46;&#99;&#x6f;&#x6d;</a></p>
-<p>Hostname ssh.github.com    改为  140.82.113.35</p>
-<p>PreferredAuthentications publickey</p>
-<p>IdentityFile ~&#x2F;.ssh&#x2F;id_rsa</p>
-<p>Port 443</p>
-<p>我的疑问是，看了一篇博主的文章说是域名解析被污染了，但是为什么 ping ssh.github.com 没问题， ssh -T -p 443 <a href="http://git@ssh.github.com/">git@ssh.github.com</a> 为什么会有问题？</p>
-]]></content>
-      <categories>
-        <category>工具使用</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>ida</title>
-    <url>/posts/343b.html</url>
-    <content><![CDATA[<p>按下F5可以看伪代码</p>
-<span id="more"></span>
-
-]]></content>
-      <categories>
-        <category>工具使用</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>nc网络军刀</title>
-    <url>/posts/8c99.html</url>
-    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><span id="more"></span>
-
-
-
-<p>-g&lt;网关&gt; 设置路由器跃程通信网关，最多可设置 8 个。</p>
-<p>-G&lt;指向器数目&gt; 设置来源路由指向器，其数值为 4 的倍数。</p>
-<p>-h 在线帮助。</p>
-<p>-i&lt;延迟秒数&gt; 设置时间间隔，以便传送信息及扫描通信端口。</p>
-<p>-l 使用监听模式，管控传入的资料。</p>
-<p>-n 直接使用 IP 地址，而不通过域名服务器。</p>
-<p>-o&lt;输出文件&gt; 指定文件名称，把往来传输的数据以 16 进制字码倾倒成该文件保存。</p>
-<p>-p&lt;通信端口&gt; 设置本地主机使用的通信端口。</p>
-<p>-r 乱数指定本地与远端主机的通信端口。</p>
-<p>-s&lt;来源位址&gt; 设置本地主机送出数据包的 IP 地址。</p>
-<p>-u 使用 UDP 传输协议。</p>
-<p>-v 显示指令执行过程。</p>
-<p>-w&lt;超时秒数&gt; 设置等待连线的时间。</p>
-<p>-z 使用 0字节 输入&#x2F;输出模式，只在扫描通信端口时使用。</p>
-<h2 id="实用命令"><a href="#实用命令" class="headerlink" title="实用命令"></a>实用命令</h2><h3 id="测试TCP-UDP指定端口通不通"><a href="#测试TCP-UDP指定端口通不通" class="headerlink" title="测试TCP&#x2F;UDP指定端口通不通"></a>测试TCP&#x2F;UDP指定端口通不通</h3><h4 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nc -zv ip port</span><br><span class="line"></span><br><span class="line">(base) jiabao@jiabao-vm:~/桌面$ nc -zv  192.168.73.1 8080</span><br><span class="line">Connection to 192.168.73.1 8080 port [tcp/http-alt] succeeded!</span><br></pre></td></tr></table></figure>
-
-<h4 id="UDP"><a href="#UDP" class="headerlink" title="UDP"></a>UDP</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nc -zuv ip port</span><br><span class="line"></span><br><span class="line">(base) jiabao@jiabao-vm:~/桌面$ nc -zuv  192.168.73.1 8080</span><br><span class="line">Connection to 192.168.73.1 8080 port [udp/*] succeeded!</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="作为客户端进行消息透传"><a href="#作为客户端进行消息透传" class="headerlink" title="作为客户端进行消息透传"></a>作为客户端进行消息透传</h3><p>输入消息，按下回车发送（还不清楚怎么发送换行），服务端返回的消息也可以显示</p>
-<h4 id="TCP-1"><a href="#TCP-1" class="headerlink" title="TCP"></a>TCP</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nc -v 192.168.73.1 8080</span><br></pre></td></tr></table></figure>
-
-<h4 id="UDP-1"><a href="#UDP-1" class="headerlink" title="UDP"></a>UDP</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nc -uv 192.168.7.1 8080</span><br></pre></td></tr></table></figure>
-
-<h3 id="作为服务端进行消息透传"><a href="#作为服务端进行消息透传" class="headerlink" title="作为服务端进行消息透传"></a>作为服务端进行消息透传</h3><p>输入消息，按下回车发送（还不清楚怎么发送换行），客户端返回的消息也可以显示</p>
-<h4 id="TCP-2"><a href="#TCP-2" class="headerlink" title="TCP"></a>TCP</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nc -lp 8888	<span class="comment">#-pl就不行 加-v想显示详细信息也不行</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="UDP-2"><a href="#UDP-2" class="headerlink" title="UDP"></a>UDP</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nc -ulp 8888	</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>工具使用</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>ubuntu虚拟机</title>
-    <url>/posts/6f69.html</url>
-    <content><![CDATA[<p>一、安装VMware Workstation Pro</p>
-<span id="more"></span>
-
-<p>直接去官网下载最新即可，下载速度也很快，网上也有很多密钥</p>
-<p>二、下载ununtu镜像文件</p>
-<p>ubuntu官网下载太慢，可以去清华镜像</p>
-<p>三、安装ubuntu</p>
-<p>3.1新建虚拟机</p>
-<p>Ubuntun 64位</p>
-<p>使用网络地址转换（NAT）</p>
-<p><img src="https://s2.loli.net/2024/09/21/3C5U9DtObhBrweY.png"></p>
-<p>安装Ubuntu的时候屏幕太小看不到下一步，点不到继续按钮：</p>
-<p>alt + f7</p>
-<p>sudo 不用输密码：</p>
-<ol>
-<li><p>先切换到root用户，首次切换root用户需要初始化密码 sudo passwd</p>
-</li>
-<li><p>sudo vim &#x2F;etc&#x2F;sudoers</p>
-</li>
-<li><p>在文件最后一行添加  用户名 ALL&#x3D;(ALL)	NOPASSWD:ALL</p>
-</li>
-</ol>
-<p>三种网络模式：</p>
-<ol>
-<li><p>桥接模式</p>
-</li>
-<li><p>就相当与一台实际的物理机，有实际的IP地址</p>
-</li>
-<li><p>NAT模式</p>
-</li>
-<li><p>虚拟机使用主机的网络，有一个虚拟的路由器和虚拟的IP，相当于主机是一个路由器，可以访问外网，但是外网访问不了虚拟机</p>
-</li>
-<li><p>仅主机模式</p>
-</li>
-<li><p>只有主机与虚拟机之间可以通讯</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>工具使用</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>云服务器</title>
-    <url>/posts/c933.html</url>
-    <content><![CDATA[<h1 id="frp内网穿透"><a href="#frp内网穿透" class="headerlink" title="frp内网穿透"></a>frp内网穿透</h1><span id="more"></span>
-
-<pre><code>123.56.109.110
-</code></pre>
-<p>密码：123456sji.</p>
-<p>wget <a href="https://github.com/fatedier/frp/releases/download/v0.15.1/frp_0.15.1_linux_amd64.tar.gz">https://github.com/fatedier/frp/releases/download/v0.15.1/frp_0.15.1_linux_amd64.tar.gz</a><br>tar xzvf frp_0.15.1_linux_amd64.tar.gz</p>
-<p><a href="https://github.com/fatedier/frp/releases/download/v0.58.1/frp_0.58.1_linux_arm64.tar.gz">https://github.com/fatedier/frp/releases/download/v0.58.1/frp_0.58.1_linux_arm64.tar.gz</a></p>
-<p><a href="https://github.com/fatedier/frp/releases/download/v0.58.1/frp_0.58.1_linux_amd64.tar.gz">https://github.com/fatedier/frp/releases/download/v0.58.1/frp_0.58.1_linux_amd64.tar.gz</a></p>
-<p>使用 <code>arch</code> 查看架构，下载对应版本</p>
-<p>服务端：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">bindPort = 7000</span><br><span class="line"><span class="comment">#vHostHTTPPort = 1234</span></span><br><span class="line">webServer.addr = <span class="string">&quot;0.0.0.0&quot;</span></span><br><span class="line">webServer.port = 8500</span><br><span class="line">webServer.user = <span class="string">&quot;admin&quot;</span></span><br><span class="line">webServer.password = <span class="string">&quot;200105&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>客户端：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">serverAddr = <span class="string">&quot;123.56.109.110&quot;</span></span><br><span class="line">serverPort = 7000</span><br><span class="line"></span><br><span class="line">[[proxies]]</span><br><span class="line">name = <span class="string">&quot;ssh&quot;</span></span><br><span class="line"><span class="built_in">type</span> = <span class="string">&quot;tcp&quot;</span></span><br><span class="line">localIP = <span class="string">&quot;127.0.0.1&quot;</span></span><br><span class="line">localPort = 8022</span><br><span class="line">remotePort = 1235</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h1 id="apache–web服务器"><a href="#apache–web服务器" class="headerlink" title="apache–web服务器"></a>apache–web服务器</h1><ol>
-<li>安装：pkg install apache2</li>
-<li>启动：apachectl start</li>
-<li>停止：apachectl stop</li>
-<li>重启：apachectl restart</li>
-</ol>
-<p>修改配置文件：<code>vim $PREFIX/etc/apache2/httpd.conf</code>,找到<code>ServerName</code>解开注释,<code>www.example.com</code>改为<code>127.0.0.1:8080</code></p>
-<p>&#x2F;data&#x2F;data&#x2F;com.termux&#x2F;files&#x2F;usr&#x2F;share&#x2F;apache2&#x2F;default-site&#x2F;htdocs&#x2F;</p>
-]]></content>
-      <categories>
-        <category>工具使用</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>虚拟摄像头</title>
-    <url>/posts/6264.html</url>
-    <content><![CDATA[<p><a href="https://www.52pojie.cn/thread-1610562-1-1.html">Iriun Webcam 手机变成PC摄像头V2.7.2 - 『精品软件区』 - 吾爱破解 - LCG - LSG |安卓破解|病毒分析|www.52pojie.cn</a></p>
-<span id="more"></span>
-
-<p><img src="https://gitee.com/samll_planet/drawing-bed/raw/master/img/20240114200553.png"></p>
-]]></content>
-      <categories>
-        <category>工具使用</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>低代码&amp;编程思维训练</title>
-    <url>/posts/c6ba.html</url>
-    <content><![CDATA[<h1 id="​shineblink"><a href="#​shineblink" class="headerlink" title="​shineblink"></a>​shineblink</h1><span id="more"></span>
-
-
-
-<p>特点：官网资料详细，用Lua编程语言（介于c与python之间），不需要开发环境，板子内置编译器，导致下载代码方便（把代码放到TF卡中就不用管了），与机智云很好的配合，联网容易上手。</p>
-<p>官网：<a href="http://www.shineblink.com/" title="shineblink">shineblink</a></p>
-<h1 id="x20-天问Block"><a href="#x20-天问Block" class="headerlink" title="&#x20;天问Block"></a>&#x20;天问Block</h1><p>51STC图形化编程，拖拉拽方式，习惯了写代码的方式后我试了下感觉不是很好</p>
-<p>官网：<a href="http://www.haohaodada.com/" title="好好搭搭在线">好好搭搭在线</a></p>
-<h1 id="原型图设计"><a href="#原型图设计" class="headerlink" title="原型图设计"></a>原型图设计</h1><p><code>axureRP</code></p>
-<h1 id="代码战争"><a href="#代码战争" class="headerlink" title="代码战争"></a>代码战争</h1><p>像过关打游戏一样，训练编程思维</p>
-<p>官网需要开会员</p>
-<p>官网：<a href="https://codecombat.cn/">CodeCombat - 玩游戏学编程|零基础Python, Javascript入门|CodeCombat 个人版 | CodeCombat</a></p>
-<h1 id="Scratch"><a href="#Scratch" class="headerlink" title="Scratch"></a>Scratch</h1><p>像搭积木一样，训练编程思维</p>
-<p>官网：<a href="https://www.scratch5.com/">Scratch编程</a></p>
-]]></content>
-      <categories>
-        <category>工具使用</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>传感器</title>
-    <url>/posts/3ae2.html</url>
-    <content><![CDATA[<p>1、室内定位 UWB 定位：Nooploop</p>
-]]></content>
-      <categories>
-        <category>嵌入式</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>BootLoader</title>
-    <url>/posts/d017.html</url>
-    <content><![CDATA[<p>指令的最低位为1：Thumb指令集	  STM32是CM3架构，使用的是这类指令集</p>
-<span id="more"></span>
-
-<p>指令的最低位为0：ARM指令集</p>
-]]></content>
-      <categories>
-        <category>嵌入式</category>
       </categories>
   </entry>
   <entry>
@@ -735,6 +759,24 @@
 ]]></content>
       <categories>
         <category>手机端</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>FFmpeg</title>
+    <url>/posts/a4f0.html</url>
+    <content><![CDATA[<p>组成：</p>
+<span id="more"></span>
+
+<ul>
+<li>封装模块AVFormat</li>
+<li>编解码AVCodec</li>
+<li>滤镜模块AVFilter</li>
+<li>视频图像转换swscale</li>
+<li>音频转换计算swresample</li>
+</ul>
+]]></content>
+      <categories>
+        <category>深度学习</category>
       </categories>
   </entry>
   <entry>
@@ -780,111 +822,12 @@
       </categories>
   </entry>
   <entry>
-    <title>adb命令</title>
-    <url>/posts/771d.html</url>
-    <content><![CDATA[<h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><span id="more"></span>
-
-
-
-<h2 id="可以看是否与手机建立连接-adb-devices"><a href="#可以看是否与手机建立连接-adb-devices" class="headerlink" title="可以看是否与手机建立连接 adb devices"></a>可以看是否与手机建立连接 adb devices</h2><p>建立连接：</p>
-<p>List of devices attached<br>10AD5C2HHQ0012H device</p>
-<p>没有建立连接：</p>
-<p>List of devices attached</p>
-<h2 id="查看当前页面的包名以及活动名-adb-shell-dumpsys-window-findstr-mCurrentFocus"><a href="#查看当前页面的包名以及活动名-adb-shell-dumpsys-window-findstr-mCurrentFocus" class="headerlink" title="查看当前页面的包名以及活动名 adb shell dumpsys window | findstr mCurrentFocus"></a>查看当前页面的包名以及活动名 adb shell dumpsys window | findstr mCurrentFocus</h2>]]></content>
-      <categories>
-        <category>手机端</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>windows建立FTP站点</title>
-    <url>/posts/79bc.html</url>
-    <content><![CDATA[<h1 id="一、开启FTP服务"><a href="#一、开启FTP服务" class="headerlink" title="一、开启FTP服务"></a>一、开启FTP服务</h1><span id="more"></span>
-
-
-
-<p><img src="https://gitee.com/samll_planet/drawing-bed/raw/master/img/20231218183557.png"></p>
-<h1 id="二、开启FTP的防火墙"><a href="#二、开启FTP的防火墙" class="headerlink" title="二、开启FTP的防火墙"></a>二、开启FTP的防火墙</h1><p><img src="https://gitee.com/samll_planet/drawing-bed/raw/master/img/20231218183804.png"></p>
-<p><img src="https://gitee.com/samll_planet/drawing-bed/raw/master/img/20231218183928.png"></p>
-<h1 id="三、在IIS控制台添加站点"><a href="#三、在IIS控制台添加站点" class="headerlink" title="三、在IIS控制台添加站点"></a>三、在IIS控制台添加站点</h1><p>如果打开IIS控制台没出现在频幕上，可能是没接扩展屏但出现在了原来扩展屏的位置上，在win+r运行 <code>inetmgr.exe /reset</code></p>
-<h1 id="四、遇到的问题"><a href="#四、遇到的问题" class="headerlink" title="四、遇到的问题"></a>四、遇到的问题</h1><ol>
-<li>用网络登录windows不可以，在你输入用户名和密码怎么都不对（远程桌面也是这样），切换到本地用户就行了</li>
-<li>匿名登录的用户名是：<code>anonymous</code> ，密码是随意输入一个邮箱就行，如果不能登录把FTP站点文件夹的权限增加一个everyone完全控制</li>
-</ol>
-<h1 id="五、基本FTP命令"><a href="#五、基本FTP命令" class="headerlink" title="五、基本FTP命令"></a>五、基本FTP命令</h1><p><a href="https://blog.csdn.net/LLittleF/article/details/105492175">关于FTP服务器出现227 Entering Passive Mode错误的解决思路-CSDN博客</a></p>
-<p><a href="https://www.cnblogs.com/bkywanly/p/9767246.html">常见的错误：FTP连接时出现“227 Entering Passive Mode” - wanly - 博客园 (cnblogs.com)</a></p>
-]]></content>
-      <categories>
-        <category>网页</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>js注意事项</title>
-    <url>/posts/b39d.html</url>
-    <content><![CDATA[<p>1、按键事件</p>
-<span id="more"></span>
-
-<p>onkeydown和onkeyup不区分字母大小写，onkeypress区分字母大小写。</p>
-<p>在我们实际开发中，我们更多的使用keydowni和keyup,，它能识别所有的键（包括功能键）</p>
-<p>Keypress不识别功能键，但是keyCode属性能区分大小写，返回不同的ASCIH值</p>
-]]></content>
-      <categories>
-        <category>网页</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>外网访问本地站点</title>
-    <url>/posts/b506.html</url>
-    <content><![CDATA[<h1 id="一、利用IIS"><a href="#一、利用IIS" class="headerlink" title="一、利用IIS"></a>一、利用IIS</h1><span id="more"></span>
-
-<p>使用花生壳内网穿透，把本地ip与端口映射到外网，使其不在同一个局域网内也可访问，这里介绍两个方法供参考，少踩坑。</p>
-<h2 id="1、开启IIS服务"><a href="#1、开启IIS服务" class="headerlink" title="1、开启IIS服务"></a>1、开启IIS服务</h2><p>控制面板 – 程序与功能 – 启动或关闭Windows功能 </p>
-<p>最好都激活一下</p>
-<p><img src="https://s2.loli.net/2024/09/21/NyhQPLoeYrAsGS7.png"></p>
-<h2 id="2、配置IIS"><a href="#2、配置IIS" class="headerlink" title="2、配置IIS"></a>2、配置IIS</h2><p>控制面板 – 管理工具 – IIS管理器</p>
-<p>添加网站，把  网站名称、物理路径、IP地址、端口  这四个填写好。</p>
-<p>坑一：若打开为这个界面</p>
-<p><img src="https://s2.loli.net/2024/09/21/nReN921aXJC7bSl.png"></p>
-<p>则是，没有权限</p>
-<p><img src="https://s2.loli.net/2024/09/21/FxmQud2e5W3nrkp.png"></p>
-<p>如果是局域网内打不开，则是防火墙拦截了，开启防火墙</p>
-<p><img src="https://s2.loli.net/2024/09/21/X6rbWwNFsienTKI.png"></p>
-<p><img src="https://s2.loli.net/2024/09/21/Dho7rWCKizc364b.png"></p>
-<p><img src="https://s2.loli.net/2024/09/21/jSgKfVahYAzisl8.png"></p>
-<p><img src="https://s2.loli.net/2024/09/21/vrYskycHRO3U9ql.png"></p>
-<p>至此，局域网内就能完美访问了</p>
-<h2 id="3、花生壳内网穿透"><a href="#3、花生壳内网穿透" class="headerlink" title="3、花生壳内网穿透"></a>3、花生壳内网穿透</h2><p>必须下载客户端，仅仅在网页上配置是没有用的</p>
-<p><img src="https://s2.loli.net/2024/09/21/OdUo2YKn1rZEA7j.png"></p>
-<h1 id="二、利用VsCode插件Live-Serve"><a href="#二、利用VsCode插件Live-Serve" class="headerlink" title="二、利用VsCode插件Live Serve"></a>二、利用VsCode插件Live Serve</h1><p>这款软件很好用，在代码编辑界面就可以直接跳往浏览器查看效果，而且省去了配置IIS的步骤，直接进行花生壳内网穿透就行。</p>
-]]></content>
-      <categories>
-        <category>网页</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>FFmpeg</title>
-    <url>/posts/a4f0.html</url>
-    <content><![CDATA[<p>组成：</p>
-<span id="more"></span>
-
-<ul>
-<li>封装模块AVFormat</li>
-<li>编解码AVCodec</li>
-<li>滤镜模块AVFilter</li>
-<li>视频图像转换swscale</li>
-<li>音频转换计算swresample</li>
-</ul>
-]]></content>
-      <categories>
-        <category>深度学习</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Yolov5s算法从训练到部署</title>
     <url>/posts/720c.html</url>
-    <content><![CDATA[<h1 id="PyTorch-GPU环境搭建"><a href="#PyTorch-GPU环境搭建" class="headerlink" title="PyTorch GPU环境搭建"></a>PyTorch GPU环境搭建</h1><span id="more"></span>
-
-<p>[TOC]</p>
+    <content><![CDATA[<h1 id="PyTorch-GPU环境搭建"><a href="#PyTorch-GPU环境搭建" class="headerlink" title="PyTorch GPU环境搭建"></a>PyTorch GPU环境搭建</h1><p>[TOC]</p>
 <p>&#x9;本文主要介绍的是使用PyTorch开源神经网络框架GPU版本训练自己制作数据集的Yolov5s目标检测算法，并量化转化为瑞芯微RK系列搭载的NPU加速单元可以推理的rknn格式模型全流程。</p>
+<span id="more"></span>
+
 <p>&#x9;使用Anaconda虚拟Python环境，在此环境上安装相应显卡驱动版本的PyTorch GPU版本，在PyCharm上训练测试。</p>
 <h2 id="查看显卡CUDA版本"><a href="#查看显卡CUDA版本" class="headerlink" title="查看显卡CUDA版本"></a>查看显卡CUDA版本</h2><p>&#x9;显卡型号可以去设备管理器中查看，显卡驱动以及CUDA版本可以在cmd输入以下命令查看：</p>
 <pre><code>nvidia-smi
@@ -1240,26 +1183,115 @@ parser.add_argument(&#39;--data&#39;, type=str, default=&#39;data/mask.yaml&#39;
       </categories>
   </entry>
   <entry>
-    <title>W5500网卡做HTTP服务器</title>
-    <url>/posts/edf1.html</url>
-    <content><![CDATA[]]></content>
+    <title>js注意事项</title>
+    <url>/posts/b39d.html</url>
+    <content><![CDATA[<p>1、按键事件</p>
+<span id="more"></span>
+
+<p>onkeydown和onkeyup不区分字母大小写，onkeypress区分字母大小写。</p>
+<p>在我们实际开发中，我们更多的使用keydowni和keyup,，它能识别所有的键（包括功能键）</p>
+<p>Keypress不识别功能键，但是keyCode属性能区分大小写，返回不同的ASCIH值</p>
+]]></content>
       <categories>
-        <category>嵌入式</category>
+        <category>网页</category>
       </categories>
   </entry>
   <entry>
-    <title>编译ffmpeg源码</title>
-    <url>/posts/44f8.html</url>
-    <content><![CDATA[<p>&#x9;在Windows上使用msys2，花费了两天的时间都没编译好ffmpeg，各种错误，网上还找不到解决方案，于是在Linux下编译，不过以后可以不用单独安装mingw64，使用msys就很方便。</p>
-<span id="more"></span>
+    <title>windows建立FTP站点</title>
+    <url>/posts/79bc.html</url>
+    <content><![CDATA[<h1 id="一、开启FTP服务"><a href="#一、开启FTP服务" class="headerlink" title="一、开启FTP服务"></a>一、开启FTP服务</h1><span id="more"></span>
 
-<p>一个简本完成编译，很赞：</p>
-<p><a href="https://blog.csdn.net/RQ997832/article/details/125036907">ffmpeg学习：ubuntu下编译ffmpeg(全网最懒的编译脚本)_ubuntu编译ffmpeg-CSDN博客</a></p>
-<p>我没有安装libopus，总是说	ERROR: opus not found using pkg-config</p>
+
+
+<p><img src="https://gitee.com/samll_planet/drawing-bed/raw/master/img/20231218183557.png"></p>
+<h1 id="二、开启FTP的防火墙"><a href="#二、开启FTP的防火墙" class="headerlink" title="二、开启FTP的防火墙"></a>二、开启FTP的防火墙</h1><p><img src="https://gitee.com/samll_planet/drawing-bed/raw/master/img/20231218183804.png"></p>
+<p><img src="https://gitee.com/samll_planet/drawing-bed/raw/master/img/20231218183928.png"></p>
+<h1 id="三、在IIS控制台添加站点"><a href="#三、在IIS控制台添加站点" class="headerlink" title="三、在IIS控制台添加站点"></a>三、在IIS控制台添加站点</h1><p>如果打开IIS控制台没出现在频幕上，可能是没接扩展屏但出现在了原来扩展屏的位置上，在win+r运行 <code>inetmgr.exe /reset</code></p>
+<h1 id="四、遇到的问题"><a href="#四、遇到的问题" class="headerlink" title="四、遇到的问题"></a>四、遇到的问题</h1><ol>
+<li>用网络登录windows不可以，在你输入用户名和密码怎么都不对（远程桌面也是这样），切换到本地用户就行了</li>
+<li>匿名登录的用户名是：<code>anonymous</code> ，密码是随意输入一个邮箱就行，如果不能登录把FTP站点文件夹的权限增加一个everyone完全控制</li>
+</ol>
+<h1 id="五、基本FTP命令"><a href="#五、基本FTP命令" class="headerlink" title="五、基本FTP命令"></a>五、基本FTP命令</h1><p><a href="https://blog.csdn.net/LLittleF/article/details/105492175">关于FTP服务器出现227 Entering Passive Mode错误的解决思路-CSDN博客</a></p>
+<p><a href="https://www.cnblogs.com/bkywanly/p/9767246.html">常见的错误：FTP连接时出现“227 Entering Passive Mode” - wanly - 博客园 (cnblogs.com)</a></p>
 ]]></content>
       <categories>
-        <category>C++</category>
-        <category>ffmpeg</category>
+        <category>网页</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>外网访问本地站点</title>
+    <url>/posts/b506.html</url>
+    <content><![CDATA[<h1 id="一、利用IIS"><a href="#一、利用IIS" class="headerlink" title="一、利用IIS"></a>一、利用IIS</h1><span id="more"></span>
+
+<p>使用花生壳内网穿透，把本地ip与端口映射到外网，使其不在同一个局域网内也可访问，这里介绍两个方法供参考，少踩坑。</p>
+<h2 id="1、开启IIS服务"><a href="#1、开启IIS服务" class="headerlink" title="1、开启IIS服务"></a>1、开启IIS服务</h2><p>控制面板 – 程序与功能 – 启动或关闭Windows功能 </p>
+<p>最好都激活一下</p>
+<p><img src="https://s2.loli.net/2024/09/21/NyhQPLoeYrAsGS7.png"></p>
+<h2 id="2、配置IIS"><a href="#2、配置IIS" class="headerlink" title="2、配置IIS"></a>2、配置IIS</h2><p>控制面板 – 管理工具 – IIS管理器</p>
+<p>添加网站，把  网站名称、物理路径、IP地址、端口  这四个填写好。</p>
+<p>坑一：若打开为这个界面</p>
+<p><img src="https://s2.loli.net/2024/09/21/nReN921aXJC7bSl.png"></p>
+<p>则是，没有权限</p>
+<p><img src="https://s2.loli.net/2024/09/21/FxmQud2e5W3nrkp.png"></p>
+<p>如果是局域网内打不开，则是防火墙拦截了，开启防火墙</p>
+<p><img src="https://s2.loli.net/2024/09/21/X6rbWwNFsienTKI.png"></p>
+<p><img src="https://s2.loli.net/2024/09/21/Dho7rWCKizc364b.png"></p>
+<p><img src="https://s2.loli.net/2024/09/21/jSgKfVahYAzisl8.png"></p>
+<p><img src="https://s2.loli.net/2024/09/21/vrYskycHRO3U9ql.png"></p>
+<p>至此，局域网内就能完美访问了</p>
+<h2 id="3、花生壳内网穿透"><a href="#3、花生壳内网穿透" class="headerlink" title="3、花生壳内网穿透"></a>3、花生壳内网穿透</h2><p>必须下载客户端，仅仅在网页上配置是没有用的</p>
+<p><img src="https://s2.loli.net/2024/09/21/OdUo2YKn1rZEA7j.png"></p>
+<h1 id="二、利用VsCode插件Live-Serve"><a href="#二、利用VsCode插件Live-Serve" class="headerlink" title="二、利用VsCode插件Live Serve"></a>二、利用VsCode插件Live Serve</h1><p>这款软件很好用，在代码编辑界面就可以直接跳往浏览器查看效果，而且省去了配置IIS的步骤，直接进行花生壳内网穿透就行。</p>
+]]></content>
+      <categories>
+        <category>网页</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Linux命令</title>
+    <url>/posts/869e.html</url>
+    <content><![CDATA[<p>一、 杀进程</p>
+<span id="more"></span>
+
+<p>用libhv启动了http服务器，结果没写终止服务，就想要kill它，kill需要进程id，结果用top也没找到它的id，可以用以下方式精确查找</p>
+<p>1、netstat -nap | grep 端口号</p>
+<p>2、ps aux | grep 进程名</p>
+<p>3、pkill 进程名</p>
+<p>二、连接wifi</p>
+<p>1、查看网络设备列表</p>
+<figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">nmcli dev</span></span><br></pre></td></tr></table></figure>
+
+<p>  如果列出的设备状态是 unmanaged 的，说明网络设备不受NetworkManager管理，你需要清空 &#x2F;etc&#x2F;network&#x2F;interfaces下的网络设置,然后重启</p>
+<pre><code>  2、开启wifi
+</code></pre>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">nmcli</span> r wifi <span class="literal">on</span></span><br></pre></td></tr></table></figure>
+
+<p>3、扫描附近wifi热点</p>
+<figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">nmcli dev wifi</span></span><br></pre></td></tr></table></figure>
+
+<p>4、连接指定wifi</p>
+<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">nmcli dev wifi <span class="keyword">connect</span> &quot;SSID&quot; <span class="keyword">password</span> &quot;PASSWORD&quot; ifname wlan0</span><br></pre></td></tr></table></figure>
+
+<p>设置完成后，就能连接上指定WiFi，并且在下次开机后能自动连接。</p>
+]]></content>
+      <categories>
+        <category>嵌入式</category>
+        <category>Linux</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>经验</title>
+    <url>/posts/e977.html</url>
+    <content><![CDATA[<p>root@jiabao-vm:&#x2F;home&#x2F;jiabao&#x2F;桌面&#x2F;ffmpeg&#x2F;ffmpeg_build# .&#x2F;build.sh</p>
+<span id="more"></span>
+
+<p><code>.</code>&#x2F;tools.sh: 行 2: $‘\r’：未找到命令&#x20;</p>
+<p>root@jiabao-vm:&#x2F;home&#x2F;jiabao&#x2F;桌面&#x2F;ffmpeg&#x2F;ffmpeg_build# sed -i ‘s&#x2F;\r$&#x2F;&#x2F;‘ .&#x2F;tools.sh</p>
+<p>$ 会匹配每一行字符串的结尾。</p>
+]]></content>
+      <categories>
+        <category>嵌入式</category>
+        <category>Linux</category>
       </categories>
   </entry>
   <entry>
@@ -1285,44 +1317,6 @@ parser.add_argument(&#39;--data&#39;, type=str, default=&#39;data/mask.yaml&#39;
 <p>源码配置串口错误</p>
 <figure class="highlight llvm"><table><tr><td class="code"><pre><span class="line">源码是：uart_configure(UART_DEVICE_<span class="number">1</span><span class="punctuation">,</span> <span class="number">115200</span><span class="punctuation">,</span> DMAC_TRANS_WIDTH_<span class="number">8</span><span class="punctuation">,</span> UART_STOP_<span class="number">1</span><span class="punctuation">,</span> UART_PARITY_NONE)<span class="comment">;</span></span><br><span class="line">    而DMAC_TRANS_WIDTH_<span class="number">8</span>我转过去看是 DMAC_TRANS_WIDTH_<span class="number">8</span> <span class="operator">=</span> <span class="number">0x0</span> 也就是<span class="number">0</span></span><br><span class="line">    配置函数里面有位宽断言，configASSERT(data_width &gt;<span class="operator">=</span> <span class="number">5</span> &amp;&amp; data_width &lt;<span class="operator">=</span> <span class="number">8</span>)<span class="comment">;</span></span><br><span class="line">    #<span class="keyword">define</span> configASSERT(<span class="keyword">x</span>)                                   \</span><br><span class="line">    if((<span class="keyword">x</span>) <span class="operator">=</span><span class="operator">=</span> <span class="number">0</span>)                                          \</span><br><span class="line">    &#123;                                                     \</span><br><span class="line">        printf(<span class="string">&quot;(%s:%d) %s\r\n&quot;</span><span class="punctuation">,</span> __FILE__<span class="punctuation">,</span> __LINE__<span class="punctuation">,</span> #<span class="keyword">x</span>)<span class="comment">; \</span></span><br><span class="line">        for(<span class="comment">;;)                                           \</span></span><br><span class="line">            <span class="comment">;                                             \</span></span><br><span class="line">    &#125;</span><br><span class="line">    也就是会一直si</span><br></pre></td></tr></table></figure>
 ]]></content>
-      <categories>
-        <category>嵌入式</category>
-        <category>MCU</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>51制作贪吃蛇小游戏，附带Proteus仿真</title>
-    <url>/posts/a388.html</url>
-    <content><![CDATA[<h1 id="一、代码解读"><a href="#一、代码解读" class="headerlink" title="一、代码解读"></a>一、代码解读</h1><span id="more"></span>
-
-
-
-<p>一个按钮来启动游戏的开始，开始以后LCD1602上显示当前的关卡和得分，当长到一定长度后会进入下一个关卡，每个关卡移动的速度不一样（越到后面速度越快，用到定时器）</p>
-<p>有关蛇和食物里的属性都有很多，考虑使用结构体来存储：</p>
-<p>结构体一定要初始化，有的编译器全局结构体可能会初始化0，但最好初始化一下。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Food</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">char</span> x;    <span class="comment">// 食物的横坐标</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">char</span> y;    <span class="comment">// 食物的纵坐标</span></span><br><span class="line">&#125;food;  <span class="comment">// 食物结构体</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Snake</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span> x[SNAKE_Max_Long];</span><br><span class="line">    <span class="type">char</span> y[SNAKE_Max_Long];</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">char</span> Long;     <span class="comment">// 蛇的长度</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">char</span> Life;     <span class="comment">// 蛇的生命</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">char</span> Score;    <span class="comment">// 蛇的分数</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">char</span> Level;    <span class="comment">// 蛇的等级</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">char</span> Dir;      <span class="comment">// 蛇移动方向</span></span><br><span class="line">&#125;snake; <span class="comment">// 蛇结构体</span></span><br></pre></td></tr></table></figure>
-
-<p>结构体初始化：</p>
-<p>每次默认都从一个地方出生，而且方向都向右。</p>
-<figure class="highlight abnf"><table><tr><td class="code"><pre><span class="line">//****************初始化蛇的位置等***********************//</span><br><span class="line">static void initSnake()</span><br><span class="line">&#123;</span><br><span class="line">    //********清除内存数据**********//</span><br><span class="line">    unsigned char i<span class="comment">;</span></span><br><span class="line">    for(i<span class="operator">=</span><span class="number">0</span><span class="comment">; i&lt;SNAKE_Max_Long; i++)</span></span><br><span class="line">    &#123;</span><br><span class="line">        snake.x[i]<span class="operator">=</span>-<span class="number">1</span><span class="comment">;</span></span><br><span class="line">        snake.y[i]<span class="operator">=</span>-<span class="number">1</span><span class="comment">;</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    //********初始化蛇参数**********//</span><br><span class="line">    snake.Long<span class="operator">=</span><span class="number">2</span><span class="comment">;   // 初始化蛇的长度为两节</span></span><br><span class="line">    snake.Life<span class="operator">=</span><span class="number">1</span><span class="comment">;   //初始化蛇活着</span></span><br><span class="line">    if(snake.Level&gt;<span class="number">1</span>)   //不是重新开始，而是新关卡</span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    else</span><br><span class="line">    &#123;</span><br><span class="line">        snake.Level <span class="operator">=</span> <span class="number">1</span><span class="comment">;</span></span><br><span class="line">        snake.Score <span class="operator">=</span> <span class="number">0</span><span class="comment">;</span></span><br><span class="line">    &#125;</span><br><span class="line">    snake.Dir<span class="operator">=</span>right<span class="comment">;</span></span><br><span class="line">    snake.x[<span class="number">1</span>]<span class="operator">=</span><span class="number">0</span><span class="comment">;</span></span><br><span class="line">    snake.y[<span class="number">1</span>]<span class="operator">=</span><span class="number">2</span><span class="comment">;</span></span><br><span class="line">    snake.x[<span class="number">0</span>]<span class="operator">=</span><span class="number">1</span><span class="comment">;</span></span><br><span class="line">    snake.y[<span class="number">0</span>]<span class="operator">=</span><span class="number">2</span><span class="comment">;</span></span><br><span class="line">    createFood()<span class="comment">;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>食物随机产生：</p>
-<figure class="highlight gml"><table><tr><td class="code"><pre><span class="line"><span class="keyword">static</span> void createFood()</span><br><span class="line">&#123;</span><br><span class="line">    unsigned char i;</span><br><span class="line">    food.<span class="variable language_">x</span> = rand()%WIDTH;</span><br><span class="line">    food.<span class="variable language_">y</span> = rand()%LENGTH;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;snake.Long; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(food.<span class="variable language_">x</span>==snake.<span class="variable language_">x</span>[i] &amp;&amp; food.<span class="variable language_">y</span>==snake.<span class="variable language_">y</span>[i])</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;   </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//产生食物成功</span></span><br><span class="line">    <span class="keyword">if</span>(i==snake.Long)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//失败</span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        createFood();   <span class="comment">//重新产生</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>蛇运动坐标刷新：</p>
-<p>到了一定时间才刷新，这个时间用定时器控制。</p>
-<p>看到这个，是不是也想到了滚动字符，也可以这样做，当然也可以在数组里用%来解决。</p>
-<figure class="highlight gml"><table><tr><td class="code"><pre><span class="line"><span class="keyword">static</span> void runSnake()</span><br><span class="line">&#123;</span><br><span class="line">    unsigned char i;</span><br><span class="line">    <span class="comment">// 蛇身体坐标移动，蛇头方向坐标逐渐向蛇尾方向移动</span></span><br><span class="line">    <span class="keyword">for</span>(i=snake.Long; i&gt;<span class="number">0</span>; i--)</span><br><span class="line">    &#123;   </span><br><span class="line">        snake.<span class="variable language_">y</span>[i]=snake.<span class="variable language_">y</span>[i<span class="number">-1</span>];</span><br><span class="line">        snake.<span class="variable language_">x</span>[i]=snake.<span class="variable language_">x</span>[i<span class="number">-1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 重新获得蛇的头部位置</span></span><br><span class="line">    <span class="keyword">switch</span>(snake.Dir)</span><br><span class="line">    &#123;   </span><br><span class="line">        <span class="keyword">case</span> up:    snake.<span class="variable language_">y</span>[<span class="number">0</span>]-=<span class="number">1</span>; <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> down:  snake.<span class="variable language_">y</span>[<span class="number">0</span>]+=<span class="number">1</span>; <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> left:  snake.<span class="variable language_">x</span>[<span class="number">0</span>]-=<span class="number">1</span>; <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> right: snake.<span class="variable language_">x</span>[<span class="number">0</span>]+=<span class="number">1</span>; <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">default</span>: <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 蛇吃到食物</span></span><br><span class="line">    <span class="keyword">if</span>(snake.<span class="variable language_">x</span>[<span class="number">0</span>]==food.<span class="variable language_">x</span> &amp;&amp; snake.<span class="variable language_">y</span>[<span class="number">0</span>]==food.<span class="variable language_">y</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        snake.Long++;</span><br><span class="line">        snake.Score++;</span><br><span class="line">        createFood();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>判定蛇死：</p>
-<p>两种情况判定蛇死了。</p>
-<figure class="highlight gml"><table><tr><td class="code"><pre><span class="line">        <span class="comment">// 限定蛇活动范围，超范围就dead</span></span><br><span class="line">        <span class="keyword">if</span>((snake.<span class="variable language_">x</span>[<span class="number">0</span>]&gt;(WIDTH<span class="number">-1</span>)) || (snake.<span class="variable language_">x</span>[<span class="number">0</span>]&lt;<span class="number">0</span>) || (snake.<span class="variable language_">y</span>[<span class="number">0</span>]&gt;(LENGTH<span class="number">-1</span>)) || (snake.<span class="variable language_">y</span>[<span class="number">0</span>]&lt;<span class="number">0</span>))</span><br><span class="line">        &#123;</span><br><span class="line">            snake.Life=<span class="number">0</span>;   </span><br><span class="line">            snake.Level=<span class="number">1</span>;</span><br><span class="line">            speedLevel=<span class="number">25</span>;</span><br><span class="line">            keyVal=right;</span><br><span class="line">            LcdShowOver();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 蛇自杀检测</span></span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">4</span>; i&lt;=snake.Long; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(snake.<span class="variable language_">x</span>[i<span class="number">-1</span>]==snake.<span class="variable language_">x</span>[<span class="number">0</span>] &amp;&amp; snake.<span class="variable language_">y</span>[i<span class="number">-1</span>]==snake.<span class="variable language_">y</span>[<span class="number">0</span>])</span><br><span class="line">            &#123;</span><br><span class="line">                snake.Life=<span class="number">0</span>;</span><br><span class="line">                snake.Level=<span class="number">1</span>;</span><br><span class="line">                speedLevel=<span class="number">25</span>;</span><br><span class="line">                keyVal=right;</span><br><span class="line">                LcdShowOver();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
-
-<p>在8*8点阵上显示：</p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">void drawSnake()</span><br><span class="line">&#123;</span><br><span class="line">    unsigned char <span class="attribute">i</span>=0;</span><br><span class="line">    <span class="keyword">for</span>(<span class="attribute">i</span>=0; i&lt;8; i++) DispRAM[i]=0;</span><br><span class="line">    <span class="keyword">for</span>(<span class="attribute">i</span>=0; i&lt;snake.Long; i++)</span><br><span class="line">        DispRAM[snake.y[i]] |= 1&lt;&lt;snake.x[i];</span><br><span class="line">    scanDisplay(DispRAM);</span><br><span class="line">    drawPoint(food.x, food.y);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="二、Proteus图"><a href="#二、Proteus图" class="headerlink" title="二、Proteus图"></a>二、Proteus图</h1><p><img src="https://s2.loli.net/2024/09/21/o6wkCm9lvjHYOeG.png"></p>
-<h1 id="三、演示"><a href="#三、演示" class="headerlink" title="三、演示"></a>三、演示</h1>]]></content>
       <categories>
         <category>嵌入式</category>
         <category>MCU</category>
@@ -1381,6 +1375,44 @@ parser.add_argument(&#39;--data&#39;, type=str, default=&#39;data/mask.yaml&#39;
 <p>显示二维码也可以扫的，欢迎大家扫一扫，哈哈</p>
 <p><img src="/./youdaonote/%E5%B5%8C%E5%85%A5%E5%BC%8F/MCU/images/WEBRESOURCE7661f02f9b202cecae58abecdb705e9e%E6%88%AA%E5%9B%BE.png"></p>
 ]]></content>
+      <categories>
+        <category>嵌入式</category>
+        <category>MCU</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>51制作贪吃蛇小游戏，附带Proteus仿真</title>
+    <url>/posts/a388.html</url>
+    <content><![CDATA[<h1 id="一、代码解读"><a href="#一、代码解读" class="headerlink" title="一、代码解读"></a>一、代码解读</h1><span id="more"></span>
+
+
+
+<p>一个按钮来启动游戏的开始，开始以后LCD1602上显示当前的关卡和得分，当长到一定长度后会进入下一个关卡，每个关卡移动的速度不一样（越到后面速度越快，用到定时器）</p>
+<p>有关蛇和食物里的属性都有很多，考虑使用结构体来存储：</p>
+<p>结构体一定要初始化，有的编译器全局结构体可能会初始化0，但最好初始化一下。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Food</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">char</span> x;    <span class="comment">// 食物的横坐标</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">char</span> y;    <span class="comment">// 食物的纵坐标</span></span><br><span class="line">&#125;food;  <span class="comment">// 食物结构体</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Snake</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span> x[SNAKE_Max_Long];</span><br><span class="line">    <span class="type">char</span> y[SNAKE_Max_Long];</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">char</span> Long;     <span class="comment">// 蛇的长度</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">char</span> Life;     <span class="comment">// 蛇的生命</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">char</span> Score;    <span class="comment">// 蛇的分数</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">char</span> Level;    <span class="comment">// 蛇的等级</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">char</span> Dir;      <span class="comment">// 蛇移动方向</span></span><br><span class="line">&#125;snake; <span class="comment">// 蛇结构体</span></span><br></pre></td></tr></table></figure>
+
+<p>结构体初始化：</p>
+<p>每次默认都从一个地方出生，而且方向都向右。</p>
+<figure class="highlight abnf"><table><tr><td class="code"><pre><span class="line">//****************初始化蛇的位置等***********************//</span><br><span class="line">static void initSnake()</span><br><span class="line">&#123;</span><br><span class="line">    //********清除内存数据**********//</span><br><span class="line">    unsigned char i<span class="comment">;</span></span><br><span class="line">    for(i<span class="operator">=</span><span class="number">0</span><span class="comment">; i&lt;SNAKE_Max_Long; i++)</span></span><br><span class="line">    &#123;</span><br><span class="line">        snake.x[i]<span class="operator">=</span>-<span class="number">1</span><span class="comment">;</span></span><br><span class="line">        snake.y[i]<span class="operator">=</span>-<span class="number">1</span><span class="comment">;</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    //********初始化蛇参数**********//</span><br><span class="line">    snake.Long<span class="operator">=</span><span class="number">2</span><span class="comment">;   // 初始化蛇的长度为两节</span></span><br><span class="line">    snake.Life<span class="operator">=</span><span class="number">1</span><span class="comment">;   //初始化蛇活着</span></span><br><span class="line">    if(snake.Level&gt;<span class="number">1</span>)   //不是重新开始，而是新关卡</span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    else</span><br><span class="line">    &#123;</span><br><span class="line">        snake.Level <span class="operator">=</span> <span class="number">1</span><span class="comment">;</span></span><br><span class="line">        snake.Score <span class="operator">=</span> <span class="number">0</span><span class="comment">;</span></span><br><span class="line">    &#125;</span><br><span class="line">    snake.Dir<span class="operator">=</span>right<span class="comment">;</span></span><br><span class="line">    snake.x[<span class="number">1</span>]<span class="operator">=</span><span class="number">0</span><span class="comment">;</span></span><br><span class="line">    snake.y[<span class="number">1</span>]<span class="operator">=</span><span class="number">2</span><span class="comment">;</span></span><br><span class="line">    snake.x[<span class="number">0</span>]<span class="operator">=</span><span class="number">1</span><span class="comment">;</span></span><br><span class="line">    snake.y[<span class="number">0</span>]<span class="operator">=</span><span class="number">2</span><span class="comment">;</span></span><br><span class="line">    createFood()<span class="comment">;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>食物随机产生：</p>
+<figure class="highlight gml"><table><tr><td class="code"><pre><span class="line"><span class="keyword">static</span> void createFood()</span><br><span class="line">&#123;</span><br><span class="line">    unsigned char i;</span><br><span class="line">    food.<span class="variable language_">x</span> = rand()%WIDTH;</span><br><span class="line">    food.<span class="variable language_">y</span> = rand()%LENGTH;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;snake.Long; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(food.<span class="variable language_">x</span>==snake.<span class="variable language_">x</span>[i] &amp;&amp; food.<span class="variable language_">y</span>==snake.<span class="variable language_">y</span>[i])</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;   </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//产生食物成功</span></span><br><span class="line">    <span class="keyword">if</span>(i==snake.Long)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//失败</span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        createFood();   <span class="comment">//重新产生</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>蛇运动坐标刷新：</p>
+<p>到了一定时间才刷新，这个时间用定时器控制。</p>
+<p>看到这个，是不是也想到了滚动字符，也可以这样做，当然也可以在数组里用%来解决。</p>
+<figure class="highlight gml"><table><tr><td class="code"><pre><span class="line"><span class="keyword">static</span> void runSnake()</span><br><span class="line">&#123;</span><br><span class="line">    unsigned char i;</span><br><span class="line">    <span class="comment">// 蛇身体坐标移动，蛇头方向坐标逐渐向蛇尾方向移动</span></span><br><span class="line">    <span class="keyword">for</span>(i=snake.Long; i&gt;<span class="number">0</span>; i--)</span><br><span class="line">    &#123;   </span><br><span class="line">        snake.<span class="variable language_">y</span>[i]=snake.<span class="variable language_">y</span>[i<span class="number">-1</span>];</span><br><span class="line">        snake.<span class="variable language_">x</span>[i]=snake.<span class="variable language_">x</span>[i<span class="number">-1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 重新获得蛇的头部位置</span></span><br><span class="line">    <span class="keyword">switch</span>(snake.Dir)</span><br><span class="line">    &#123;   </span><br><span class="line">        <span class="keyword">case</span> up:    snake.<span class="variable language_">y</span>[<span class="number">0</span>]-=<span class="number">1</span>; <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> down:  snake.<span class="variable language_">y</span>[<span class="number">0</span>]+=<span class="number">1</span>; <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> left:  snake.<span class="variable language_">x</span>[<span class="number">0</span>]-=<span class="number">1</span>; <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> right: snake.<span class="variable language_">x</span>[<span class="number">0</span>]+=<span class="number">1</span>; <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">default</span>: <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 蛇吃到食物</span></span><br><span class="line">    <span class="keyword">if</span>(snake.<span class="variable language_">x</span>[<span class="number">0</span>]==food.<span class="variable language_">x</span> &amp;&amp; snake.<span class="variable language_">y</span>[<span class="number">0</span>]==food.<span class="variable language_">y</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        snake.Long++;</span><br><span class="line">        snake.Score++;</span><br><span class="line">        createFood();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>判定蛇死：</p>
+<p>两种情况判定蛇死了。</p>
+<figure class="highlight gml"><table><tr><td class="code"><pre><span class="line">        <span class="comment">// 限定蛇活动范围，超范围就dead</span></span><br><span class="line">        <span class="keyword">if</span>((snake.<span class="variable language_">x</span>[<span class="number">0</span>]&gt;(WIDTH<span class="number">-1</span>)) || (snake.<span class="variable language_">x</span>[<span class="number">0</span>]&lt;<span class="number">0</span>) || (snake.<span class="variable language_">y</span>[<span class="number">0</span>]&gt;(LENGTH<span class="number">-1</span>)) || (snake.<span class="variable language_">y</span>[<span class="number">0</span>]&lt;<span class="number">0</span>))</span><br><span class="line">        &#123;</span><br><span class="line">            snake.Life=<span class="number">0</span>;   </span><br><span class="line">            snake.Level=<span class="number">1</span>;</span><br><span class="line">            speedLevel=<span class="number">25</span>;</span><br><span class="line">            keyVal=right;</span><br><span class="line">            LcdShowOver();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 蛇自杀检测</span></span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">4</span>; i&lt;=snake.Long; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(snake.<span class="variable language_">x</span>[i<span class="number">-1</span>]==snake.<span class="variable language_">x</span>[<span class="number">0</span>] &amp;&amp; snake.<span class="variable language_">y</span>[i<span class="number">-1</span>]==snake.<span class="variable language_">y</span>[<span class="number">0</span>])</span><br><span class="line">            &#123;</span><br><span class="line">                snake.Life=<span class="number">0</span>;</span><br><span class="line">                snake.Level=<span class="number">1</span>;</span><br><span class="line">                speedLevel=<span class="number">25</span>;</span><br><span class="line">                keyVal=right;</span><br><span class="line">                LcdShowOver();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<p>在8*8点阵上显示：</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">void drawSnake()</span><br><span class="line">&#123;</span><br><span class="line">    unsigned char <span class="attribute">i</span>=0;</span><br><span class="line">    <span class="keyword">for</span>(<span class="attribute">i</span>=0; i&lt;8; i++) DispRAM[i]=0;</span><br><span class="line">    <span class="keyword">for</span>(<span class="attribute">i</span>=0; i&lt;snake.Long; i++)</span><br><span class="line">        DispRAM[snake.y[i]] |= 1&lt;&lt;snake.x[i];</span><br><span class="line">    scanDisplay(DispRAM);</span><br><span class="line">    drawPoint(food.x, food.y);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="二、Proteus图"><a href="#二、Proteus图" class="headerlink" title="二、Proteus图"></a>二、Proteus图</h1><p><img src="https://s2.loli.net/2024/09/21/o6wkCm9lvjHYOeG.png"></p>
+<h1 id="三、演示"><a href="#三、演示" class="headerlink" title="三、演示"></a>三、演示</h1>]]></content>
       <categories>
         <category>嵌入式</category>
         <category>MCU</category>
@@ -1458,53 +1490,6 @@ parser.add_argument(&#39;--data&#39;, type=str, default=&#39;data/mask.yaml&#39;
       </categories>
   </entry>
   <entry>
-    <title>Linux命令</title>
-    <url>/posts/869e.html</url>
-    <content><![CDATA[<p>一、 杀进程</p>
-<span id="more"></span>
-
-<p>用libhv启动了http服务器，结果没写终止服务，就想要kill它，kill需要进程id，结果用top也没找到它的id，可以用以下方式精确查找</p>
-<p>1、netstat -nap | grep 端口号</p>
-<p>2、ps aux | grep 进程名</p>
-<p>3、pkill 进程名</p>
-<p>二、连接wifi</p>
-<p>1、查看网络设备列表</p>
-<figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">nmcli dev</span></span><br></pre></td></tr></table></figure>
-
-<p>  如果列出的设备状态是 unmanaged 的，说明网络设备不受NetworkManager管理，你需要清空 &#x2F;etc&#x2F;network&#x2F;interfaces下的网络设置,然后重启</p>
-<pre><code>  2、开启wifi
-</code></pre>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">nmcli</span> r wifi <span class="literal">on</span></span><br></pre></td></tr></table></figure>
-
-<p>3、扫描附近wifi热点</p>
-<figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">nmcli dev wifi</span></span><br></pre></td></tr></table></figure>
-
-<p>4、连接指定wifi</p>
-<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">nmcli dev wifi <span class="keyword">connect</span> &quot;SSID&quot; <span class="keyword">password</span> &quot;PASSWORD&quot; ifname wlan0</span><br></pre></td></tr></table></figure>
-
-<p>设置完成后，就能连接上指定WiFi，并且在下次开机后能自动连接。</p>
-]]></content>
-      <categories>
-        <category>嵌入式</category>
-        <category>Linux</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>经验</title>
-    <url>/posts/e977.html</url>
-    <content><![CDATA[<p>root@jiabao-vm:&#x2F;home&#x2F;jiabao&#x2F;桌面&#x2F;ffmpeg&#x2F;ffmpeg_build# .&#x2F;build.sh</p>
-<span id="more"></span>
-
-<p><code>.</code>&#x2F;tools.sh: 行 2: $‘\r’：未找到命令&#x20;</p>
-<p>root@jiabao-vm:&#x2F;home&#x2F;jiabao&#x2F;桌面&#x2F;ffmpeg&#x2F;ffmpeg_build# sed -i ‘s&#x2F;\r$&#x2F;&#x2F;‘ .&#x2F;tools.sh</p>
-<p>$ 会匹配每一行字符串的结尾。</p>
-]]></content>
-      <categories>
-        <category>嵌入式</category>
-        <category>Linux</category>
-      </categories>
-  </entry>
-  <entry>
     <title>SPI</title>
     <url>/posts/e70d.html</url>
     <content><![CDATA[<p>菊花链</p>
@@ -1521,6 +1506,21 @@ parser.add_argument(&#39;--data&#39;, type=str, default=&#39;data/mask.yaml&#39;
       <categories>
         <category>嵌入式</category>
         <category>通信</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>编译ffmpeg源码</title>
+    <url>/posts/44f8.html</url>
+    <content><![CDATA[<p>&#x9;在Windows上使用msys2，花费了两天的时间都没编译好ffmpeg，各种错误，网上还找不到解决方案，于是在Linux下编译，不过以后可以不用单独安装mingw64，使用msys就很方便。</p>
+<span id="more"></span>
+
+<p>一个简本完成编译，很赞：</p>
+<p><a href="https://blog.csdn.net/RQ997832/article/details/125036907">ffmpeg学习：ubuntu下编译ffmpeg(全网最懒的编译脚本)_ubuntu编译ffmpeg-CSDN博客</a></p>
+<p>我没有安装libopus，总是说	ERROR: opus not found using pkg-config</p>
+]]></content>
+      <categories>
+        <category>C++</category>
+        <category>ffmpeg</category>
       </categories>
   </entry>
   <entry>
@@ -1686,31 +1686,6 @@ parser.add_argument(&#39;--data&#39;, type=str, default=&#39;data/mask.yaml&#39;
       </categories>
   </entry>
   <entry>
-    <title>opencv图片上写中文</title>
-    <url>/posts/80c3.html</url>
-    <content><![CDATA[<h1 id="一、自己opencv库有freetype"><a href="#一、自己opencv库有freetype" class="headerlink" title="一、自己opencv库有freetype"></a>一、自己opencv库有freetype</h1><span id="more"></span>
-
-
-
-<figure class="highlight arduino"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;opencv2/freetype.hpp&gt;</span>    <span class="comment">//编译的opencv是否包含，包含就能使用此方法，方便快捷，不包含就要使用方法二了。</span></span></span><br><span class="line"></span><br><span class="line">cv::Ptr&lt;cv::freetype::FreeType2&gt; ft2;</span><br><span class="line"></span><br><span class="line"><span class="comment">//字体初始化</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">init_font</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ft2 = cv::freetype::<span class="built_in">createFreeType2</span>();</span><br><span class="line">    ft2-&gt;<span class="built_in">loadFontData</span>( <span class="string">&quot;../font/msyh.ttc&quot;</span>, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//加入字体文件后</span></span><br><span class="line">ft2-&gt;<span class="built_in">putText</span>(frame,data[<span class="number">0</span>].vehicle_plate_server[i].number,</span><br><span class="line">    cv::<span class="built_in">Point</span>(data[<span class="number">0</span>].vehicle_plate_server[i].rect[<span class="number">0</span>]<span class="number">+5</span>, data[<span class="number">0</span>].vehicle_plate_server[i].rect[<span class="number">3</span>]<span class="number">+15</span>),</span><br><span class="line">    <span class="number">20</span>,cv::<span class="built_in">Scalar</span>(r,g,b),<span class="number">1</span>,<span class="number">8</span>,<span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
-
-<p>二、需要自己装freetype库</p>
-<p>需要包含一个头文件和一个源文件，当然也可以封装为一个hpp文件。</p>
-<p>CvxText.h:</p>
-<figure class="highlight arduino"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">ifndef</span> OPENCV_CVX_TEXT_HPP_</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> OPENCV_CVX_TEXT_HPP_</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 支持OpenCV中文汉字输入</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ft2build.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> FT_FREETYPE_H</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;opencv2/opencv.hpp&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">CvxText</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 装载字库文件</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="built_in">CvxText</span>(<span class="type">const</span> <span class="type">char</span>* freeType);</span><br><span class="line">    <span class="keyword">virtual</span> ~<span class="built_in">CvxText</span>();</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 获取字体.目前有些参数尚不支持.</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \param font        字体类型, 目前不支持</span></span><br><span class="line"><span class="comment">    * \param size        字体大小/空白比例/间隔比例/旋转角度</span></span><br><span class="line"><span class="comment">    * \param underline   下画线</span></span><br><span class="line"><span class="comment">    * \param diaphaneity 透明度</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \sa setFont, restoreFont</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">getFont</span><span class="params">(<span class="type">int</span>* type, cv::Scalar* size = <span class="literal">nullptr</span>, <span class="type">bool</span>* underline = <span class="literal">nullptr</span>, <span class="type">float</span>* diaphaneity = <span class="literal">nullptr</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 设置字体.目前有些参数尚不支持.</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \param font        字体类型, 目前不支持</span></span><br><span class="line"><span class="comment">    * \param size        字体大小/空白比例/间隔比例/旋转角度</span></span><br><span class="line"><span class="comment">    * \param underline   下画线</span></span><br><span class="line"><span class="comment">    * \param diaphaneity 透明度</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \sa getFont, restoreFont</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">setFont</span><span class="params">(<span class="type">int</span>* type, cv::Scalar* size = <span class="literal">nullptr</span>, <span class="type">bool</span>* underline = <span class="literal">nullptr</span>, <span class="type">float</span>* diaphaneity = <span class="literal">nullptr</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 恢复原始的字体设置.</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \sa getFont, setFont</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">restoreFont</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 输出汉字(颜色默认为黑色).遇到不能输出的字符将停止.</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \param img  输出的影象</span></span><br><span class="line"><span class="comment">    * \param text 文本内容</span></span><br><span class="line"><span class="comment">    * \param pos  文本位置</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \return 返回成功输出的字符长度，失败返回-1.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">putText</span><span class="params">(cv::Mat&amp; img, <span class="type">char</span>* text, cv::Point pos)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 输出汉字(颜色默认为黑色).遇到不能输出的字符将停止.</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \param img  输出的影象</span></span><br><span class="line"><span class="comment">    * \param text 文本内容</span></span><br><span class="line"><span class="comment">    * \param pos  文本位置</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \return 返回成功输出的字符长度，失败返回-1.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">putText</span><span class="params">(cv::Mat&amp; img, <span class="type">const</span> <span class="type">wchar_t</span>* text, cv::Point pos)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 输出汉字.遇到不能输出的字符将停止.</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \param img   输出的影象</span></span><br><span class="line"><span class="comment">    * \param text  文本内容</span></span><br><span class="line"><span class="comment">    * \param pos   文本位置</span></span><br><span class="line"><span class="comment">    * \param color 文本颜色</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \return 返回成功输出的字符长度，失败返回-1.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">putText</span><span class="params">(cv::Mat&amp; img, <span class="type">const</span> <span class="type">char</span>* text, cv::Point pos, cv::Scalar color)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 输出汉字.遇到不能输出的字符将停止.</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \param img   输出的影象</span></span><br><span class="line"><span class="comment">    * \param text  文本内容</span></span><br><span class="line"><span class="comment">    * \param pos   文本位置</span></span><br><span class="line"><span class="comment">    * \param color 文本颜色</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \return 返回成功输出的字符长度，失败返回-1.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">putText</span><span class="params">(cv::Mat&amp; img, <span class="type">const</span> <span class="type">wchar_t</span>* text, cv::Point pos, cv::Scalar color)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="comment">// 禁止copy</span></span><br><span class="line">    CvxText&amp; <span class="keyword">operator</span>=(<span class="type">const</span> CvxText&amp;);</span><br><span class="line">    <span class="comment">// 输出当前字符, 更新m_pos位置</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">putWChar</span><span class="params">(cv::Mat&amp; img, <span class="type">wchar_t</span> wc, cv::Point&amp; pos, cv::Scalar color)</span></span>;</span><br><span class="line"></span><br><span class="line">    FT_Library   m_library;   <span class="comment">// 字库</span></span><br><span class="line">    FT_Face      m_face;      <span class="comment">// 字体</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 默认的字体输出参数</span></span><br><span class="line">    <span class="type">int</span>         m_fontType;</span><br><span class="line">    cv::Scalar   m_fontSize;</span><br><span class="line">    <span class="type">bool</span>      m_fontUnderline;</span><br><span class="line">    <span class="type">float</span>      m_fontDiaphaneity;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span> <span class="comment">// OPENCV_CVX_TEXT_HPP_</span></span></span><br></pre></td></tr></table></figure>
-
-<p>CvxText.cpp:</p>
-<figure class="highlight arduino"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;wchar.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;assert.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;locale.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ctype.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;CvxText.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 打开字库</span></span><br><span class="line">CvxText::<span class="built_in">CvxText</span>(<span class="type">const</span> <span class="type">char</span>* freeType)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">assert</span>(freeType != <span class="literal">NULL</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 打开字库文件, 创建一个字体</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">FT_Init_FreeType</span>(&amp;m_library))<span class="keyword">throw</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">FT_New_Face</span>(m_library, freeType, <span class="number">0</span>, &amp;m_face))<span class="keyword">throw</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 设置字体输出参数</span></span><br><span class="line">    <span class="built_in">restoreFont</span>();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 设置C语言的字符集环境</span></span><br><span class="line">    <span class="built_in">setlocale</span>(LC_ALL, <span class="string">&quot;&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 释放FreeType资源</span></span><br><span class="line">CvxText::~<span class="built_in">CvxText</span>()</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">FT_Done_Face</span>(m_face);</span><br><span class="line">    <span class="built_in">FT_Done_FreeType</span>(m_library);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 设置字体参数:</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// font         - 字体类型, 目前不支持</span></span><br><span class="line"><span class="comment">// size         - 字体大小/空白比例/间隔比例/旋转角度</span></span><br><span class="line"><span class="comment">// underline   - 下画线</span></span><br><span class="line"><span class="comment">// diaphaneity   - 透明度</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">CvxText::getFont</span><span class="params">(<span class="type">int</span>* type, cv::Scalar* size, <span class="type">bool</span>* underline, <span class="type">float</span>* diaphaneity)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (type) *type = m_fontType;</span><br><span class="line">    <span class="keyword">if</span> (size) *size = m_fontSize;</span><br><span class="line">    <span class="keyword">if</span> (underline) *underline = m_fontUnderline;</span><br><span class="line">    <span class="keyword">if</span> (diaphaneity) *diaphaneity = m_fontDiaphaneity;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">CvxText::setFont</span><span class="params">(<span class="type">int</span>* type, cv::Scalar* size, <span class="type">bool</span>* underline, <span class="type">float</span>* diaphaneity)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 参数合法性检查</span></span><br><span class="line">    <span class="keyword">if</span> (type) &#123;</span><br><span class="line">        <span class="keyword">if</span> (*type &gt;= <span class="number">0</span>) m_fontType = *type;    <span class="comment">//网上很多地方if (*type &gt;= 0)没加星号</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (size) &#123;</span><br><span class="line">        m_fontSize.val[<span class="number">0</span>] = std::<span class="built_in">fabs</span>(size-&gt;val[<span class="number">0</span>]);</span><br><span class="line">        m_fontSize.val[<span class="number">1</span>] = std::<span class="built_in">fabs</span>(size-&gt;val[<span class="number">1</span>]);</span><br><span class="line">        m_fontSize.val[<span class="number">2</span>] = std::<span class="built_in">fabs</span>(size-&gt;val[<span class="number">2</span>]);</span><br><span class="line">        m_fontSize.val[<span class="number">3</span>] = std::<span class="built_in">fabs</span>(size-&gt;val[<span class="number">3</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (underline) &#123;</span><br><span class="line">        m_fontUnderline = *underline;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (diaphaneity) &#123;</span><br><span class="line">        m_fontDiaphaneity = *diaphaneity;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">FT_Set_Pixel_Sizes</span>(m_face, (<span class="type">int</span>)m_fontSize.val[<span class="number">0</span>], <span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 恢复原始的字体设置</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">CvxText::restoreFont</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    m_fontType = <span class="number">0</span>;            <span class="comment">// 字体类型(不支持)</span></span><br><span class="line"></span><br><span class="line">    m_fontSize.val[<span class="number">0</span>] = <span class="number">20</span>;      <span class="comment">// 字体大小</span></span><br><span class="line">    m_fontSize.val[<span class="number">1</span>] = <span class="number">0.5</span>;   <span class="comment">// 空白字符大小比例</span></span><br><span class="line">    m_fontSize.val[<span class="number">2</span>] = <span class="number">0.1</span>;   <span class="comment">// 间隔大小比例</span></span><br><span class="line">    m_fontSize.val[<span class="number">3</span>] = <span class="number">0</span>;      <span class="comment">// 旋转角度(不支持)</span></span><br><span class="line"></span><br><span class="line">    m_fontUnderline = <span class="literal">false</span>;   <span class="comment">// 下画线(不支持)</span></span><br><span class="line"></span><br><span class="line">    m_fontDiaphaneity = <span class="number">1.0</span>;   <span class="comment">// 色彩比例(可产生透明效果)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 设置字符大小</span></span><br><span class="line">    <span class="built_in">FT_Set_Pixel_Sizes</span>(m_face, (<span class="type">int</span>)m_fontSize.val[<span class="number">0</span>], <span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出函数(颜色默认为白色)</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">CvxText::putText</span><span class="params">(cv::Mat&amp; img, <span class="type">char</span>* text, cv::Point pos)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">putText</span>(img, text, pos, <span class="built_in">CV_RGB</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">CvxText::putText</span><span class="params">(cv::Mat&amp; img, <span class="type">const</span> <span class="type">wchar_t</span>* text, cv::Point pos)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">putText</span>(img, text, pos, <span class="built_in">CV_RGB</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">CvxText::putText</span><span class="params">(cv::Mat&amp; img, <span class="type">const</span> <span class="type">char</span>* text, cv::Point pos, cv::Scalar color)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (img.data == <span class="literal">nullptr</span>) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">if</span> (text == <span class="literal">nullptr</span>) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; text[i] != <span class="string">&#x27;\0&#x27;</span>; ++i) &#123;</span><br><span class="line">        <span class="type">wchar_t</span> wc = text[i];</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 解析双字节符号</span></span><br><span class="line">        <span class="keyword">if</span> (!<span class="built_in">isascii</span>(wc)) <span class="built_in">mbtowc</span>(&amp;wc, &amp;text[i++], <span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 输出当前的字符</span></span><br><span class="line">        <span class="built_in">putWChar</span>(img, wc, pos, color);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> i;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">CvxText::putText</span><span class="params">(cv::Mat&amp; img, <span class="type">const</span> <span class="type">wchar_t</span>* text, cv::Point pos, cv::Scalar color)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (img.data == <span class="literal">nullptr</span>) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">if</span> (text == <span class="literal">nullptr</span>) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; text[i] != <span class="string">&#x27;\0&#x27;</span>; ++i) &#123;</span><br><span class="line">        <span class="comment">// 输出当前的字符</span></span><br><span class="line">        <span class="built_in">putWChar</span>(img, text[i], pos, color);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> i;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出当前字符, 更新m_pos位置</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">CvxText::putWChar</span><span class="params">(cv::Mat&amp; img, <span class="type">wchar_t</span> wc, cv::Point&amp; pos, cv::Scalar color)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 根据unicode生成字体的二值位图</span></span><br><span class="line">    FT_UInt glyph_index = <span class="built_in">FT_Get_Char_Index</span>(m_face, wc);</span><br><span class="line">    <span class="built_in">FT_Load_Glyph</span>(m_face, glyph_index, FT_LOAD_DEFAULT);</span><br><span class="line">    <span class="built_in">FT_Render_Glyph</span>(m_face-&gt;glyph, FT_RENDER_MODE_MONO);</span><br><span class="line"></span><br><span class="line">    FT_GlyphSlot slot = m_face-&gt;glyph;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 行列数</span></span><br><span class="line">    <span class="type">int</span> rows = slot-&gt;bitmap.rows;</span><br><span class="line">    <span class="type">int</span> cols = slot-&gt;bitmap.width;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; rows; ++i) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; cols; ++j) &#123;</span><br><span class="line">            <span class="type">int</span> off = i * slot-&gt;bitmap.pitch + j / <span class="number">8</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (slot-&gt;bitmap.buffer[off] &amp; (<span class="number">0xC0</span> &gt;&gt; (j % <span class="number">8</span>))) &#123;</span><br><span class="line">                <span class="type">int</span> r = pos.y - (rows - <span class="number">1</span> - i);</span><br><span class="line">                <span class="type">int</span> c = pos.x + j;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (r &gt;= <span class="number">0</span> &amp;&amp; r &lt; img.rows &amp;&amp; c &gt;= <span class="number">0</span> &amp;&amp; c &lt; img.cols) &#123;</span><br><span class="line">                    cv::Vec3b pixel = img.<span class="built_in">at</span>&lt;cv::Vec3b&gt;(cv::<span class="built_in">Point</span>(c, r));</span><br><span class="line">                    cv::Scalar scalar = cv::<span class="built_in">Scalar</span>(pixel.val[<span class="number">0</span>], pixel.val[<span class="number">1</span>], pixel.val[<span class="number">2</span>]);</span><br><span class="line"></span><br><span class="line">                    <span class="comment">// 进行色彩融合</span></span><br><span class="line">                    <span class="type">float</span> p = m_fontDiaphaneity;</span><br><span class="line">                    <span class="keyword">for</span> (<span class="type">int</span> k = <span class="number">0</span>; k &lt; <span class="number">4</span>; ++k) &#123;</span><br><span class="line">                        scalar.val[k] = scalar.val[k] * (<span class="number">1</span> - p) + color.val[k] * p;</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                    img.<span class="built_in">at</span>&lt;cv::Vec3b&gt;(cv::<span class="built_in">Point</span>(c, r))[<span class="number">0</span>] = (<span class="type">unsigned</span> <span class="type">char</span>)(scalar.val[<span class="number">0</span>]);</span><br><span class="line">                    img.<span class="built_in">at</span>&lt;cv::Vec3b&gt;(cv::<span class="built_in">Point</span>(c, r))[<span class="number">1</span>] = (<span class="type">unsigned</span> <span class="type">char</span>)(scalar.val[<span class="number">1</span>]);</span><br><span class="line">                    img.<span class="built_in">at</span>&lt;cv::Vec3b&gt;(cv::<span class="built_in">Point</span>(c, r))[<span class="number">2</span>] = (<span class="type">unsigned</span> <span class="type">char</span>)(scalar.val[<span class="number">2</span>]);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 修改下一个字的输出位置</span></span><br><span class="line">    <span class="type">double</span> space = m_fontSize.val[<span class="number">0</span>] * m_fontSize.val[<span class="number">1</span>];</span><br><span class="line">    <span class="type">double</span> sep = m_fontSize.val[<span class="number">0</span>] * m_fontSize.val[<span class="number">2</span>];</span><br><span class="line"></span><br><span class="line">    pos.x += (<span class="type">int</span>)((cols ? cols : space) + sep);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>应用：</p>
-<figure class="highlight arduino"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    utils::logging::<span class="built_in">setLogLevel</span>(utils::logging::LOG_LEVEL_ERROR);<span class="comment">//只输出错误日志</span></span><br><span class="line">    Mat img = <span class="built_in">imread</span>(<span class="string">&quot;C:/Users/ACER/Pictures/Saved Pictures/SmartHome.jpg&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="function">CvxText <span class="title">text</span><span class="params">(<span class="string">&quot;../simhei.ttf&quot;</span>)</span></span>; <span class="comment">//指定字体</span></span><br><span class="line">    <span class="comment">//CvxText text(&quot;../msyh.ttc&quot;); //指定字体</span></span><br><span class="line"></span><br><span class="line">    <span class="type">const</span> <span class="type">char</span>* msg = <span class="string">&quot;jiabao佳宝&quot;</span>;</span><br><span class="line">    <span class="type">float</span> p = <span class="number">0.5</span>;</span><br><span class="line">    text.<span class="built_in">setFont</span>(<span class="literal">NULL</span>, <span class="literal">NULL</span>, <span class="literal">NULL</span>, &amp;p);   <span class="comment">// 透明处理</span></span><br><span class="line">    text.<span class="built_in">putText</span>(img, msg, <span class="built_in">Point</span>(<span class="number">30</span>, <span class="number">30</span>), <span class="built_in">CV_RGB</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>));</span><br><span class="line">    <span class="built_in">imshow</span>(<span class="string">&quot;test&quot;</span>, img);</span><br><span class="line">    cv::<span class="built_in">waitKey</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>深度学习</category>
-        <category>OpenCV</category>
-      </categories>
-  </entry>
-  <entry>
     <title>opencv只显示感兴趣的区域</title>
     <url>/posts/c13.html</url>
     <content><![CDATA[<p>在推理算法中，只想把有用的区域1000给保留，其他区域都给变成黑</p>
@@ -1752,43 +1727,24 @@ parser.add_argument(&#39;--data&#39;, type=str, default=&#39;data/mask.yaml&#39;
       </categories>
   </entry>
   <entry>
-    <title>opencv注意事项</title>
-    <url>/posts/3a95.html</url>
-    <content><![CDATA[<p>一、不让显示一堆无用的调试信息</p>
-<span id="more"></span>
+    <title>opencv图片上写中文</title>
+    <url>/posts/80c3.html</url>
+    <content><![CDATA[<h1 id="一、自己opencv库有freetype"><a href="#一、自己opencv库有freetype" class="headerlink" title="一、自己opencv库有freetype"></a>一、自己opencv库有freetype</h1><span id="more"></span>
 
-<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;opencv2/core/utils/logger.hpp&gt;</span>	//调试相关</span></span><br><span class="line"><span class="symbol">utils:</span>:logging::setLogLevel(utils::logging::LOG_LEVEL_ERROR)<span class="punctuation">;</span><span class="comment">//只输出错误日志</span></span><br></pre></td></tr></table></figure>
 
-<p>二、在vs中添加opencv环境</p>
-<p>1、配置包含目录</p>
-<p><img src="https://s2.loli.net/2024/09/21/H3gd79IDXtyuQiG.png"></p>
-<p>2、配置库目录</p>
-<p><img src="https://s2.loli.net/2024/09/21/p3KtcI9FT5Lwshk.png"></p>
-<p>3、配置附加依赖项</p>
-<p><img src="https://s2.loli.net/2024/09/21/UG9jmL2eExKXkhz.png"></p>
-<p>4、把以上配置保存，形成一个配置文件，以后的新项目直接添加配置文件就行了</p>
-<ul>
-<li>新建一个项目属性表，在新项目属性表里面配置上面的配置</li>
-</ul>
-<p><img src="https://s2.loli.net/2024/09/21/ZrIPWxBwlnMq423.png"></p>
-<p><img src="https://s2.loli.net/2024/09/21/tQE7ykXOWi6SYDb.png"></p>
-<p>切记，要在这个新建的属性上面进行上面介绍的配置</p>
-<p>配置完之后，打开看一下这个配置文件的内容：</p>
-<p><img src="https://s2.loli.net/2024/09/21/tvQWmrKaiEgMnud.png"></p>
-<ul>
-<li>新项目添加现成的配置文件：</li>
-</ul>
-<p>最好把配置文件也复制一份到项目下，防止原工程删除导致配置文件找不到。也可以添加多个配置文件，是可以叠加的。</p>
-<p><img src="https://s2.loli.net/2024/09/21/mdJPLq1UhpC72Kb.png"></p>
-<p>三、传递参数</p>
-<p>这样直接&#x3D;，只是将Mat这个结构体信息拷贝了一份，并没有拷贝指向图像的内存信息，操作仍然在同一内存中进行的，所以原图，也就是实参发生了改变。调用fun 前与后的img与img1是一样的，显示的图片也是带字体的。</p>
-<figure class="highlight arduino"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">fun</span><span class="params">(Mat img)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Mat img1 = img;</span><br><span class="line">    <span class="function">CvxText <span class="title">text</span><span class="params">(<span class="string">&quot;../simhei.ttf&quot;</span>)</span></span>; <span class="comment">// 指定字体</span></span><br><span class="line">    <span class="type">const</span> <span class="type">char</span> *msg = <span class="string">&quot;jiabao佳宝&quot;</span>;</span><br><span class="line">    <span class="type">float</span> p = <span class="number">1</span>;</span><br><span class="line">    text.<span class="built_in">setFont</span>(<span class="literal">NULL</span>, <span class="literal">NULL</span>, <span class="literal">NULL</span>, &amp;p); <span class="comment">// 透明处理</span></span><br><span class="line">    text.<span class="built_in">putText</span>(img1, msg, <span class="built_in">Point</span>(<span class="number">30</span>, <span class="number">30</span>), <span class="built_in">CV_RGB</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>));</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    utils::logging::<span class="built_in">setLogLevel</span>(utils::logging::LOG_LEVEL_ERROR); <span class="comment">// 只输出错误日志</span></span><br><span class="line">    Mat img = <span class="built_in">imread</span>(<span class="string">&quot;C:/Users/ACER/Pictures/Saved Pictures/SmartHome.jpg&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">fun</span>(img);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">imshow</span>(<span class="string">&quot;test&quot;</span>, img);</span><br><span class="line"></span><br><span class="line">    cv::<span class="built_in">waitKey</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>如果不想改变原图，就需要这样：</p>
-<figure class="highlight stata"><table><tr><td class="code"><pre><span class="line">	<span class="comment">//深拷贝</span></span><br><span class="line"> </span><br><span class="line"> <span class="comment">//方法1</span></span><br><span class="line">	<span class="keyword">Mat</span> img1 = img.clone();</span><br><span class="line"></span><br><span class="line">	<span class="comment">//方法二</span></span><br><span class="line">	<span class="keyword">Mat</span> img1;</span><br><span class="line">img.copyTo(img1);</span><br></pre></td></tr></table></figure>
+<figure class="highlight arduino"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;opencv2/freetype.hpp&gt;</span>    <span class="comment">//编译的opencv是否包含，包含就能使用此方法，方便快捷，不包含就要使用方法二了。</span></span></span><br><span class="line"></span><br><span class="line">cv::Ptr&lt;cv::freetype::FreeType2&gt; ft2;</span><br><span class="line"></span><br><span class="line"><span class="comment">//字体初始化</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">init_font</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ft2 = cv::freetype::<span class="built_in">createFreeType2</span>();</span><br><span class="line">    ft2-&gt;<span class="built_in">loadFontData</span>( <span class="string">&quot;../font/msyh.ttc&quot;</span>, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//加入字体文件后</span></span><br><span class="line">ft2-&gt;<span class="built_in">putText</span>(frame,data[<span class="number">0</span>].vehicle_plate_server[i].number,</span><br><span class="line">    cv::<span class="built_in">Point</span>(data[<span class="number">0</span>].vehicle_plate_server[i].rect[<span class="number">0</span>]<span class="number">+5</span>, data[<span class="number">0</span>].vehicle_plate_server[i].rect[<span class="number">3</span>]<span class="number">+15</span>),</span><br><span class="line">    <span class="number">20</span>,cv::<span class="built_in">Scalar</span>(r,g,b),<span class="number">1</span>,<span class="number">8</span>,<span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
 
-<p>CmakeList:</p>
-<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="title">set</span><span class="params">(OpenCV_DIR  E:/Program/VScode/opencv/opencv_4.<span class="number">6.0</span>/install/x64/mingw/lib)</span></span></span><br><span class="line"><span class="function"><span class="title">find_package</span><span class="params">(OpenCV REQUIRED)</span></span></span><br><span class="line">#添加头文件</span><br><span class="line"><span class="function"><span class="title">include_directories</span><span class="params">($&#123;OpenCV_INCLUDE_DIRS&#125;)</span></span></span><br><span class="line">#链接库文件</span><br><span class="line"><span class="function"><span class="title">target_link_libraries</span><span class="params">(test1  $&#123;OpenCV_LIBS&#125;)</span></span></span><br><span class="line"><span class="function"><span class="title">message</span><span class="params">(<span class="string">&quot;OpenCV_INCLUDE_DIRS:&quot;</span> ($&#123;OpenCV_INCLUDE_DIRS&#125;)</span></span>)</span><br><span class="line"><span class="function"><span class="title">message</span><span class="params">(<span class="string">&quot;OpenCV_LIBS:&quot;</span> ($&#123;OpenCV_LIBS&#125;)</span></span>)</span><br></pre></td></tr></table></figure>
+<p>二、需要自己装freetype库</p>
+<p>需要包含一个头文件和一个源文件，当然也可以封装为一个hpp文件。</p>
+<p>CvxText.h:</p>
+<figure class="highlight arduino"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">ifndef</span> OPENCV_CVX_TEXT_HPP_</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> OPENCV_CVX_TEXT_HPP_</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 支持OpenCV中文汉字输入</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ft2build.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> FT_FREETYPE_H</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;opencv2/opencv.hpp&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">CvxText</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 装载字库文件</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="built_in">CvxText</span>(<span class="type">const</span> <span class="type">char</span>* freeType);</span><br><span class="line">    <span class="keyword">virtual</span> ~<span class="built_in">CvxText</span>();</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 获取字体.目前有些参数尚不支持.</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \param font        字体类型, 目前不支持</span></span><br><span class="line"><span class="comment">    * \param size        字体大小/空白比例/间隔比例/旋转角度</span></span><br><span class="line"><span class="comment">    * \param underline   下画线</span></span><br><span class="line"><span class="comment">    * \param diaphaneity 透明度</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \sa setFont, restoreFont</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">getFont</span><span class="params">(<span class="type">int</span>* type, cv::Scalar* size = <span class="literal">nullptr</span>, <span class="type">bool</span>* underline = <span class="literal">nullptr</span>, <span class="type">float</span>* diaphaneity = <span class="literal">nullptr</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 设置字体.目前有些参数尚不支持.</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \param font        字体类型, 目前不支持</span></span><br><span class="line"><span class="comment">    * \param size        字体大小/空白比例/间隔比例/旋转角度</span></span><br><span class="line"><span class="comment">    * \param underline   下画线</span></span><br><span class="line"><span class="comment">    * \param diaphaneity 透明度</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \sa getFont, restoreFont</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">setFont</span><span class="params">(<span class="type">int</span>* type, cv::Scalar* size = <span class="literal">nullptr</span>, <span class="type">bool</span>* underline = <span class="literal">nullptr</span>, <span class="type">float</span>* diaphaneity = <span class="literal">nullptr</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 恢复原始的字体设置.</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \sa getFont, setFont</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">restoreFont</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 输出汉字(颜色默认为黑色).遇到不能输出的字符将停止.</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \param img  输出的影象</span></span><br><span class="line"><span class="comment">    * \param text 文本内容</span></span><br><span class="line"><span class="comment">    * \param pos  文本位置</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \return 返回成功输出的字符长度，失败返回-1.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">putText</span><span class="params">(cv::Mat&amp; img, <span class="type">char</span>* text, cv::Point pos)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 输出汉字(颜色默认为黑色).遇到不能输出的字符将停止.</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \param img  输出的影象</span></span><br><span class="line"><span class="comment">    * \param text 文本内容</span></span><br><span class="line"><span class="comment">    * \param pos  文本位置</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \return 返回成功输出的字符长度，失败返回-1.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">putText</span><span class="params">(cv::Mat&amp; img, <span class="type">const</span> <span class="type">wchar_t</span>* text, cv::Point pos)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 输出汉字.遇到不能输出的字符将停止.</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \param img   输出的影象</span></span><br><span class="line"><span class="comment">    * \param text  文本内容</span></span><br><span class="line"><span class="comment">    * \param pos   文本位置</span></span><br><span class="line"><span class="comment">    * \param color 文本颜色</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \return 返回成功输出的字符长度，失败返回-1.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">putText</span><span class="params">(cv::Mat&amp; img, <span class="type">const</span> <span class="type">char</span>* text, cv::Point pos, cv::Scalar color)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 输出汉字.遇到不能输出的字符将停止.</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \param img   输出的影象</span></span><br><span class="line"><span class="comment">    * \param text  文本内容</span></span><br><span class="line"><span class="comment">    * \param pos   文本位置</span></span><br><span class="line"><span class="comment">    * \param color 文本颜色</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \return 返回成功输出的字符长度，失败返回-1.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">putText</span><span class="params">(cv::Mat&amp; img, <span class="type">const</span> <span class="type">wchar_t</span>* text, cv::Point pos, cv::Scalar color)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="comment">// 禁止copy</span></span><br><span class="line">    CvxText&amp; <span class="keyword">operator</span>=(<span class="type">const</span> CvxText&amp;);</span><br><span class="line">    <span class="comment">// 输出当前字符, 更新m_pos位置</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">putWChar</span><span class="params">(cv::Mat&amp; img, <span class="type">wchar_t</span> wc, cv::Point&amp; pos, cv::Scalar color)</span></span>;</span><br><span class="line"></span><br><span class="line">    FT_Library   m_library;   <span class="comment">// 字库</span></span><br><span class="line">    FT_Face      m_face;      <span class="comment">// 字体</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 默认的字体输出参数</span></span><br><span class="line">    <span class="type">int</span>         m_fontType;</span><br><span class="line">    cv::Scalar   m_fontSize;</span><br><span class="line">    <span class="type">bool</span>      m_fontUnderline;</span><br><span class="line">    <span class="type">float</span>      m_fontDiaphaneity;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span> <span class="comment">// OPENCV_CVX_TEXT_HPP_</span></span></span><br></pre></td></tr></table></figure>
+
+<p>CvxText.cpp:</p>
+<figure class="highlight arduino"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;wchar.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;assert.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;locale.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ctype.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;CvxText.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 打开字库</span></span><br><span class="line">CvxText::<span class="built_in">CvxText</span>(<span class="type">const</span> <span class="type">char</span>* freeType)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">assert</span>(freeType != <span class="literal">NULL</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 打开字库文件, 创建一个字体</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">FT_Init_FreeType</span>(&amp;m_library))<span class="keyword">throw</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">FT_New_Face</span>(m_library, freeType, <span class="number">0</span>, &amp;m_face))<span class="keyword">throw</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 设置字体输出参数</span></span><br><span class="line">    <span class="built_in">restoreFont</span>();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 设置C语言的字符集环境</span></span><br><span class="line">    <span class="built_in">setlocale</span>(LC_ALL, <span class="string">&quot;&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 释放FreeType资源</span></span><br><span class="line">CvxText::~<span class="built_in">CvxText</span>()</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">FT_Done_Face</span>(m_face);</span><br><span class="line">    <span class="built_in">FT_Done_FreeType</span>(m_library);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 设置字体参数:</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// font         - 字体类型, 目前不支持</span></span><br><span class="line"><span class="comment">// size         - 字体大小/空白比例/间隔比例/旋转角度</span></span><br><span class="line"><span class="comment">// underline   - 下画线</span></span><br><span class="line"><span class="comment">// diaphaneity   - 透明度</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">CvxText::getFont</span><span class="params">(<span class="type">int</span>* type, cv::Scalar* size, <span class="type">bool</span>* underline, <span class="type">float</span>* diaphaneity)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (type) *type = m_fontType;</span><br><span class="line">    <span class="keyword">if</span> (size) *size = m_fontSize;</span><br><span class="line">    <span class="keyword">if</span> (underline) *underline = m_fontUnderline;</span><br><span class="line">    <span class="keyword">if</span> (diaphaneity) *diaphaneity = m_fontDiaphaneity;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">CvxText::setFont</span><span class="params">(<span class="type">int</span>* type, cv::Scalar* size, <span class="type">bool</span>* underline, <span class="type">float</span>* diaphaneity)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 参数合法性检查</span></span><br><span class="line">    <span class="keyword">if</span> (type) &#123;</span><br><span class="line">        <span class="keyword">if</span> (*type &gt;= <span class="number">0</span>) m_fontType = *type;    <span class="comment">//网上很多地方if (*type &gt;= 0)没加星号</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (size) &#123;</span><br><span class="line">        m_fontSize.val[<span class="number">0</span>] = std::<span class="built_in">fabs</span>(size-&gt;val[<span class="number">0</span>]);</span><br><span class="line">        m_fontSize.val[<span class="number">1</span>] = std::<span class="built_in">fabs</span>(size-&gt;val[<span class="number">1</span>]);</span><br><span class="line">        m_fontSize.val[<span class="number">2</span>] = std::<span class="built_in">fabs</span>(size-&gt;val[<span class="number">2</span>]);</span><br><span class="line">        m_fontSize.val[<span class="number">3</span>] = std::<span class="built_in">fabs</span>(size-&gt;val[<span class="number">3</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (underline) &#123;</span><br><span class="line">        m_fontUnderline = *underline;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (diaphaneity) &#123;</span><br><span class="line">        m_fontDiaphaneity = *diaphaneity;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">FT_Set_Pixel_Sizes</span>(m_face, (<span class="type">int</span>)m_fontSize.val[<span class="number">0</span>], <span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 恢复原始的字体设置</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">CvxText::restoreFont</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    m_fontType = <span class="number">0</span>;            <span class="comment">// 字体类型(不支持)</span></span><br><span class="line"></span><br><span class="line">    m_fontSize.val[<span class="number">0</span>] = <span class="number">20</span>;      <span class="comment">// 字体大小</span></span><br><span class="line">    m_fontSize.val[<span class="number">1</span>] = <span class="number">0.5</span>;   <span class="comment">// 空白字符大小比例</span></span><br><span class="line">    m_fontSize.val[<span class="number">2</span>] = <span class="number">0.1</span>;   <span class="comment">// 间隔大小比例</span></span><br><span class="line">    m_fontSize.val[<span class="number">3</span>] = <span class="number">0</span>;      <span class="comment">// 旋转角度(不支持)</span></span><br><span class="line"></span><br><span class="line">    m_fontUnderline = <span class="literal">false</span>;   <span class="comment">// 下画线(不支持)</span></span><br><span class="line"></span><br><span class="line">    m_fontDiaphaneity = <span class="number">1.0</span>;   <span class="comment">// 色彩比例(可产生透明效果)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 设置字符大小</span></span><br><span class="line">    <span class="built_in">FT_Set_Pixel_Sizes</span>(m_face, (<span class="type">int</span>)m_fontSize.val[<span class="number">0</span>], <span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出函数(颜色默认为白色)</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">CvxText::putText</span><span class="params">(cv::Mat&amp; img, <span class="type">char</span>* text, cv::Point pos)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">putText</span>(img, text, pos, <span class="built_in">CV_RGB</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">CvxText::putText</span><span class="params">(cv::Mat&amp; img, <span class="type">const</span> <span class="type">wchar_t</span>* text, cv::Point pos)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">putText</span>(img, text, pos, <span class="built_in">CV_RGB</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">CvxText::putText</span><span class="params">(cv::Mat&amp; img, <span class="type">const</span> <span class="type">char</span>* text, cv::Point pos, cv::Scalar color)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (img.data == <span class="literal">nullptr</span>) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">if</span> (text == <span class="literal">nullptr</span>) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; text[i] != <span class="string">&#x27;\0&#x27;</span>; ++i) &#123;</span><br><span class="line">        <span class="type">wchar_t</span> wc = text[i];</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 解析双字节符号</span></span><br><span class="line">        <span class="keyword">if</span> (!<span class="built_in">isascii</span>(wc)) <span class="built_in">mbtowc</span>(&amp;wc, &amp;text[i++], <span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 输出当前的字符</span></span><br><span class="line">        <span class="built_in">putWChar</span>(img, wc, pos, color);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> i;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">CvxText::putText</span><span class="params">(cv::Mat&amp; img, <span class="type">const</span> <span class="type">wchar_t</span>* text, cv::Point pos, cv::Scalar color)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (img.data == <span class="literal">nullptr</span>) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">if</span> (text == <span class="literal">nullptr</span>) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; text[i] != <span class="string">&#x27;\0&#x27;</span>; ++i) &#123;</span><br><span class="line">        <span class="comment">// 输出当前的字符</span></span><br><span class="line">        <span class="built_in">putWChar</span>(img, text[i], pos, color);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> i;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出当前字符, 更新m_pos位置</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">CvxText::putWChar</span><span class="params">(cv::Mat&amp; img, <span class="type">wchar_t</span> wc, cv::Point&amp; pos, cv::Scalar color)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 根据unicode生成字体的二值位图</span></span><br><span class="line">    FT_UInt glyph_index = <span class="built_in">FT_Get_Char_Index</span>(m_face, wc);</span><br><span class="line">    <span class="built_in">FT_Load_Glyph</span>(m_face, glyph_index, FT_LOAD_DEFAULT);</span><br><span class="line">    <span class="built_in">FT_Render_Glyph</span>(m_face-&gt;glyph, FT_RENDER_MODE_MONO);</span><br><span class="line"></span><br><span class="line">    FT_GlyphSlot slot = m_face-&gt;glyph;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 行列数</span></span><br><span class="line">    <span class="type">int</span> rows = slot-&gt;bitmap.rows;</span><br><span class="line">    <span class="type">int</span> cols = slot-&gt;bitmap.width;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; rows; ++i) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; cols; ++j) &#123;</span><br><span class="line">            <span class="type">int</span> off = i * slot-&gt;bitmap.pitch + j / <span class="number">8</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (slot-&gt;bitmap.buffer[off] &amp; (<span class="number">0xC0</span> &gt;&gt; (j % <span class="number">8</span>))) &#123;</span><br><span class="line">                <span class="type">int</span> r = pos.y - (rows - <span class="number">1</span> - i);</span><br><span class="line">                <span class="type">int</span> c = pos.x + j;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (r &gt;= <span class="number">0</span> &amp;&amp; r &lt; img.rows &amp;&amp; c &gt;= <span class="number">0</span> &amp;&amp; c &lt; img.cols) &#123;</span><br><span class="line">                    cv::Vec3b pixel = img.<span class="built_in">at</span>&lt;cv::Vec3b&gt;(cv::<span class="built_in">Point</span>(c, r));</span><br><span class="line">                    cv::Scalar scalar = cv::<span class="built_in">Scalar</span>(pixel.val[<span class="number">0</span>], pixel.val[<span class="number">1</span>], pixel.val[<span class="number">2</span>]);</span><br><span class="line"></span><br><span class="line">                    <span class="comment">// 进行色彩融合</span></span><br><span class="line">                    <span class="type">float</span> p = m_fontDiaphaneity;</span><br><span class="line">                    <span class="keyword">for</span> (<span class="type">int</span> k = <span class="number">0</span>; k &lt; <span class="number">4</span>; ++k) &#123;</span><br><span class="line">                        scalar.val[k] = scalar.val[k] * (<span class="number">1</span> - p) + color.val[k] * p;</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                    img.<span class="built_in">at</span>&lt;cv::Vec3b&gt;(cv::<span class="built_in">Point</span>(c, r))[<span class="number">0</span>] = (<span class="type">unsigned</span> <span class="type">char</span>)(scalar.val[<span class="number">0</span>]);</span><br><span class="line">                    img.<span class="built_in">at</span>&lt;cv::Vec3b&gt;(cv::<span class="built_in">Point</span>(c, r))[<span class="number">1</span>] = (<span class="type">unsigned</span> <span class="type">char</span>)(scalar.val[<span class="number">1</span>]);</span><br><span class="line">                    img.<span class="built_in">at</span>&lt;cv::Vec3b&gt;(cv::<span class="built_in">Point</span>(c, r))[<span class="number">2</span>] = (<span class="type">unsigned</span> <span class="type">char</span>)(scalar.val[<span class="number">2</span>]);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 修改下一个字的输出位置</span></span><br><span class="line">    <span class="type">double</span> space = m_fontSize.val[<span class="number">0</span>] * m_fontSize.val[<span class="number">1</span>];</span><br><span class="line">    <span class="type">double</span> sep = m_fontSize.val[<span class="number">0</span>] * m_fontSize.val[<span class="number">2</span>];</span><br><span class="line"></span><br><span class="line">    pos.x += (<span class="type">int</span>)((cols ? cols : space) + sep);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>应用：</p>
+<figure class="highlight arduino"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    utils::logging::<span class="built_in">setLogLevel</span>(utils::logging::LOG_LEVEL_ERROR);<span class="comment">//只输出错误日志</span></span><br><span class="line">    Mat img = <span class="built_in">imread</span>(<span class="string">&quot;C:/Users/ACER/Pictures/Saved Pictures/SmartHome.jpg&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="function">CvxText <span class="title">text</span><span class="params">(<span class="string">&quot;../simhei.ttf&quot;</span>)</span></span>; <span class="comment">//指定字体</span></span><br><span class="line">    <span class="comment">//CvxText text(&quot;../msyh.ttc&quot;); //指定字体</span></span><br><span class="line"></span><br><span class="line">    <span class="type">const</span> <span class="type">char</span>* msg = <span class="string">&quot;jiabao佳宝&quot;</span>;</span><br><span class="line">    <span class="type">float</span> p = <span class="number">0.5</span>;</span><br><span class="line">    text.<span class="built_in">setFont</span>(<span class="literal">NULL</span>, <span class="literal">NULL</span>, <span class="literal">NULL</span>, &amp;p);   <span class="comment">// 透明处理</span></span><br><span class="line">    text.<span class="built_in">putText</span>(img, msg, <span class="built_in">Point</span>(<span class="number">30</span>, <span class="number">30</span>), <span class="built_in">CV_RGB</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>));</span><br><span class="line">    <span class="built_in">imshow</span>(<span class="string">&quot;test&quot;</span>, img);</span><br><span class="line">    cv::<span class="built_in">waitKey</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>深度学习</category>
@@ -1809,6 +1765,40 @@ parser.add_argument(&#39;--data&#39;, type=str, default=&#39;data/mask.yaml&#39;
       <categories>
         <category>深度学习</category>
         <category>OpenCV</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>libtorch使用cuda加速</title>
+    <url>/posts/b31a.html</url>
+    <content><![CDATA[<p>libtorch的lib挺多的：</p>
+<span id="more"></span>
+
+<p>opencv_world460d.lib</p>
+<p>asmjit.lib</p>
+<p>c10.lib</p>
+<p>c10_cuda.lib</p>
+<p>caffe2_nvrtc.lib</p>
+<p>clog.lib</p>
+<p>cpuinfo.lib</p>
+<p>dnnl.lib</p>
+<p>fbgemm.lib</p>
+<p>kineto.lib</p>
+<p>libprotobuf.lib</p>
+<p>libprotobuf-lite.lib</p>
+<p>libprotoc.lib</p>
+<p>pthreadpool.lib</p>
+<p>torch.lib</p>
+<p>torch_cpu.lib</p>
+<p>torch_cuda.lib</p>
+<p>torch_cuda_cpp.lib</p>
+<p>torch_cuda_cu.lib</p>
+<p>XNNPACK.lib</p>
+<p>需要加神奇的一句：</p>
+<p>&#x2F;INCLUDE:?warp_size@cuda@at@@YAHXZ</p>
+]]></content>
+      <categories>
+        <category>深度学习</category>
+        <category>边缘计算</category>
       </categories>
   </entry>
   <entry>
@@ -1854,40 +1844,6 @@ parser.add_argument(&#39;--data&#39;, type=str, default=&#39;data/mask.yaml&#39;
 
 <p><img src="https://s2.loli.net/2024/09/21/VInOgGfad3DqAoL.png"></p>
 <p>查看npu使用率：cat &#x2F;sys&#x2F;kernel&#x2F;debug&#x2F;rknpu&#x2F;load</p>
-]]></content>
-      <categories>
-        <category>深度学习</category>
-        <category>边缘计算</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>libtorch使用cuda加速</title>
-    <url>/posts/b31a.html</url>
-    <content><![CDATA[<p>libtorch的lib挺多的：</p>
-<span id="more"></span>
-
-<p>opencv_world460d.lib</p>
-<p>asmjit.lib</p>
-<p>c10.lib</p>
-<p>c10_cuda.lib</p>
-<p>caffe2_nvrtc.lib</p>
-<p>clog.lib</p>
-<p>cpuinfo.lib</p>
-<p>dnnl.lib</p>
-<p>fbgemm.lib</p>
-<p>kineto.lib</p>
-<p>libprotobuf.lib</p>
-<p>libprotobuf-lite.lib</p>
-<p>libprotoc.lib</p>
-<p>pthreadpool.lib</p>
-<p>torch.lib</p>
-<p>torch_cpu.lib</p>
-<p>torch_cuda.lib</p>
-<p>torch_cuda_cpp.lib</p>
-<p>torch_cuda_cu.lib</p>
-<p>XNNPACK.lib</p>
-<p>需要加神奇的一句：</p>
-<p>&#x2F;INCLUDE:?warp_size@cuda@at@@YAHXZ</p>
 ]]></content>
       <categories>
         <category>深度学习</category>
@@ -2084,6 +2040,40 @@ parser.add_argument(&#39;--data&#39;, type=str, default=&#39;data/mask.yaml&#39;
       </categories>
   </entry>
   <entry>
+    <title>MicroPy——EC600</title>
+    <url>/posts/1eea.html</url>
+    <content><![CDATA[<ol>
+<li><p>使用thonny开发，连不上板子，出现诸如：\</p>
+<span id="more"></span>
+<p>line 1708, in event_generate     handler(event)</p>
+<p>“\thonny\shell.py”, line 433, in _handle_program_output     self._update_visible_io(None)</p>
+<p>解决方案：<a href="https://bbs.01studio.cc/thread/425">解决py4G-EC600无法连接Thonny (01studio.cc)</a></p>
+</li>
+<li><p>定时器回调如果需要参数：</p>
+<p>与c不一样，c的参数不会写在括号内</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> machine <span class="keyword">import</span> Timer</span><br><span class="line"><span class="keyword">import</span> utime</span><br><span class="line">timer0 = Timer(Timer.Timer0)</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fun</span>(<span class="params">timer0,i</span>):</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;timeout&quot;</span>)</span><br><span class="line">  <span class="built_in">print</span>(i)</span><br><span class="line">  timer0.stop()</span><br><span class="line">timer0.start(period=<span class="number">500</span>,mode=Timer.ONE_SHOT,callback=fun(timer0,<span class="number">0</span>))</span><br><span class="line">utime.sleep_ms(<span class="number">3000</span>)</span><br></pre></td></tr></table></figure></li>
+<li><p>定时器回调里面发布mqtt消息：</p>
+<p>现象是我在一个PERIODIC 定时器里面再嵌套ONE_SHOT定时器，在ONE_SHOT定时器里面发布mqtt消息发送不出去，刚开始以为是定时器回调里面不能进行mqtt消息发布，或者是嵌套的太多，又或者是对栈大小有限制。</p>
+<ul>
+<li>PERIODIC 可以</li>
+<li>ONE_SHOT 可以</li>
+<li>PERIODIC 定时器里面再嵌套ONE_SHOT 可以</li>
+</ul>
+<p>结论：最后把疑惑一一排除后，发现是需要在主线程里加延时函数</p>
+</li>
+<li><p>定时器单次触发需要在回调函数里面调用stop才能在下次使用的时候触发</p>
+</li>
+<li><p>从MQTT返回来的消息类型都是字节流bytes，如果与字符串相比较需要解码</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#返回的topic打印：b&#x27;/863347063146022/01/user/get&#x27;</span></span><br><span class="line"><span class="keyword">if</span> topic.decode()==TOPIC_GET:  <span class="comment">#decode默认解码为utf-8</span></span><br><span class="line">  <span class="keyword">pass</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>嵌入式</category>
+        <category>项目</category>
+        <category>EC600</category>
+      </categories>
+  </entry>
+  <entry>
     <title>实现功能</title>
     <url>/posts/c888.html</url>
     <content><![CDATA[<p>ec600给单片机（用电脑串口测试）发：</p>
@@ -2099,6 +2089,26 @@ parser.add_argument(&#39;--data&#39;, type=str, default=&#39;data/mask.yaml&#39;
         <category>嵌入式</category>
         <category>项目</category>
         <category>EC600</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>T9与T8通讯协议</title>
+    <url>/posts/3186.html</url>
+    <content><![CDATA[<h1 id="一、手机端界面显示："><a href="#一、手机端界面显示：" class="headerlink" title="一、手机端界面显示："></a>一、手机端界面显示：</h1><span id="more"></span>
+
+
+
+<p>T8上报的数据：  左右一对光敏的数值、T8状态位</p>
+<p>下发给T8的命令：左转、右转、复位</p>
+<p>现在的界面：</p>
+<p><img src="https://s2.loli.net/2024/09/21/tO9spTGdl7j8DNb.jpg"></p>
+<h1 id="二、数据流"><a href="#二、数据流" class="headerlink" title="二、数据流"></a>二、数据流</h1><p>1、数据流向：</p>
+<p><img src="https://s2.loli.net/2024/09/21/onVe3IbKLUgt7Hi.png"></p>
+]]></content>
+      <categories>
+        <category>嵌入式</category>
+        <category>项目</category>
+        <category>T9</category>
       </categories>
   </entry>
   <entry>
@@ -2157,26 +2167,6 @@ parser.add_argument(&#39;--data&#39;, type=str, default=&#39;data/mask.yaml&#39;
       </categories>
   </entry>
   <entry>
-    <title>T9与T8通讯协议</title>
-    <url>/posts/3186.html</url>
-    <content><![CDATA[<h1 id="一、手机端界面显示："><a href="#一、手机端界面显示：" class="headerlink" title="一、手机端界面显示："></a>一、手机端界面显示：</h1><span id="more"></span>
-
-
-
-<p>T8上报的数据：  左右一对光敏的数值、T8状态位</p>
-<p>下发给T8的命令：左转、右转、复位</p>
-<p>现在的界面：</p>
-<p><img src="https://s2.loli.net/2024/09/21/tO9spTGdl7j8DNb.jpg"></p>
-<h1 id="二、数据流"><a href="#二、数据流" class="headerlink" title="二、数据流"></a>二、数据流</h1><p>1、数据流向：</p>
-<p><img src="https://s2.loli.net/2024/09/21/onVe3IbKLUgt7Hi.png"></p>
-]]></content>
-      <categories>
-        <category>嵌入式</category>
-        <category>项目</category>
-        <category>T9</category>
-      </categories>
-  </entry>
-  <entry>
     <title>T9工程说明性文档</title>
     <url>/posts/9482.html</url>
     <content><![CDATA[<h1 id="T9工程说明性文档"><a href="#T9工程说明性文档" class="headerlink" title="T9工程说明性文档"></a>T9工程说明性文档</h1><span id="more"></span>
@@ -2218,40 +2208,6 @@ parser.add_argument(&#39;--data&#39;, type=str, default=&#39;data/mask.yaml&#39;
         <category>嵌入式</category>
         <category>项目</category>
         <category>T9</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>MicroPy——EC600</title>
-    <url>/posts/1eea.html</url>
-    <content><![CDATA[<ol>
-<li><p>使用thonny开发，连不上板子，出现诸如：\</p>
-<span id="more"></span>
-<p>line 1708, in event_generate     handler(event)</p>
-<p>“\thonny\shell.py”, line 433, in _handle_program_output     self._update_visible_io(None)</p>
-<p>解决方案：<a href="https://bbs.01studio.cc/thread/425">解决py4G-EC600无法连接Thonny (01studio.cc)</a></p>
-</li>
-<li><p>定时器回调如果需要参数：</p>
-<p>与c不一样，c的参数不会写在括号内</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> machine <span class="keyword">import</span> Timer</span><br><span class="line"><span class="keyword">import</span> utime</span><br><span class="line">timer0 = Timer(Timer.Timer0)</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fun</span>(<span class="params">timer0,i</span>):</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;timeout&quot;</span>)</span><br><span class="line">  <span class="built_in">print</span>(i)</span><br><span class="line">  timer0.stop()</span><br><span class="line">timer0.start(period=<span class="number">500</span>,mode=Timer.ONE_SHOT,callback=fun(timer0,<span class="number">0</span>))</span><br><span class="line">utime.sleep_ms(<span class="number">3000</span>)</span><br></pre></td></tr></table></figure></li>
-<li><p>定时器回调里面发布mqtt消息：</p>
-<p>现象是我在一个PERIODIC 定时器里面再嵌套ONE_SHOT定时器，在ONE_SHOT定时器里面发布mqtt消息发送不出去，刚开始以为是定时器回调里面不能进行mqtt消息发布，或者是嵌套的太多，又或者是对栈大小有限制。</p>
-<ul>
-<li>PERIODIC 可以</li>
-<li>ONE_SHOT 可以</li>
-<li>PERIODIC 定时器里面再嵌套ONE_SHOT 可以</li>
-</ul>
-<p>结论：最后把疑惑一一排除后，发现是需要在主线程里加延时函数</p>
-</li>
-<li><p>定时器单次触发需要在回调函数里面调用stop才能在下次使用的时候触发</p>
-</li>
-<li><p>从MQTT返回来的消息类型都是字节流bytes，如果与字符串相比较需要解码</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#返回的topic打印：b&#x27;/863347063146022/01/user/get&#x27;</span></span><br><span class="line"><span class="keyword">if</span> topic.decode()==TOPIC_GET:  <span class="comment">#decode默认解码为utf-8</span></span><br><span class="line">  <span class="keyword">pass</span></span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <categories>
-        <category>嵌入式</category>
-        <category>项目</category>
-        <category>EC600</category>
       </categories>
   </entry>
   <entry>
@@ -2297,6 +2253,50 @@ parser.add_argument(&#39;--data&#39;, type=str, default=&#39;data/mask.yaml&#39;
         <category>嵌入式</category>
         <category>项目</category>
         <category>T9</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>opencv注意事项</title>
+    <url>/posts/3a95.html</url>
+    <content><![CDATA[<p>一、不让显示一堆无用的调试信息</p>
+<span id="more"></span>
+
+<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;opencv2/core/utils/logger.hpp&gt;</span>	//调试相关</span></span><br><span class="line"><span class="symbol">utils:</span>:logging::setLogLevel(utils::logging::LOG_LEVEL_ERROR)<span class="punctuation">;</span><span class="comment">//只输出错误日志</span></span><br></pre></td></tr></table></figure>
+
+<p>二、在vs中添加opencv环境</p>
+<p>1、配置包含目录</p>
+<p><img src="https://s2.loli.net/2024/09/21/H3gd79IDXtyuQiG.png"></p>
+<p>2、配置库目录</p>
+<p><img src="https://s2.loli.net/2024/09/21/p3KtcI9FT5Lwshk.png"></p>
+<p>3、配置附加依赖项</p>
+<p><img src="https://s2.loli.net/2024/09/21/UG9jmL2eExKXkhz.png"></p>
+<p>4、把以上配置保存，形成一个配置文件，以后的新项目直接添加配置文件就行了</p>
+<ul>
+<li>新建一个项目属性表，在新项目属性表里面配置上面的配置</li>
+</ul>
+<p><img src="https://s2.loli.net/2024/09/21/ZrIPWxBwlnMq423.png"></p>
+<p><img src="https://s2.loli.net/2024/09/21/tQE7ykXOWi6SYDb.png"></p>
+<p>切记，要在这个新建的属性上面进行上面介绍的配置</p>
+<p>配置完之后，打开看一下这个配置文件的内容：</p>
+<p><img src="https://s2.loli.net/2024/09/21/tvQWmrKaiEgMnud.png"></p>
+<ul>
+<li>新项目添加现成的配置文件：</li>
+</ul>
+<p>最好把配置文件也复制一份到项目下，防止原工程删除导致配置文件找不到。也可以添加多个配置文件，是可以叠加的。</p>
+<p><img src="https://s2.loli.net/2024/09/21/mdJPLq1UhpC72Kb.png"></p>
+<p>三、传递参数</p>
+<p>这样直接&#x3D;，只是将Mat这个结构体信息拷贝了一份，并没有拷贝指向图像的内存信息，操作仍然在同一内存中进行的，所以原图，也就是实参发生了改变。调用fun 前与后的img与img1是一样的，显示的图片也是带字体的。</p>
+<figure class="highlight arduino"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">fun</span><span class="params">(Mat img)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Mat img1 = img;</span><br><span class="line">    <span class="function">CvxText <span class="title">text</span><span class="params">(<span class="string">&quot;../simhei.ttf&quot;</span>)</span></span>; <span class="comment">// 指定字体</span></span><br><span class="line">    <span class="type">const</span> <span class="type">char</span> *msg = <span class="string">&quot;jiabao佳宝&quot;</span>;</span><br><span class="line">    <span class="type">float</span> p = <span class="number">1</span>;</span><br><span class="line">    text.<span class="built_in">setFont</span>(<span class="literal">NULL</span>, <span class="literal">NULL</span>, <span class="literal">NULL</span>, &amp;p); <span class="comment">// 透明处理</span></span><br><span class="line">    text.<span class="built_in">putText</span>(img1, msg, <span class="built_in">Point</span>(<span class="number">30</span>, <span class="number">30</span>), <span class="built_in">CV_RGB</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>));</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    utils::logging::<span class="built_in">setLogLevel</span>(utils::logging::LOG_LEVEL_ERROR); <span class="comment">// 只输出错误日志</span></span><br><span class="line">    Mat img = <span class="built_in">imread</span>(<span class="string">&quot;C:/Users/ACER/Pictures/Saved Pictures/SmartHome.jpg&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">fun</span>(img);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">imshow</span>(<span class="string">&quot;test&quot;</span>, img);</span><br><span class="line"></span><br><span class="line">    cv::<span class="built_in">waitKey</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果不想改变原图，就需要这样：</p>
+<figure class="highlight stata"><table><tr><td class="code"><pre><span class="line">	<span class="comment">//深拷贝</span></span><br><span class="line"> </span><br><span class="line"> <span class="comment">//方法1</span></span><br><span class="line">	<span class="keyword">Mat</span> img1 = img.clone();</span><br><span class="line"></span><br><span class="line">	<span class="comment">//方法二</span></span><br><span class="line">	<span class="keyword">Mat</span> img1;</span><br><span class="line">img.copyTo(img1);</span><br></pre></td></tr></table></figure>
+
+<p>CmakeList:</p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="title">set</span><span class="params">(OpenCV_DIR  E:/Program/VScode/opencv/opencv_4.<span class="number">6.0</span>/install/x64/mingw/lib)</span></span></span><br><span class="line"><span class="function"><span class="title">find_package</span><span class="params">(OpenCV REQUIRED)</span></span></span><br><span class="line">#添加头文件</span><br><span class="line"><span class="function"><span class="title">include_directories</span><span class="params">($&#123;OpenCV_INCLUDE_DIRS&#125;)</span></span></span><br><span class="line">#链接库文件</span><br><span class="line"><span class="function"><span class="title">target_link_libraries</span><span class="params">(test1  $&#123;OpenCV_LIBS&#125;)</span></span></span><br><span class="line"><span class="function"><span class="title">message</span><span class="params">(<span class="string">&quot;OpenCV_INCLUDE_DIRS:&quot;</span> ($&#123;OpenCV_INCLUDE_DIRS&#125;)</span></span>)</span><br><span class="line"><span class="function"><span class="title">message</span><span class="params">(<span class="string">&quot;OpenCV_LIBS:&quot;</span> ($&#123;OpenCV_LIBS&#125;)</span></span>)</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>深度学习</category>
+        <category>OpenCV</category>
       </categories>
   </entry>
 </search>
