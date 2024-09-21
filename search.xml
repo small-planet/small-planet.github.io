@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>操作系统</title>
-    <url>/posts/0.html</url>
-    <content><![CDATA[<p><img src="https://gitee.com/samll_planet/drawing-bed/raw/master/img/20230904181505.png"></p>
-]]></content>
-      <categories>
-        <category>测试</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/posts/3eeb.html</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -30,9 +21,21 @@
 ]]></content>
   </entry>
   <entry>
+    <title>操作系统</title>
+    <url>/posts/437.html</url>
+    <content><![CDATA[<p><img src="https://gitee.com/samll_planet/drawing-bed/raw/master/img/20230904181505.png"></p>
+<span id="more"></span>
+]]></content>
+      <categories>
+        <category>测试</category>
+      </categories>
+  </entry>
+  <entry>
     <title>网络</title>
-    <url>/posts/%E7%BD%91%E7%BB%9C.html</url>
-    <content><![CDATA[<p><img src="https://gitee.com/samll_planet/drawing-bed/raw/master/img/20230922192641.png"></p>
+    <url>/posts/9e95.html</url>
+    <content><![CDATA[<span id="more"></span>
+
+<p><img src="https://gitee.com/samll_planet/drawing-bed/raw/master/img/20230922192641.png"></p>
 <p><img src="https://gitee.com/samll_planet/drawing-bed/raw/master/img/20230922204553.png"></p>
 <p><img src="https://gitee.com/samll_planet/drawing-bed/raw/master/img/20230922204711.png"></p>
 <p>成长之路：</p>
@@ -54,9 +57,54 @@
       </categories>
   </entry>
   <entry>
+    <title>配置Termux</title>
+    <url>/posts/e637.html</url>
+    <content><![CDATA[<h1 id="去GitHub下载最新的app"><a href="#去GitHub下载最新的app" class="headerlink" title="去GitHub下载最新的app"></a>去GitHub下载最新的app</h1><span id="more"></span>
+
+
+
+<h2 id="查看手机v7还是v8架构"><a href="#查看手机v7还是v8架构" class="headerlink" title="查看手机v7还是v8架构"></a>查看手机v7还是v8架构</h2><h1 id="换国内源"><a href="#换国内源" class="headerlink" title="换国内源"></a>换国内源</h1><p><a href="https://mirrors.tuna.tsinghua.edu.cn/help/termux/">termux | 镜像站使用帮助 | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror</a>下的命令行替换</p>
+<h1 id="安装ssh"><a href="#安装ssh" class="headerlink" title="安装ssh"></a>安装ssh</h1><p>1、ssh 客户端向 ssh 服务器端发送连接请求</p>
+<p>2、ssh 服务器端发送一个随机的信息</p>
+<p>3、ssh 客户端使用本地的私钥对服务器端发送过来的信息进行加密</p>
+<p>4、ssh 客户端向服务器端发送加密过后的信息</p>
+<p>5、ssh 服务器端使用公钥对该信息进行解密</p>
+<p>6、若解密之后的信息和之前发送的信息匹配，则信任客户端，否则不信任。</p>
+<p>把客户端的公钥给服务器：</p>
+<p>ssh-copy-id u0a_362@192.168.150.212 -p 8022</p>
+<p>vscode试了不行</p>
+<h1 id="root"><a href="#root" class="headerlink" title="root"></a>root</h1><p>&#x9;这里的root只是termux有</p>
+<ol>
+<li>pkg install proot</li>
+<li>进入root：termux-chroot</li>
+<li>退出root：exit</li>
+</ol>
+<h1 id="查看端口占用"><a href="#查看端口占用" class="headerlink" title="查看端口占用"></a>查看端口占用</h1><p>Andorid 10 以下的版本是可以正常使用 netstat 命令</p>
+<figure class="highlight crystal"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看所有端口</span></span><br><span class="line">~ <span class="variable">$ </span>netstat -an</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 查看8022端口的开放情况</span></span><br><span class="line">~ <span class="variable">$ </span>netstat -an | grep <span class="number">8022</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>Andorid 10 及以上版本的 Termux 下无法正常使用 netstat -an 命令</p>
+<pre><code># 安装nmap端口扫描神器
+~ $ pkg install nmap
+ 
+# 扫描本地端口
+~ $ nmap 127.0.0.1
+</code></pre>
+<h1 id="自启动"><a href="#自启动" class="headerlink" title="自启动"></a>自启动</h1><p>打开Termux会先启动<code>~/.bashrc</code>	 ，在里面编写自启动脚本</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;用户：&quot;</span>$(<span class="built_in">whoami</span>)</span><br><span class="line"><span class="keyword">if</span> pgrep -x <span class="string">&quot;sshd&quot;</span> &gt;/dev/null</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;sshd运行中...&quot;</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line"><span class="built_in">nohup</span> sshd &amp;</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;自动启动sshd&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"><span class="keyword">if</span> pgrep -x <span class="string">&quot;alist&quot;</span> &gt;/dev/null</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;alist运行中...&quot;</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line"><span class="built_in">nohup</span> alist server &amp;</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;自动启动alist&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+
+<p><code>nohup &amp;</code> 为后台启动，日志也不再当前终端显示，而是在<code>nohup.out</code> 文件中</p>
+]]></content>
+      <categories>
+        <category>测试</category>
+        <category>test1</category>
+      </categories>
+  </entry>
+  <entry>
     <title>配置记录</title>
     <url>/posts/d5a2.html</url>
     <content><![CDATA[<p>gitee令牌：（图床）</p>
+<span id="more"></span>
+
 <p>1bc526bc92f2c9070bea0f3161353667</p>
 <p>代码片段：</p>
 <p><a href="https://gitee.com/samll_planet/codes/dh1g8cy43w9nker7mut5283">vscode配置插件云同步 - 代码片段 - Gitee.com</a></p>
@@ -79,7 +127,7 @@
 <p>添加文件头注释：ctrl+alt+i</p>
 <p>添加函数注释：ctrl+alt+t</p>
 <p>gmail：</p>
-<p>mail;password;submail;passwordmail: <a href="mailto:&#98;&#x61;&#110;&#115;&#x68;&#x65;&#101;&#99;&#x72;&#117;&#115;&#x68;&#x65;&#x72;&#x33;&#x32;&#x31;&#x40;&#103;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#x6f;&#109;">&#98;&#x61;&#110;&#115;&#x68;&#x65;&#101;&#99;&#x72;&#117;&#115;&#x68;&#x65;&#x72;&#x33;&#x32;&#x31;&#x40;&#103;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#x6f;&#109;</a>:QOGEpU6%5&amp;3:<a href="http://bansheecrusher32199@spam4.me/">bansheecrusher32199@spam4.me</a></p>
+<p>mail;password;submail;passwordmail: <a href="mailto:&#x62;&#x61;&#110;&#115;&#x68;&#101;&#x65;&#x63;&#x72;&#x75;&#x73;&#104;&#x65;&#x72;&#x33;&#50;&#x31;&#x40;&#103;&#x6d;&#97;&#105;&#x6c;&#46;&#99;&#111;&#109;">&#x62;&#x61;&#110;&#115;&#x68;&#101;&#x65;&#x63;&#x72;&#x75;&#x73;&#104;&#x65;&#x72;&#x33;&#50;&#x31;&#x40;&#103;&#x6d;&#97;&#105;&#x6c;&#46;&#99;&#111;&#109;</a>:QOGEpU6%5&amp;3:<a href="http://bansheecrusher32199@spam4.me/">bansheecrusher32199@spam4.me</a></p>
 <p><a href="http://smallplanet7240@gmail.com/"><strong>smallplanet7240@gmail.com</strong></a></p>
 <p><strong>123456sji</strong></p>
 <p>st:</p>
