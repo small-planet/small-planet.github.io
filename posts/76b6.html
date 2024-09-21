@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+<meta name="referrer" content="no-referrer" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"small-planet.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="板子：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="边缘计算调试记录">
+<meta property="og:url" content="https://small-planet.github.io/posts/76b6.html">
+<meta property="og:site_name" content="鼎芯码元">
+<meta property="og:description" content="板子：">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2024/09/21/Vs4QgEmqAoPUcTI.png">
+<meta property="og:image" content="https://s2.loli.net/2024/09/21/OgNiHRcdu1oSyCt.png">
+<meta property="og:image" content="https://s2.loli.net/2024/09/21/i3bvIBnzRypLdqo.png">
+<meta property="og:image" content="https://s2.loli.net/2024/09/21/GaRWt2nKE7h83lL.png">
+<meta property="og:image" content="https://s2.loli.net/2024/09/21/tTIaRP1XeDbgEvU.png">
+<meta property="og:image" content="https://s2.loli.net/2024/09/21/IRtVg4Pq5D23E8C.png">
+<meta property="og:image" content="https://s2.loli.net/2024/09/21/P4BW9RdVZ1UaFtD.png">
+<meta property="og:image" content="https://s2.loli.net/2024/09/21/mMRzfloC39utQLv.png">
+<meta property="og:image" content="https://s2.loli.net/2024/09/21/kQMV9hKHSUZ3W7j.png">
+<meta property="og:image" content="https://s2.loli.net/2024/09/21/qDuO29wNrTtGkHi.png">
+<meta property="og:image" content="https://s2.loli.net/2024/09/21/jAXuZFhaTgSLJzq.png">
+<meta property="og:image" content="https://s2.loli.net/2024/09/21/HuBKvLmlksMqe5R.png">
+<meta property="og:image" content="https://s2.loli.net/2024/09/21/2ADcZnCirdeqLEz.png">
+<meta property="og:image" content="https://small-planet.github.io/youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCE09a24080d18fe357e21650625053fde2%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://s2.loli.net/2024/09/21/jqQxgozai8NwLSv.png">
+<meta property="og:image" content="https://small-planet.github.io/youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCE47809f090adf7e71119cbc4986b71769%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://small-planet.github.io/youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCE223aa9ee724e51f206c70c431de433a0%E6%88%AA%E5%9B%BE.png">
+<meta property="article:published_time" content="2024-09-21T07:20:28.523Z">
+<meta property="article:modified_time" content="2024-09-21T07:23:40.478Z">
+<meta property="article:author" content="small_planet">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2024/09/21/Vs4QgEmqAoPUcTI.png">
+
+<link rel="canonical" href="https://small-planet.github.io/posts/76b6.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>边缘计算调试记录 | 鼎芯码元</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">鼎芯码元</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">盼一树花开，等一个人来</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://small-planet.github.io/posts/76b6.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo.png">
+      <meta itemprop="name" content="small_planet">
+      <meta itemprop="description" content="代码狂魔">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鼎芯码元">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          边缘计算调试记录
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-09-21 15:20:28 / 修改时间：15:23:40" itemprop="dateCreated datePublished" datetime="2024-09-21T15:20:28+08:00">2024-09-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">深度学习</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/" itemprop="url" rel="index"><span itemprop="name">边缘计算</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/76b6.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/76b6.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.7k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>板子：</p>
+<span id="more"></span>
+
+<p>root</p>
+<p>linaro</p>
+<p>EMQX 服务器：</p>
+<p><a target="_blank" rel="noopener" href="https://emqx.changyg.top:23700/#/dashboard/overview">https://emqx.changyg.top:23700/#/dashboard/overview</a></p>
+<p>admin</p>
+<p>ctkj2023</p>
+<p>服务器地址：mqtt::&#x2F;&#x2F;emqx.changyg.top</p>
+<p>port:23622</p>
+<p>编译好的build，执行：</p>
+<p>1、cd到build</p>
+<p>2、cmake ..</p>
+<p>3、make</p>
+<p>4、</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">   export <span class="variable constant_">LD_LIBRARY_PATH</span>=<span class="variable">$LD_LIBRARY_PATH</span><span class="symbol">:/root/workspace/picasso_sdk_test/importc/picassolitesdk/lib</span></span><br><span class="line">   export <span class="variable constant_">PICASSO_CONFIG_PATH</span>=<span class="regexp">/root/workspace</span><span class="regexp">/picasso_sdk_test/importc</span><span class="regexp">/picassolitesdk/lib</span></span><br><span class="line"></span><br><span class="line">export <span class="variable constant_">LD_LIBRARY_PATH</span>=<span class="variable">$LD_LIBRARY_PATH</span><span class="symbol">:/root/workspace/picasso_sdk/importc/picassolitesdk/lib</span></span><br><span class="line">   export <span class="variable constant_">PICASSO_CONFIG_PATH</span>=<span class="regexp">/root/workspace</span><span class="regexp">/picasso_sdk/importc</span><span class="regexp">/picassolitesdk/lib</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>5、 .&#x2F;ctest ..&#x2F;..&#x2F;image</p>
+<p><img src="https://s2.loli.net/2024/09/21/Vs4QgEmqAoPUcTI.png"></p>
+<p><img src="https://s2.loli.net/2024/09/21/OgNiHRcdu1oSyCt.png"></p>
+<p>加入视频流的：</p>
+<p><img src="https://s2.loli.net/2024/09/21/i3bvIBnzRypLdqo.png"></p>
+<p><img src="https://s2.loli.net/2024/09/21/GaRWt2nKE7h83lL.png"></p>
+<p>出现卡流的情况，明天读个视频试试</p>
+<p><img src="https://s2.loli.net/2024/09/21/tTIaRP1XeDbgEvU.png"></p>
+<p><img src="https://s2.loli.net/2024/09/21/IRtVg4Pq5D23E8C.png"></p>
+<p><img src="https://s2.loli.net/2024/09/21/P4BW9RdVZ1UaFtD.png"></p>
+<p>去掉所有推理的部分</p>
+<p><img src="https://s2.loli.net/2024/09/21/mMRzfloC39utQLv.png"></p>
+<p><img src="https://s2.loli.net/2024/09/21/kQMV9hKHSUZ3W7j.png"></p>
+<p>差不多能定位到错误所在了</p>
+<p><img src="https://s2.loli.net/2024/09/21/qDuO29wNrTtGkHi.png"></p>
+<p>车牌检测：</p>
+<p><img src="https://s2.loli.net/2024/09/21/jAXuZFhaTgSLJzq.png"></p>
+<p>22&#x2F;12&#x2F;8	（换过so后已解决）</p>
+<p><img src="https://s2.loli.net/2024/09/21/HuBKvLmlksMqe5R.png"></p>
+<p>失败res</p>
+<p>res: {“code”:200,”data”:[],”result”:”failed”}</p>
+<p>价值至上：研发要站到客户的立场上去思考问题，做客户满意的产品，把整个团队以及整个公司的智慧结晶都赋予给研发的产品，用户满意了，认可了我们产品的价值，也就是认可了我们个人的价值，用户的满意也会让我们更加有热情投入到新的产品研发上，形成正反馈。</p>
+<p>专业高效：我们是一只专业的团队，有着专业的设备和科研条件，在平时的研发中也要做到专业。专业高效离不开一套标准的开发流程， 我们目前都在制定。</p>
+<p>持续超越：我们做的东西都不可能是一成不变的，特别像我们电子行业，产品更新换代快， 我们更要保持学习，肯专研，一代比一代做的好。</p>
+<p>实事求是：做人做事都要保证实事求是的作风，不弄虚作假，严谨做产品。</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">;车牌识别</span><br><span class="line">[server]</span><br><span class="line"><span class="attribute">server_list</span>=vehicle_plate_server;</span><br><span class="line">[server_all]</span><br><span class="line"><span class="attribute">server_list_all</span>=vehicle_plate_server;muck_truck_detect_server;street_violate_detect_server;vehicle_plate_server;muck_truck_plate_server</span><br><span class="line">[device]</span><br><span class="line"><span class="attribute">dv_type</span>=RK3399pro;</span><br><span class="line">[licence]</span><br><span class="line"><span class="attribute">serial_num</span>=ncs0ggvgB7doaQj80lyWSauZR4gl8l0g1w5WAbRB+U0GSvN0hoECj2</span><br><span class="line">HSeXdDBJ0Jl7wOhlyfzAuf8HmwMjc6T9N96Kwi0TU6HB24/kcIdaXoqi3tGflkK7bH1AN0</span><br><span class="line">5vF5w1jIhIo3CcLdolGCNCMMlPwSjSiuOHK6HUkt7RodTg8sV8xsGfMNBqH5XxOK+CTibUuTfwhuCuo</span><br><span class="line">VJIrMDevbvQTwOyv7TLkPvv/alqfsJdQpHIZVr3LJmls40cNjrikX</span><br><span class="line">data.server_name = <span class="string">&quot;vehicle_plate_server:ALL&quot;</span>;</span><br><span class="line"></span><br><span class="line">;渣土车识别</span><br><span class="line">[server]</span><br><span class="line"><span class="attribute">server_list</span>=muck_truck_detect_server;</span><br><span class="line">[server_all]</span><br><span class="line"><span class="attribute">server_list_all</span>=muck_truck_detect_server;muck_truck_detect_server;street_violate_detect_server;vehicle_plate_server</span><br><span class="line">[device]</span><br><span class="line"><span class="attribute">dv_type</span>=RK3399pro;</span><br><span class="line">[licence]</span><br><span class="line"><span class="attribute">serial_num</span>=ncs0ggvgB7doaQj80lyWSbD49La/TkmPDiV0I54mxWtB7SySjv9d8rPDgO2V1nl80oEBuuG5Ogy4wLDg2M1rHSv</span><br><span class="line">l+kEn8zwbayC84dzwnDTcGaClqioRCXUXD8au0HsPnQfgg/nT5aBMLNtkUDwlFgUCIyZah3XQ6cGzH1NkcqGS18zy5cF+igJRbE</span><br><span class="line">aNXP15AUqMrg/BG7n6/+AjWYGC1iVikIv+91XVPvO+VQdnvYMBBFi2kgv6oE69j05rRVrk</span><br><span class="line">data.server_name = <span class="string">&quot;muck_truck_detect_server:ALL&quot;</span>;</span><br><span class="line"></span><br><span class="line">;渣土车车牌识别</span><br><span class="line">[server]</span><br><span class="line"><span class="attribute">server_list</span>=muck_truck_plate_server;</span><br><span class="line">[server_all]</span><br><span class="line"><span class="attribute">server_list_all</span>=muck_truck_plate_server;muck_truck_detect_server;street_violate_detect_server;vehicle_plate_server;muck_truck_plate_server</span><br><span class="line">[device]</span><br><span class="line"><span class="attribute">dv_type</span>=RK3399pro;</span><br><span class="line">[licence]</span><br><span class="line"><span class="attribute">serial_num</span>=ncs0ggvgB7doaQj80lyWSWHmovw7RshQAJ+63D5FNoaH/3Zp6iInlEDfbXMPJFbT109kv+YBHb3MEuIc</span><br><span class="line">NvDA3DBCTEv4zfRnLsrt55DmpU7O48G3vCYhXdljLvd4JogcQN2wV/XXNUwP6TuwYys1c1hCRpY97UjY7ZpfhyRCDbr</span><br><span class="line">C/bFJVPT2br+YYz9kqbKTHpGlGq3z+li89CjvnZRdas+Org/lMZDNJzQ5qsJCbPt86yVR0HbW10l9amn3DrCr</span><br><span class="line">data.server_name = <span class="string">&quot;muck_truck_plate_server:ALL&quot;</span>;</span><br><span class="line"></span><br><span class="line">;街道破损识别</span><br><span class="line">[server]</span><br><span class="line"><span class="attribute">server_list</span>=street_violate_detect_server;</span><br><span class="line">[server_all]</span><br><span class="line"><span class="attribute">server_list_all</span>=street_violate_detect_server;muck_truck_detect_server;street_violate_detect_server;vehicle_plate_server;muck_truck_plate_server</span><br><span class="line">[device]</span><br><span class="line"><span class="attribute">dv_type</span>=RK3399pro;</span><br><span class="line">[licence]</span><br><span class="line"><span class="attribute">serial_num</span>=ncs0ggvgB7doaQj80lyWSQrxBwKa5FUvvnimRufJiITjuAxLfzu0QgrHvk3pzJbiaxCyJjQs+3mGt+8</span><br><span class="line">FFdJTp7q6k6Hfh4svjDp/9kYxcXEEn+rzNqtJH4eQag0fzE28wM8k8ByGEQmSt5Vo9g6bPEu1IGZyGdCAWinQJ03JTpP</span><br><span class="line">2iy0uqlYl4VuPPbd1zy8kn2VkG0n1/8LDdDHMOqxyGKKjJIoIbkCdJjb24uZA04Udu6tuZ6OYLPM2TNbhuG0h</span><br><span class="line">data.server_name = <span class="string">&quot;street_violate_detect_server:ALL&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>ini文件不能加注释，也不能换行</p>
+<p>linux 下可以使用nc 127.0.0.1 port</p>
+<p>Windows下可以使用telnet 127.0.0.1 port	需要在控制面板程序中打开服务</p>
+<p>libhv开始线程后，主线程不再运行，mqtt线程同理</p>
+<p>单例类内变量的访问问题，都用</p>
+<figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MyMqtt::get_instance<span class="function"><span class="params">()</span>-&gt;</span>类内变量</span><br></pre></td></tr></table></figure>
+
+<p>mqtt失联后，再连接订阅的话题不丢</p>
+<p>.h 与.hpp 都支持定义函数</p>
+<p>join要等待子线程运行完才会接着往下运行</p>
+<p>1、export LD_LIBRARY_PATH&#x3D;$LD_LIBRARY_PATH:&#x2F;root&#x2F;workspace&#x2F;edge_client_app_test&#x2F;importc&#x2F;picassosdk&#x2F;lib</p>
+<p>2、ulimit -s 40960</p>
+<p>3、.&#x2F;client_app</p>
+<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">//version <span class="number">3.11</span><span class="number">.2</span>    +int 没问题</span><br><span class="line">json j;</span><br><span class="line">for (int i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++)</span><br><span class="line">&#123;</span><br><span class="line">    json t;</span><br><span class="line">    t[<span class="string">&quot;name&quot;</span>] = <span class="number">4</span> + i;</span><br><span class="line">    j[i] = t;</span><br><span class="line">&#125;</span><br><span class="line">cout &lt;&lt; j.dump(<span class="number">4</span>) &lt;&lt; endl;</span><br><span class="line">int a = j[<span class="number">0</span>][<span class="string">&quot;name&quot;</span>] + <span class="number">5</span>;</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;a:&quot;</span> &lt;&lt; a + <span class="number">5</span> &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">//version <span class="number">3.9</span><span class="number">.1</span>    +int 有问题</span><br><span class="line">label_info[<span class="number">0</span>][<span class="string">&quot;rect&quot;</span>][<span class="number">0</span>] + <span class="number">5</span></span><br><span class="line">//可以强制类型转换</span><br><span class="line">(int)label_info[<span class="number">0</span>][<span class="string">&quot;rect&quot;</span>][<span class="number">0</span>] + <span class="number">5</span></span><br></pre></td></tr></table></figure>
+
+<p>第一帧会出错：</p>
+<p><img src="https://s2.loli.net/2024/09/21/2ADcZnCirdeqLEz.png"></p>
+<p><img src="/./youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCE09a24080d18fe357e21650625053fde2%E6%88%AA%E5%9B%BE.png"></p>
+<p><img src="https://s2.loli.net/2024/09/21/jqQxgozai8NwLSv.png"></p>
+<p>展厅从rk3588移植到rk3399pro：</p>
+<p>方法一：</p>
+<p>从picasso_sdk_test的rga（包括动态库、头文件）移到工程，报错：</p>
+<p><img src="/./youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCE47809f090adf7e71119cbc4986b71769%E6%88%AA%E5%9B%BE.png"></p>
+<p><img src="/./youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCE223aa9ee724e51f206c70c431de433a0%E6%88%AA%E5%9B%BE.png"></p>
+<p>有几点不一样，格式不一样，rk3399NCHW，u_int8</p>
+<p>process文件里的函数都平替一下</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">机动车服务</span><br><span class="line">[server]</span><br><span class="line"><span class="attribute">server_list</span>=vehicle_server;</span><br><span class="line">[server_all]</span><br><span class="line"><span class="attribute">server_list_all</span>=vehicle_server;muck_truck_detect_server;street_violate_detect_server;vehicle_plate_server;muck_truck_plate_server</span><br><span class="line">[device]</span><br><span class="line"><span class="attribute">dv_type</span>=RK3588;</span><br><span class="line">[licence]</span><br><span class="line"><span class="attribute">serial_num</span>=ncs0ggvgB7doaQj80lyWScuxrojn8Qxx/4ZlGFX49xKGw75IRXHXaI0eAmoFGxqaPPI2Vm1U18dfdGJbrSHTaL6gVS3WSokZFYpwc0pJdUY9nHWwqgfuH42oWyKHgt8fNf7h4pEOj4Fn9Wxq8pwQXZj0m2yepU1+lWaIz7xrzaUgoOajAdYF0OQ2n57VPvYT1yc/kSXPxa+S3MEquPeTTA==</span><br><span class="line">data.server_name = <span class="string">&quot;vehicle_server:ALL&quot;</span>;</span><br><span class="line"></span><br><span class="line">人脸</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/6682.html" rel="prev" title="毕业设计">
+      <i class="fa fa-chevron-left"></i> 毕业设计
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/posts/9e95.html" rel="next" title="网络">
+      网络 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="small_planet"
+      src="/images/logo.png">
+  <p class="site-author-name" itemprop="name">small_planet</p>
+  <div class="site-description" itemprop="description">代码狂魔</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">64</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://gitee.com/samll_planet" title="Gitee → https:&#x2F;&#x2F;gitee.com&#x2F;samll_planet" rel="noopener" target="_blank"><i class="fa gitee fa-fw"></i>Gitee</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/724032931@qq.com" title="E-Mail → 724032931@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://blog.csdn.net/small_planet" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;small_planet" rel="noopener" target="_blank"><i class="fa csdn fa-fw"></i>CSDN</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://m.bilibili.com/space/434066983" title="bili → https:&#x2F;&#x2F;m.bilibili.com&#x2F;space&#x2F;434066983" rel="noopener" target="_blank"><i class="fa bilibili fa-fw"></i>bili</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://wpa.qq.com/msgrd?v=3&uin=724032931&site=qq&menu=yes" title="qq → http:&#x2F;&#x2F;wpa.qq.com&#x2F;msgrd?v&#x3D;3&amp;uin&#x3D;724032931&amp;site&#x3D;qq&amp;menu&#x3D;yes" rel="noopener" target="_blank"><i class="fa qq fa-fw"></i>qq</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzI2NzY0NDA0MQ==&scene=124#wechat_redirect" title="wx → https:&#x2F;&#x2F;mp.weixin.qq.com&#x2F;mp&#x2F;profile_ext?action&#x3D;home&amp;__biz&#x3D;MzI2NzY0NDA0MQ&#x3D;&#x3D;&amp;scene&#x3D;124#wechat_redirect" rel="noopener" target="_blank"><i class="fa wx fa-fw"></i>wx</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.zhihu.com/people/jin-zhu-zhe-chi-37-12" title="zhihu → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;jin-zhu-zhe-chi-37-12" rel="noopener" target="_blank"><i class="fa zhihu fa-fw"></i>zhihu</a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">small_planet</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">100k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">1:31</span>
+</div>
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("08/21/2024 12:00:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+    setInterval("createtime()",250);
+</script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span><br></span>	
+
+<span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+</span>
+<span>总访客&nbsp<span id="busuanzi_value_site_uv"></span>&nbsp人</span>
+    <span class="post-meta-divider">|</span>
+<span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+</span>
+    <span>总访问量&nbsp<span id="busuanzi_value_site_pv"></span>&nbsp次</span>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : '5dmvYD1GhXuMggREBshLL5Mn-gzGzoHsz',
+      appKey     : '2mGdfyDnpoX5ic0wVgDgDH0J',
+      placeholder: "欢迎交流",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+</html>

@@ -21,19 +21,19 @@
     var CONFIG = {"hostname":"small-planet.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="代码狂魔">
-<meta property="og:type" content="website">
-<meta property="og:title" content="标签">
-<meta property="og:url" content="https://small-planet.github.io/tags/index.html">
+  <meta name="description" content="一、安装依赖库">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux下编译OpenCV">
+<meta property="og:url" content="https://small-planet.github.io/posts/a893.html">
 <meta property="og:site_name" content="鼎芯码元">
-<meta property="og:description" content="代码狂魔">
+<meta property="og:description" content="一、安装依赖库">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-09-08T07:10:47.000Z">
-<meta property="article:modified_time" content="2024-09-19T13:13:18.550Z">
+<meta property="article:published_time" content="2024-09-21T07:20:28.451Z">
+<meta property="article:modified_time" content="2024-09-21T07:23:39.762Z">
 <meta property="article:author" content="small_planet">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://small-planet.github.io/tags/">
+<link rel="canonical" href="https://small-planet.github.io/posts/a893.html">
 
 
 <script id="page-configurations">
@@ -41,13 +41,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>标签 | 鼎芯码元
-</title>
+  <title>Linux下编译OpenCV | 鼎芯码元</title>
   
 
 
@@ -184,51 +183,230 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="zh-CN">
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://small-planet.github.io/posts/a893.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo.png">
+      <meta itemprop="name" content="small_planet">
+      <meta itemprop="description" content="代码狂魔">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鼎芯码元">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Linux下编译OpenCV
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">标签
-</h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
 
-<div class="post-meta">
+              <time title="创建时间：2024-09-21 15:20:28 / 修改时间：15:23:39" itemprop="dateCreated datePublished" datetime="2024-09-21T15:20:28+08:00">2024-09-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">深度学习</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/OpenCV/" itemprop="url" rel="index"><span itemprop="name">OpenCV</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/a893.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/a893.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.6k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="一、安装依赖库"><a href="#一、安装依赖库" class="headerlink" title="一、安装依赖库"></a>一、安装依赖库</h1><span id="more"></span>
+
+
+
+<p>主要依赖项：</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>apt package 名称</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>编译系统</td>
+<td>build-essential cmake pkg-config</td>
+<td>生成 OpenCV</td>
+</tr>
+<tr>
+<td>图像库</td>
+<td>libpng-dev libjpeg-dev</td>
+<td>提供各类图像格式的编解码</td>
+</tr>
+<tr>
+<td>OpenBLAS</td>
+<td>libopenblas-dev</td>
+<td>利用 CPU 向量运算指令为大量算法提供加速。</td>
+</tr>
+<tr>
+<td>Eigen3</td>
+<td>libeigen3-dev</td>
+<td>提供线性代数相关算法支持</td>
+</tr>
+<tr>
+<td>Intel TBB</td>
+<td>libtbb-dev</td>
+<td>在 Intel CPU 上提供高性能并发计算支持</td>
+</tr>
+<tr>
+<td>FFMPEG</td>
+<td>libavcodec-dev libavformat-dev libswscale-dev</td>
+<td>提供视频编解码能力</td>
+</tr>
+<tr>
+<td>GStreamer</td>
+<td>libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev</td>
+<td>提供流媒体处理能力</td>
+</tr>
+<tr>
+<td>GTK</td>
+<td>libgtk-3-dev libcanberra-gtk-module libcanberra-gtk3-module</td>
+<td>图形化用户界面</td>
+</tr>
+</tbody></table>
+<p>apt命令：</p>
+<figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="built_in">get</span> install -y libcurl4 build-essential pkg-config cmake \</span><br><span class="line">    libopenblas-<span class="built_in">dev</span> libeigen3-<span class="built_in">dev</span> libtbb-<span class="built_in">dev</span> \</span><br><span class="line">    libavcodec-<span class="built_in">dev</span> libavformat-<span class="built_in">dev</span> \</span><br><span class="line">    libgstreamer-plugins-base1<span class="number">.0</span>-<span class="built_in">dev</span> libgstreamer1<span class="number">.0</span>-<span class="built_in">dev</span> \</span><br><span class="line">    libswscale-<span class="built_in">dev</span> libgtk<span class="number">-3</span>-<span class="built_in">dev</span> libpng-<span class="built_in">dev</span> libjpeg-<span class="built_in">dev</span> \</span><br><span class="line">    libcanberra-gtk-module libcanberra-gtk3-module</span><br></pre></td></tr></table></figure>
+
+<h1 id="二、下载源码"><a href="#二、下载源码" class="headerlink" title="二、下载源码"></a>二、下载源码</h1><p><a target="_blank" rel="noopener" href="https://github.com/opencv/opencv/releases">Releases · opencv&#x2F;opencv (github.com)</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/opencv/opencv_contrib/releases">Releases · opencv&#x2F;opencv_contrib (github.com)</a></p>
+<p>注意：</p>
+<ul>
+<li><p>opencv与opencv_contrib的版本需要一致</p>
+</li>
+<li><p>opencv与opencv_contrib位于同一目录（这一点好像也不是必须的，-DOPENCV_EXTRA_MODULES_PATH&#x3D;..&#x2F;..&#x2F;opencv_contrib-4.6.0&#x2F;modules，cmake时这一项需是contrib相对build的路径）</p>
+</li>
+</ul>
+<h1 id="三、cmake"><a href="#三、cmake" class="headerlink" title="三、cmake"></a>三、cmake</h1><p>进入opencv目录，新建build，然后执行cmake命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmake .. -D&lt;选项名1&gt;=&lt;设定值1&gt; -D&lt;选项名2&gt;=&lt;设定值2&gt;</span><br></pre></td></tr></table></figure>
+
+<p>常用选项说明：</p>
+<ul>
+<li><p>CMAKE_BUILD_TYPE&#x3D;Release：不在行成的库文件中包含调试信息，并进行速度优化。如果指定为 Debug ，就可以在 Debug 过程中进入 OpenCV 内部的代码，但运行速度会略微下降。</p>
+</li>
+<li><p>CMAKE_VERBOSE_MAKEFILE&#x3D;ON：<strong>务必开启</strong>，以便于发现编译中出现的问题。</p>
+</li>
+<li><p>CMAKE_INSTALL_PREFIX&#x3D;&#x2F;usr&#x2F;local：指定 OpenCV 生成的库文件在系统中的安装路径。</p>
+</li>
+<li><p>BUILD_SHARED_LIBS&#x3D;ON：成共享库（.so），如果置为 OFF 则只会生成静态库（.a）</p>
+</li>
+<li><p>OPENCV_EXTRA_MODULES_PATH&#x3D;&lt;opencv-contrib 目录&gt;，按之前的描述，应为 「..&#x2F;..&#x2F;opencv_contrib-4.6.0」。可以用 ls 命令确认相对路径是否存在。</p>
+</li>
+<li><p>OPENCV_ENABLE_NONFREE&#x3D;ON：如果置为OFF，一些包含专利保护算法的函数将不会生成。</p>
+</li>
+<li><p>ENABLE_CXX11&#x3D;ON：支持 C++11 以上的语法和 STL 库。</p>
+</li>
+<li><p>BUILD_TESTS&#x3D;OFF，BUILD_PERF_TESTS&#x3D;OFF：关闭生成后的自我 TEST ，大多数情况没有必要，可大辐缩短生成时间。但如果怀疑生成的 OpenCV 库有问题，可以进行自测。</p>
+</li>
+<li><p>OPENCV_GENERATE_PKGCONFIG&#x3D;ON：建议开启，便于 C++ 程序通过 pkg-config 来引用 OpenCV 库。</p>
+</li>
+<li><p>WITH_CUDA&#x3D;ON，ENABLE_FAST_MATH&#x3D;ON，CUDA_FAST_MATH&#x3D;ON，WITH_CUBLAS&#x3D;ON：如果系统正确安装了 CUDA 并希望 OpenCV 启用 CUDA 支持，这四个选项都要打开。</p>
+</li>
+<li><p>WITH_IPP&#x3D;ON，WITH_TBB&#x3D;ON，WITH_OPENMP&#x3D;ON，WITH_PTHREADS_PF&#x3D;ON：这四个选项控制 OpenCV 如何进行并发运算，默认都是 ON，但如果有需要生成一个绝对单线程运行的 OpenCV ，请将这几个选项均置为 OFF 。</p>
+</li>
+</ul>
+<p>cmake命令：（根据实际进行修改）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_VERBOSE_MAKEFILE=ON \</span><br><span class="line">	-DCMAKE_INSTALL_PREFIX=/usr/local \</span><br><span class="line">	-DOPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-4.6.0/modules -DOPENCV_ENABLE_NONFREE=ON\</span><br><span class="line">	-DBUILD_opencv_python3=ON -DWITH_1394=OFF \</span><br><span class="line">	-DWITH_IPP=ON -DWITH_TBB=ON -DWITH_OPENMP=ON -DWITH_PTHREADS_PF=ON \</span><br><span class="line">	-DBUILD_TESTS=OFF -DBUILD_PERF_TESTS=OFF -DOPENCV_GENERATE_PKGCONFIG=ON \</span><br></pre></td></tr></table></figure>
+
+<p>在cmake过程中，有去github下载库，在网不好的情况下可能会一直卡在那里，解决的办法：</p>
+<ul>
+<li><p>科学上网</p>
+</li>
+<li><p>根据提示信息，下载下来，拷到对应的目录下，然后修改cmake，把https的网址改为本地路径，进行离线安装</p>
+</li>
+</ul>
+<h1 id="四、make"><a href="#四、make" class="headerlink" title="四、make"></a>四、make</h1><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">make</span> <span class="keyword">all</span> -<span class="keyword">j</span>$(<span class="keyword">grep</span> -<span class="keyword">c</span> ^processor /proc/cpuinfo)</span><br></pre></td></tr></table></figure>
+
+<h1 id="五、install"><a href="#五、install" class="headerlink" title="五、install"></a>五、install</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> make install -j$(grep -c ^processor /proc/cpuinfo)</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/a4f0.html" rel="prev" title="FFmpeg">
+      <i class="fa fa-chevron-left"></i> FFmpeg
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/posts/4c8a.html" rel="next" title="opencv一张图片渐变为另一张图片">
+      opencv一张图片渐变为另一张图片 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-              暂无标签
-            </div>
-            <div class="tag-cloud-tags">
-              
-            </div>
-          </div>
-        
-      </div>
-      
-      
-      
-    </div>
-    
-
-    
-    
-    
 
 
           </div>
@@ -280,6 +458,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96%E5%BA%93"><span class="nav-number">1.</span> <span class="nav-text">一、安装依赖库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E4%B8%8B%E8%BD%BD%E6%BA%90%E7%A0%81"><span class="nav-number">2.</span> <span class="nav-text">二、下载源码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81cmake"><span class="nav-number">3.</span> <span class="nav-text">三、cmake</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B%E3%80%81make"><span class="nav-number">4.</span> <span class="nav-text">四、make</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%94%E3%80%81install"><span class="nav-number">5.</span> <span class="nav-text">五、install</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

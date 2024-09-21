@@ -21,19 +21,27 @@
     var CONFIG = {"hostname":"small-planet.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="代码狂魔">
-<meta property="og:type" content="website">
-<meta property="og:title" content="标签">
-<meta property="og:url" content="https://small-planet.github.io/tags/index.html">
+  <meta name="description" content="一、不让显示一堆无用的调试信息">
+<meta property="og:type" content="article">
+<meta property="og:title" content="opencv注意事项">
+<meta property="og:url" content="https://small-planet.github.io/posts/3a95.html">
 <meta property="og:site_name" content="鼎芯码元">
-<meta property="og:description" content="代码狂魔">
+<meta property="og:description" content="一、不让显示一堆无用的调试信息">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-09-08T07:10:47.000Z">
-<meta property="article:modified_time" content="2024-09-19T13:13:18.550Z">
+<meta property="og:image" content="https://s2.loli.net/2024/09/21/H3gd79IDXtyuQiG.png">
+<meta property="og:image" content="https://s2.loli.net/2024/09/21/p3KtcI9FT5Lwshk.png">
+<meta property="og:image" content="https://s2.loli.net/2024/09/21/UG9jmL2eExKXkhz.png">
+<meta property="og:image" content="https://s2.loli.net/2024/09/21/ZrIPWxBwlnMq423.png">
+<meta property="og:image" content="https://s2.loli.net/2024/09/21/tQE7ykXOWi6SYDb.png">
+<meta property="og:image" content="https://s2.loli.net/2024/09/21/tvQWmrKaiEgMnud.png">
+<meta property="og:image" content="https://s2.loli.net/2024/09/21/mdJPLq1UhpC72Kb.png">
+<meta property="article:published_time" content="2024-09-21T07:20:28.462Z">
+<meta property="article:modified_time" content="2024-09-21T07:23:39.778Z">
 <meta property="article:author" content="small_planet">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2024/09/21/H3gd79IDXtyuQiG.png">
 
-<link rel="canonical" href="https://small-planet.github.io/tags/">
+<link rel="canonical" href="https://small-planet.github.io/posts/3a95.html">
 
 
 <script id="page-configurations">
@@ -41,13 +49,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>标签 | 鼎芯码元
-</title>
+  <title>opencv注意事项 | 鼎芯码元</title>
   
 
 
@@ -184,51 +191,158 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="zh-CN">
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://small-planet.github.io/posts/3a95.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo.png">
+      <meta itemprop="name" content="small_planet">
+      <meta itemprop="description" content="代码狂魔">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鼎芯码元">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          opencv注意事项
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">标签
-</h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
 
-<div class="post-meta">
+              <time title="创建时间：2024-09-21 15:20:28 / 修改时间：15:23:39" itemprop="dateCreated datePublished" datetime="2024-09-21T15:20:28+08:00">2024-09-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">深度学习</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/OpenCV/" itemprop="url" rel="index"><span itemprop="name">OpenCV</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/3a95.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/3a95.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>一、不让显示一堆无用的调试信息</p>
+<span id="more"></span>
+
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;opencv2/core/utils/logger.hpp&gt;</span>	//调试相关</span></span><br><span class="line"><span class="symbol">utils:</span>:logging::setLogLevel(utils::logging::LOG_LEVEL_ERROR)<span class="punctuation">;</span><span class="comment">//只输出错误日志</span></span><br></pre></td></tr></table></figure>
+
+<p>二、在vs中添加opencv环境</p>
+<p>1、配置包含目录</p>
+<p><img src="https://s2.loli.net/2024/09/21/H3gd79IDXtyuQiG.png"></p>
+<p>2、配置库目录</p>
+<p><img src="https://s2.loli.net/2024/09/21/p3KtcI9FT5Lwshk.png"></p>
+<p>3、配置附加依赖项</p>
+<p><img src="https://s2.loli.net/2024/09/21/UG9jmL2eExKXkhz.png"></p>
+<p>4、把以上配置保存，形成一个配置文件，以后的新项目直接添加配置文件就行了</p>
+<ul>
+<li>新建一个项目属性表，在新项目属性表里面配置上面的配置</li>
+</ul>
+<p><img src="https://s2.loli.net/2024/09/21/ZrIPWxBwlnMq423.png"></p>
+<p><img src="https://s2.loli.net/2024/09/21/tQE7ykXOWi6SYDb.png"></p>
+<p>切记，要在这个新建的属性上面进行上面介绍的配置</p>
+<p>配置完之后，打开看一下这个配置文件的内容：</p>
+<p><img src="https://s2.loli.net/2024/09/21/tvQWmrKaiEgMnud.png"></p>
+<ul>
+<li>新项目添加现成的配置文件：</li>
+</ul>
+<p>最好把配置文件也复制一份到项目下，防止原工程删除导致配置文件找不到。也可以添加多个配置文件，是可以叠加的。</p>
+<p><img src="https://s2.loli.net/2024/09/21/mdJPLq1UhpC72Kb.png"></p>
+<p>三、传递参数</p>
+<p>这样直接&#x3D;，只是将Mat这个结构体信息拷贝了一份，并没有拷贝指向图像的内存信息，操作仍然在同一内存中进行的，所以原图，也就是实参发生了改变。调用fun 前与后的img与img1是一样的，显示的图片也是带字体的。</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">fun</span><span class="params">(Mat img)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Mat img1 = img;</span><br><span class="line">    <span class="function">CvxText <span class="title">text</span><span class="params">(<span class="string">&quot;../simhei.ttf&quot;</span>)</span></span>; <span class="comment">// 指定字体</span></span><br><span class="line">    <span class="type">const</span> <span class="type">char</span> *msg = <span class="string">&quot;jiabao佳宝&quot;</span>;</span><br><span class="line">    <span class="type">float</span> p = <span class="number">1</span>;</span><br><span class="line">    text.<span class="built_in">setFont</span>(<span class="literal">NULL</span>, <span class="literal">NULL</span>, <span class="literal">NULL</span>, &amp;p); <span class="comment">// 透明处理</span></span><br><span class="line">    text.<span class="built_in">putText</span>(img1, msg, <span class="built_in">Point</span>(<span class="number">30</span>, <span class="number">30</span>), <span class="built_in">CV_RGB</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>));</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    utils::logging::<span class="built_in">setLogLevel</span>(utils::logging::LOG_LEVEL_ERROR); <span class="comment">// 只输出错误日志</span></span><br><span class="line">    Mat img = <span class="built_in">imread</span>(<span class="string">&quot;C:/Users/ACER/Pictures/Saved Pictures/SmartHome.jpg&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">fun</span>(img);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">imshow</span>(<span class="string">&quot;test&quot;</span>, img);</span><br><span class="line"></span><br><span class="line">    cv::<span class="built_in">waitKey</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果不想改变原图，就需要这样：</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">	<span class="comment">//深拷贝</span></span><br><span class="line"> </span><br><span class="line"> <span class="comment">//方法1</span></span><br><span class="line">	<span class="keyword">Mat</span> img1 = img.clone();</span><br><span class="line"></span><br><span class="line">	<span class="comment">//方法二</span></span><br><span class="line">	<span class="keyword">Mat</span> img1;</span><br><span class="line">img.copyTo(img1);</span><br></pre></td></tr></table></figure>
+
+<p>CmakeList:</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">set</span><span class="params">(OpenCV_DIR  E:/Program/VScode/opencv/opencv_4.<span class="number">6.0</span>/install/x64/mingw/lib)</span></span></span><br><span class="line"><span class="function"><span class="title">find_package</span><span class="params">(OpenCV REQUIRED)</span></span></span><br><span class="line">#添加头文件</span><br><span class="line"><span class="function"><span class="title">include_directories</span><span class="params">($&#123;OpenCV_INCLUDE_DIRS&#125;)</span></span></span><br><span class="line">#链接库文件</span><br><span class="line"><span class="function"><span class="title">target_link_libraries</span><span class="params">(test1  $&#123;OpenCV_LIBS&#125;)</span></span></span><br><span class="line"><span class="function"><span class="title">message</span><span class="params">(<span class="string">&quot;OpenCV_INCLUDE_DIRS:&quot;</span> ($&#123;OpenCV_INCLUDE_DIRS&#125;)</span></span>)</span><br><span class="line"><span class="function"><span class="title">message</span><span class="params">(<span class="string">&quot;OpenCV_LIBS:&quot;</span> ($&#123;OpenCV_LIBS&#125;)</span></span>)</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/80c3.html" rel="prev" title="opencv图片上写中文">
+      <i class="fa fa-chevron-left"></i> opencv图片上写中文
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/posts/c5fe.html" rel="next" title="opencv视频处理">
+      opencv视频处理 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-              暂无标签
-            </div>
-            <div class="tag-cloud-tags">
-              
-            </div>
-          </div>
-        
-      </div>
-      
-      
-      
-    </div>
-    
-
-    
-    
-    
 
 
           </div>

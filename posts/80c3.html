@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+<meta name="referrer" content="no-referrer" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"small-planet.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="一、自己opencv库有freetype">
+<meta property="og:type" content="article">
+<meta property="og:title" content="opencv图片上写中文">
+<meta property="og:url" content="https://small-planet.github.io/posts/80c3.html">
+<meta property="og:site_name" content="鼎芯码元">
+<meta property="og:description" content="一、自己opencv库有freetype">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-09-21T07:20:28.460Z">
+<meta property="article:modified_time" content="2024-09-21T07:23:39.775Z">
+<meta property="article:author" content="small_planet">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://small-planet.github.io/posts/80c3.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>opencv图片上写中文 | 鼎芯码元</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">鼎芯码元</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">盼一树花开，等一个人来</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://small-planet.github.io/posts/80c3.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo.png">
+      <meta itemprop="name" content="small_planet">
+      <meta itemprop="description" content="代码狂魔">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鼎芯码元">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          opencv图片上写中文
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-09-21 15:20:28 / 修改时间：15:23:39" itemprop="dateCreated datePublished" datetime="2024-09-21T15:20:28+08:00">2024-09-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">深度学习</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/OpenCV/" itemprop="url" rel="index"><span itemprop="name">OpenCV</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/80c3.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/80c3.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>7.2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>7 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="一、自己opencv库有freetype"><a href="#一、自己opencv库有freetype" class="headerlink" title="一、自己opencv库有freetype"></a>一、自己opencv库有freetype</h1><span id="more"></span>
+
+
+
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;opencv2/freetype.hpp&gt;</span>    <span class="comment">//编译的opencv是否包含，包含就能使用此方法，方便快捷，不包含就要使用方法二了。</span></span></span><br><span class="line"></span><br><span class="line">cv::Ptr&lt;cv::freetype::FreeType2&gt; ft2;</span><br><span class="line"></span><br><span class="line"><span class="comment">//字体初始化</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">init_font</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ft2 = cv::freetype::<span class="built_in">createFreeType2</span>();</span><br><span class="line">    ft2-&gt;<span class="built_in">loadFontData</span>( <span class="string">&quot;../font/msyh.ttc&quot;</span>, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//加入字体文件后</span></span><br><span class="line">ft2-&gt;<span class="built_in">putText</span>(frame,data[<span class="number">0</span>].vehicle_plate_server[i].number,</span><br><span class="line">    cv::<span class="built_in">Point</span>(data[<span class="number">0</span>].vehicle_plate_server[i].rect[<span class="number">0</span>]<span class="number">+5</span>, data[<span class="number">0</span>].vehicle_plate_server[i].rect[<span class="number">3</span>]<span class="number">+15</span>),</span><br><span class="line">    <span class="number">20</span>,cv::<span class="built_in">Scalar</span>(r,g,b),<span class="number">1</span>,<span class="number">8</span>,<span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+
+<p>二、需要自己装freetype库</p>
+<p>需要包含一个头文件和一个源文件，当然也可以封装为一个hpp文件。</p>
+<p>CvxText.h:</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">ifndef</span> OPENCV_CVX_TEXT_HPP_</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> OPENCV_CVX_TEXT_HPP_</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 支持OpenCV中文汉字输入</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ft2build.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> FT_FREETYPE_H</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;opencv2/opencv.hpp&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">CvxText</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 装载字库文件</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="built_in">CvxText</span>(<span class="type">const</span> <span class="type">char</span>* freeType);</span><br><span class="line">    <span class="keyword">virtual</span> ~<span class="built_in">CvxText</span>();</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 获取字体.目前有些参数尚不支持.</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \param font        字体类型, 目前不支持</span></span><br><span class="line"><span class="comment">    * \param size        字体大小/空白比例/间隔比例/旋转角度</span></span><br><span class="line"><span class="comment">    * \param underline   下画线</span></span><br><span class="line"><span class="comment">    * \param diaphaneity 透明度</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \sa setFont, restoreFont</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">getFont</span><span class="params">(<span class="type">int</span>* type, cv::Scalar* size = <span class="literal">nullptr</span>, <span class="type">bool</span>* underline = <span class="literal">nullptr</span>, <span class="type">float</span>* diaphaneity = <span class="literal">nullptr</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 设置字体.目前有些参数尚不支持.</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \param font        字体类型, 目前不支持</span></span><br><span class="line"><span class="comment">    * \param size        字体大小/空白比例/间隔比例/旋转角度</span></span><br><span class="line"><span class="comment">    * \param underline   下画线</span></span><br><span class="line"><span class="comment">    * \param diaphaneity 透明度</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \sa getFont, restoreFont</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">setFont</span><span class="params">(<span class="type">int</span>* type, cv::Scalar* size = <span class="literal">nullptr</span>, <span class="type">bool</span>* underline = <span class="literal">nullptr</span>, <span class="type">float</span>* diaphaneity = <span class="literal">nullptr</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 恢复原始的字体设置.</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \sa getFont, setFont</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">restoreFont</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 输出汉字(颜色默认为黑色).遇到不能输出的字符将停止.</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \param img  输出的影象</span></span><br><span class="line"><span class="comment">    * \param text 文本内容</span></span><br><span class="line"><span class="comment">    * \param pos  文本位置</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \return 返回成功输出的字符长度，失败返回-1.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">putText</span><span class="params">(cv::Mat&amp; img, <span class="type">char</span>* text, cv::Point pos)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 输出汉字(颜色默认为黑色).遇到不能输出的字符将停止.</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \param img  输出的影象</span></span><br><span class="line"><span class="comment">    * \param text 文本内容</span></span><br><span class="line"><span class="comment">    * \param pos  文本位置</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \return 返回成功输出的字符长度，失败返回-1.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">putText</span><span class="params">(cv::Mat&amp; img, <span class="type">const</span> <span class="type">wchar_t</span>* text, cv::Point pos)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 输出汉字.遇到不能输出的字符将停止.</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \param img   输出的影象</span></span><br><span class="line"><span class="comment">    * \param text  文本内容</span></span><br><span class="line"><span class="comment">    * \param pos   文本位置</span></span><br><span class="line"><span class="comment">    * \param color 文本颜色</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \return 返回成功输出的字符长度，失败返回-1.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">putText</span><span class="params">(cv::Mat&amp; img, <span class="type">const</span> <span class="type">char</span>* text, cv::Point pos, cv::Scalar color)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 输出汉字.遇到不能输出的字符将停止.</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \param img   输出的影象</span></span><br><span class="line"><span class="comment">    * \param text  文本内容</span></span><br><span class="line"><span class="comment">    * \param pos   文本位置</span></span><br><span class="line"><span class="comment">    * \param color 文本颜色</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * \return 返回成功输出的字符长度，失败返回-1.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">putText</span><span class="params">(cv::Mat&amp; img, <span class="type">const</span> <span class="type">wchar_t</span>* text, cv::Point pos, cv::Scalar color)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="comment">// 禁止copy</span></span><br><span class="line">    CvxText&amp; <span class="keyword">operator</span>=(<span class="type">const</span> CvxText&amp;);</span><br><span class="line">    <span class="comment">// 输出当前字符, 更新m_pos位置</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">putWChar</span><span class="params">(cv::Mat&amp; img, <span class="type">wchar_t</span> wc, cv::Point&amp; pos, cv::Scalar color)</span></span>;</span><br><span class="line"></span><br><span class="line">    FT_Library   m_library;   <span class="comment">// 字库</span></span><br><span class="line">    FT_Face      m_face;      <span class="comment">// 字体</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 默认的字体输出参数</span></span><br><span class="line">    <span class="type">int</span>         m_fontType;</span><br><span class="line">    cv::Scalar   m_fontSize;</span><br><span class="line">    <span class="type">bool</span>      m_fontUnderline;</span><br><span class="line">    <span class="type">float</span>      m_fontDiaphaneity;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span> <span class="comment">// OPENCV_CVX_TEXT_HPP_</span></span></span><br></pre></td></tr></table></figure>
+
+<p>CvxText.cpp:</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;wchar.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;assert.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;locale.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ctype.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;CvxText.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 打开字库</span></span><br><span class="line">CvxText::<span class="built_in">CvxText</span>(<span class="type">const</span> <span class="type">char</span>* freeType)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">assert</span>(freeType != <span class="literal">NULL</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 打开字库文件, 创建一个字体</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">FT_Init_FreeType</span>(&amp;m_library))<span class="keyword">throw</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">FT_New_Face</span>(m_library, freeType, <span class="number">0</span>, &amp;m_face))<span class="keyword">throw</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 设置字体输出参数</span></span><br><span class="line">    <span class="built_in">restoreFont</span>();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 设置C语言的字符集环境</span></span><br><span class="line">    <span class="built_in">setlocale</span>(LC_ALL, <span class="string">&quot;&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 释放FreeType资源</span></span><br><span class="line">CvxText::~<span class="built_in">CvxText</span>()</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">FT_Done_Face</span>(m_face);</span><br><span class="line">    <span class="built_in">FT_Done_FreeType</span>(m_library);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 设置字体参数:</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// font         - 字体类型, 目前不支持</span></span><br><span class="line"><span class="comment">// size         - 字体大小/空白比例/间隔比例/旋转角度</span></span><br><span class="line"><span class="comment">// underline   - 下画线</span></span><br><span class="line"><span class="comment">// diaphaneity   - 透明度</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">CvxText::getFont</span><span class="params">(<span class="type">int</span>* type, cv::Scalar* size, <span class="type">bool</span>* underline, <span class="type">float</span>* diaphaneity)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (type) *type = m_fontType;</span><br><span class="line">    <span class="keyword">if</span> (size) *size = m_fontSize;</span><br><span class="line">    <span class="keyword">if</span> (underline) *underline = m_fontUnderline;</span><br><span class="line">    <span class="keyword">if</span> (diaphaneity) *diaphaneity = m_fontDiaphaneity;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">CvxText::setFont</span><span class="params">(<span class="type">int</span>* type, cv::Scalar* size, <span class="type">bool</span>* underline, <span class="type">float</span>* diaphaneity)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 参数合法性检查</span></span><br><span class="line">    <span class="keyword">if</span> (type) &#123;</span><br><span class="line">        <span class="keyword">if</span> (*type &gt;= <span class="number">0</span>) m_fontType = *type;    <span class="comment">//网上很多地方if (*type &gt;= 0)没加星号</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (size) &#123;</span><br><span class="line">        m_fontSize.val[<span class="number">0</span>] = std::<span class="built_in">fabs</span>(size-&gt;val[<span class="number">0</span>]);</span><br><span class="line">        m_fontSize.val[<span class="number">1</span>] = std::<span class="built_in">fabs</span>(size-&gt;val[<span class="number">1</span>]);</span><br><span class="line">        m_fontSize.val[<span class="number">2</span>] = std::<span class="built_in">fabs</span>(size-&gt;val[<span class="number">2</span>]);</span><br><span class="line">        m_fontSize.val[<span class="number">3</span>] = std::<span class="built_in">fabs</span>(size-&gt;val[<span class="number">3</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (underline) &#123;</span><br><span class="line">        m_fontUnderline = *underline;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (diaphaneity) &#123;</span><br><span class="line">        m_fontDiaphaneity = *diaphaneity;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">FT_Set_Pixel_Sizes</span>(m_face, (<span class="type">int</span>)m_fontSize.val[<span class="number">0</span>], <span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 恢复原始的字体设置</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">CvxText::restoreFont</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    m_fontType = <span class="number">0</span>;            <span class="comment">// 字体类型(不支持)</span></span><br><span class="line"></span><br><span class="line">    m_fontSize.val[<span class="number">0</span>] = <span class="number">20</span>;      <span class="comment">// 字体大小</span></span><br><span class="line">    m_fontSize.val[<span class="number">1</span>] = <span class="number">0.5</span>;   <span class="comment">// 空白字符大小比例</span></span><br><span class="line">    m_fontSize.val[<span class="number">2</span>] = <span class="number">0.1</span>;   <span class="comment">// 间隔大小比例</span></span><br><span class="line">    m_fontSize.val[<span class="number">3</span>] = <span class="number">0</span>;      <span class="comment">// 旋转角度(不支持)</span></span><br><span class="line"></span><br><span class="line">    m_fontUnderline = <span class="literal">false</span>;   <span class="comment">// 下画线(不支持)</span></span><br><span class="line"></span><br><span class="line">    m_fontDiaphaneity = <span class="number">1.0</span>;   <span class="comment">// 色彩比例(可产生透明效果)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 设置字符大小</span></span><br><span class="line">    <span class="built_in">FT_Set_Pixel_Sizes</span>(m_face, (<span class="type">int</span>)m_fontSize.val[<span class="number">0</span>], <span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出函数(颜色默认为白色)</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">CvxText::putText</span><span class="params">(cv::Mat&amp; img, <span class="type">char</span>* text, cv::Point pos)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">putText</span>(img, text, pos, <span class="built_in">CV_RGB</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">CvxText::putText</span><span class="params">(cv::Mat&amp; img, <span class="type">const</span> <span class="type">wchar_t</span>* text, cv::Point pos)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">putText</span>(img, text, pos, <span class="built_in">CV_RGB</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">CvxText::putText</span><span class="params">(cv::Mat&amp; img, <span class="type">const</span> <span class="type">char</span>* text, cv::Point pos, cv::Scalar color)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (img.data == <span class="literal">nullptr</span>) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">if</span> (text == <span class="literal">nullptr</span>) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; text[i] != <span class="string">&#x27;\0&#x27;</span>; ++i) &#123;</span><br><span class="line">        <span class="type">wchar_t</span> wc = text[i];</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 解析双字节符号</span></span><br><span class="line">        <span class="keyword">if</span> (!<span class="built_in">isascii</span>(wc)) <span class="built_in">mbtowc</span>(&amp;wc, &amp;text[i++], <span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 输出当前的字符</span></span><br><span class="line">        <span class="built_in">putWChar</span>(img, wc, pos, color);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> i;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">CvxText::putText</span><span class="params">(cv::Mat&amp; img, <span class="type">const</span> <span class="type">wchar_t</span>* text, cv::Point pos, cv::Scalar color)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (img.data == <span class="literal">nullptr</span>) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">if</span> (text == <span class="literal">nullptr</span>) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; text[i] != <span class="string">&#x27;\0&#x27;</span>; ++i) &#123;</span><br><span class="line">        <span class="comment">// 输出当前的字符</span></span><br><span class="line">        <span class="built_in">putWChar</span>(img, text[i], pos, color);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> i;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出当前字符, 更新m_pos位置</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">CvxText::putWChar</span><span class="params">(cv::Mat&amp; img, <span class="type">wchar_t</span> wc, cv::Point&amp; pos, cv::Scalar color)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 根据unicode生成字体的二值位图</span></span><br><span class="line">    FT_UInt glyph_index = <span class="built_in">FT_Get_Char_Index</span>(m_face, wc);</span><br><span class="line">    <span class="built_in">FT_Load_Glyph</span>(m_face, glyph_index, FT_LOAD_DEFAULT);</span><br><span class="line">    <span class="built_in">FT_Render_Glyph</span>(m_face-&gt;glyph, FT_RENDER_MODE_MONO);</span><br><span class="line"></span><br><span class="line">    FT_GlyphSlot slot = m_face-&gt;glyph;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 行列数</span></span><br><span class="line">    <span class="type">int</span> rows = slot-&gt;bitmap.rows;</span><br><span class="line">    <span class="type">int</span> cols = slot-&gt;bitmap.width;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; rows; ++i) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; cols; ++j) &#123;</span><br><span class="line">            <span class="type">int</span> off = i * slot-&gt;bitmap.pitch + j / <span class="number">8</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (slot-&gt;bitmap.buffer[off] &amp; (<span class="number">0xC0</span> &gt;&gt; (j % <span class="number">8</span>))) &#123;</span><br><span class="line">                <span class="type">int</span> r = pos.y - (rows - <span class="number">1</span> - i);</span><br><span class="line">                <span class="type">int</span> c = pos.x + j;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (r &gt;= <span class="number">0</span> &amp;&amp; r &lt; img.rows &amp;&amp; c &gt;= <span class="number">0</span> &amp;&amp; c &lt; img.cols) &#123;</span><br><span class="line">                    cv::Vec3b pixel = img.<span class="built_in">at</span>&lt;cv::Vec3b&gt;(cv::<span class="built_in">Point</span>(c, r));</span><br><span class="line">                    cv::Scalar scalar = cv::<span class="built_in">Scalar</span>(pixel.val[<span class="number">0</span>], pixel.val[<span class="number">1</span>], pixel.val[<span class="number">2</span>]);</span><br><span class="line"></span><br><span class="line">                    <span class="comment">// 进行色彩融合</span></span><br><span class="line">                    <span class="type">float</span> p = m_fontDiaphaneity;</span><br><span class="line">                    <span class="keyword">for</span> (<span class="type">int</span> k = <span class="number">0</span>; k &lt; <span class="number">4</span>; ++k) &#123;</span><br><span class="line">                        scalar.val[k] = scalar.val[k] * (<span class="number">1</span> - p) + color.val[k] * p;</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                    img.<span class="built_in">at</span>&lt;cv::Vec3b&gt;(cv::<span class="built_in">Point</span>(c, r))[<span class="number">0</span>] = (<span class="type">unsigned</span> <span class="type">char</span>)(scalar.val[<span class="number">0</span>]);</span><br><span class="line">                    img.<span class="built_in">at</span>&lt;cv::Vec3b&gt;(cv::<span class="built_in">Point</span>(c, r))[<span class="number">1</span>] = (<span class="type">unsigned</span> <span class="type">char</span>)(scalar.val[<span class="number">1</span>]);</span><br><span class="line">                    img.<span class="built_in">at</span>&lt;cv::Vec3b&gt;(cv::<span class="built_in">Point</span>(c, r))[<span class="number">2</span>] = (<span class="type">unsigned</span> <span class="type">char</span>)(scalar.val[<span class="number">2</span>]);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 修改下一个字的输出位置</span></span><br><span class="line">    <span class="type">double</span> space = m_fontSize.val[<span class="number">0</span>] * m_fontSize.val[<span class="number">1</span>];</span><br><span class="line">    <span class="type">double</span> sep = m_fontSize.val[<span class="number">0</span>] * m_fontSize.val[<span class="number">2</span>];</span><br><span class="line"></span><br><span class="line">    pos.x += (<span class="type">int</span>)((cols ? cols : space) + sep);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>应用：</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    utils::logging::<span class="built_in">setLogLevel</span>(utils::logging::LOG_LEVEL_ERROR);<span class="comment">//只输出错误日志</span></span><br><span class="line">    Mat img = <span class="built_in">imread</span>(<span class="string">&quot;C:/Users/ACER/Pictures/Saved Pictures/SmartHome.jpg&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="function">CvxText <span class="title">text</span><span class="params">(<span class="string">&quot;../simhei.ttf&quot;</span>)</span></span>; <span class="comment">//指定字体</span></span><br><span class="line">    <span class="comment">//CvxText text(&quot;../msyh.ttc&quot;); //指定字体</span></span><br><span class="line"></span><br><span class="line">    <span class="type">const</span> <span class="type">char</span>* msg = <span class="string">&quot;jiabao佳宝&quot;</span>;</span><br><span class="line">    <span class="type">float</span> p = <span class="number">0.5</span>;</span><br><span class="line">    text.<span class="built_in">setFont</span>(<span class="literal">NULL</span>, <span class="literal">NULL</span>, <span class="literal">NULL</span>, &amp;p);   <span class="comment">// 透明处理</span></span><br><span class="line">    text.<span class="built_in">putText</span>(img, msg, <span class="built_in">Point</span>(<span class="number">30</span>, <span class="number">30</span>), <span class="built_in">CV_RGB</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>));</span><br><span class="line">    <span class="built_in">imshow</span>(<span class="string">&quot;test&quot;</span>, img);</span><br><span class="line">    cv::<span class="built_in">waitKey</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/c13.html" rel="prev" title="opencv只显示感兴趣的区域">
+      <i class="fa fa-chevron-left"></i> opencv只显示感兴趣的区域
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/posts/3a95.html" rel="next" title="opencv注意事项">
+      opencv注意事项 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E8%87%AA%E5%B7%B1opencv%E5%BA%93%E6%9C%89freetype"><span class="nav-number">1.</span> <span class="nav-text">一、自己opencv库有freetype</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="small_planet"
+      src="/images/logo.png">
+  <p class="site-author-name" itemprop="name">small_planet</p>
+  <div class="site-description" itemprop="description">代码狂魔</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">64</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://gitee.com/samll_planet" title="Gitee → https:&#x2F;&#x2F;gitee.com&#x2F;samll_planet" rel="noopener" target="_blank"><i class="fa gitee fa-fw"></i>Gitee</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/724032931@qq.com" title="E-Mail → 724032931@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://blog.csdn.net/small_planet" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;small_planet" rel="noopener" target="_blank"><i class="fa csdn fa-fw"></i>CSDN</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://m.bilibili.com/space/434066983" title="bili → https:&#x2F;&#x2F;m.bilibili.com&#x2F;space&#x2F;434066983" rel="noopener" target="_blank"><i class="fa bilibili fa-fw"></i>bili</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://wpa.qq.com/msgrd?v=3&uin=724032931&site=qq&menu=yes" title="qq → http:&#x2F;&#x2F;wpa.qq.com&#x2F;msgrd?v&#x3D;3&amp;uin&#x3D;724032931&amp;site&#x3D;qq&amp;menu&#x3D;yes" rel="noopener" target="_blank"><i class="fa qq fa-fw"></i>qq</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzI2NzY0NDA0MQ==&scene=124#wechat_redirect" title="wx → https:&#x2F;&#x2F;mp.weixin.qq.com&#x2F;mp&#x2F;profile_ext?action&#x3D;home&amp;__biz&#x3D;MzI2NzY0NDA0MQ&#x3D;&#x3D;&amp;scene&#x3D;124#wechat_redirect" rel="noopener" target="_blank"><i class="fa wx fa-fw"></i>wx</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.zhihu.com/people/jin-zhu-zhe-chi-37-12" title="zhihu → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;jin-zhu-zhe-chi-37-12" rel="noopener" target="_blank"><i class="fa zhihu fa-fw"></i>zhihu</a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">small_planet</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">100k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">1:31</span>
+</div>
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("08/21/2024 12:00:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+    setInterval("createtime()",250);
+</script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span><br></span>	
+
+<span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+</span>
+<span>总访客&nbsp<span id="busuanzi_value_site_uv"></span>&nbsp人</span>
+    <span class="post-meta-divider">|</span>
+<span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+</span>
+    <span>总访问量&nbsp<span id="busuanzi_value_site_pv"></span>&nbsp次</span>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : '5dmvYD1GhXuMggREBshLL5Mn-gzGzoHsz',
+      appKey     : '2mGdfyDnpoX5ic0wVgDgDH0J',
+      placeholder: "欢迎交流",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+</html>

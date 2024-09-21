@@ -21,19 +21,19 @@
     var CONFIG = {"hostname":"small-planet.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="代码狂魔">
-<meta property="og:type" content="website">
-<meta property="og:title" content="标签">
-<meta property="og:url" content="https://small-planet.github.io/tags/index.html">
+  <meta name="description" content="socket编程要调用各种socket函数，但是需要库Ws2_32.lib和头文件Winsock2.h">
+<meta property="og:type" content="article">
+<meta property="og:title" content="win下socket编程">
+<meta property="og:url" content="https://small-planet.github.io/posts/fef5.html">
 <meta property="og:site_name" content="鼎芯码元">
-<meta property="og:description" content="代码狂魔">
+<meta property="og:description" content="socket编程要调用各种socket函数，但是需要库Ws2_32.lib和头文件Winsock2.h">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-09-08T07:10:47.000Z">
-<meta property="article:modified_time" content="2024-09-19T13:13:18.550Z">
+<meta property="article:published_time" content="2024-09-21T07:20:28.358Z">
+<meta property="article:modified_time" content="2024-09-21T07:23:39.036Z">
 <meta property="article:author" content="small_planet">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://small-planet.github.io/tags/">
+<link rel="canonical" href="https://small-planet.github.io/posts/fef5.html">
 
 
 <script id="page-configurations">
@@ -41,13 +41,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>标签 | 鼎芯码元
-</title>
+  <title>win下socket编程 | 鼎芯码元</title>
   
 
 
@@ -184,51 +183,135 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="zh-CN">
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://small-planet.github.io/posts/fef5.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo.png">
+      <meta itemprop="name" content="small_planet">
+      <meta itemprop="description" content="代码狂魔">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鼎芯码元">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          win下socket编程
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">标签
-</h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
 
-<div class="post-meta">
+              <time title="创建时间：2024-09-21 15:20:28 / 修改时间：15:23:39" itemprop="dateCreated datePublished" datetime="2024-09-21T15:20:28+08:00">2024-09-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index"><span itemprop="name">C++</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/fef5.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/fef5.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.7k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>socket编程要调用各种socket函数，但是需要库Ws2_32.lib和头文件Winsock2.h</p>
+<span id="more"></span>
+
+<p>在VSstudio下：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;winsock2.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">pragma</span> comment(lib, <span class="string">&quot;Ws2_32.lib&quot;</span>)</span></span><br></pre></td></tr></table></figure>
+
+<p>在VScode下使用CMakeLists：</p>
+<p>在CMakeLists加上 :(然后就不需要在源文件中加#pragma comment(lib, “Ws2_32.lib”))</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">target_link_libraries</span>(<span class="variable">$&#123;CMAKE_PROJECT_NAME&#125;</span> ws2_32)</span><br></pre></td></tr></table></figure>
+
+<p>首先需要先通过WSAStartup 函数完成对Winsock服务的初始化。当一个 应用程序调用WSAStartup 函数时， 操作系统根据请求的Socket版本来搜索相应的Socket库，然后绑定找到的Socket库到该应用程序中。以后应用程序就可以调用所请求的Socket库中的相对应版本的Socket函数了。&#x20;</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">WORD wdVersion = <span class="built_in">MAKEWORD</span>(<span class="number">2</span>, <span class="number">2</span>);<span class="comment">//定义自己需要的网络库版本，这里是2.2,参数1为高位表示次版本，参数2为低位表示主版本</span></span><br><span class="line">WSADATA wdSockMsg;<span class="comment">// WSAStartup()函数会将环境的网络库信息存在这个结构体中</span></span><br><span class="line"><span class="type">int</span> nRes = <span class="built_in">WSAStartup</span>(wdVersion, &amp;wdSockMsg);<span class="comment">//打开一个套接字</span></span><br><span class="line"><span class="keyword">if</span> (<span class="number">0</span> != nRes)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">switch</span> (nRes)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">case</span> WSASYSNOTREADY: <span class="built_in">printf</span>(<span class="string">&quot;重启电脑，或者检查网络库&quot;</span>);   <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> WSAVERNOTSUPPORTED: <span class="built_in">printf</span>(<span class="string">&quot;请更新网络库&quot;</span>);  <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> WSAEINPROGRESS: <span class="built_in">printf</span>(<span class="string">&quot;请重新启动&quot;</span>);  <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> WSAEPROCLIM:  <span class="built_in">printf</span>(<span class="string">&quot;请关闭不必要的软件，以确保有足够的网络资源&quot;</span>); <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (<span class="number">2</span> != <span class="built_in">HIBYTE</span>(wdSockMsg.wVersion) || <span class="number">2</span> != <span class="built_in">LOBYTE</span>(wdSockMsg.wVersion))</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;网络库版本错误&quot;</span>);</span><br><span class="line">    <span class="built_in">WSACleanup</span>();<span class="comment">//关闭此套接字</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/***********************************************************************************************************</span></span><br><span class="line"><span class="comment"> *** @Description:  建立socket</span></span><br><span class="line"><span class="comment"> *** @param &#123;int&#125; af    AF_INET表示ipv4 AF_INET6表示ipv6</span></span><br><span class="line"><span class="comment"> *** @param &#123;int&#125; type   SOCK_STREAM表示tcp SOCK_DGRAM表示udp</span></span><br><span class="line"><span class="comment"> *** @param &#123;int&#125; protocol  一般情况下有了 af 和 type 两个参数就可以创建套接字了，操作系统会自动推演出协议类型，除非遇到这样的情况：有两种不同的协议支持同一种地址类型和数据传输类型。如果我们不指明使用哪种协议，操作系统是没办法自动推演的。</span></span><br><span class="line"><span class="comment"> *** @return &#123;SOCKET&#125;   返回SOCKET套接字描述符</span></span><br><span class="line"><span class="comment"> ***********************************************************************************************************/</span></span><br><span class="line"><span class="function">SOCKET <span class="title">socket</span><span class="params">(<span class="type">int</span> af,<span class="type">int</span> type,<span class="type">int</span> protocol)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/win32/api/winsock/nf-winsock-setsockopt">setsockopt 函数 (winsock.h) - Win32 apps | Microsoft Learn</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/8a77.html" rel="prev" title="windows下用cmake、make">
+      <i class="fa fa-chevron-left"></i> windows下用cmake、make
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/posts/2827.html" rel="next" title="不同函数间进行跳转">
+      不同函数间进行跳转 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-              暂无标签
-            </div>
-            <div class="tag-cloud-tags">
-              
-            </div>
-          </div>
-        
-      </div>
-      
-      
-      
-    </div>
-    
-
-    
-    
-    
 
 
           </div>

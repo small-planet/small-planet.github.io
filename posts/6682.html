@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+<meta name="referrer" content="no-referrer" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"small-planet.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Read more about SSH config files: https:&#x2F;&#x2F;linux.die.net&#x2F;man&#x2F;5&#x2F;ssh_config">
+<meta property="og:type" content="article">
+<meta property="og:title" content="毕业设计">
+<meta property="og:url" content="https://small-planet.github.io/posts/6682.html">
+<meta property="og:site_name" content="鼎芯码元">
+<meta property="og:description" content="Read more about SSH config files: https:&#x2F;&#x2F;linux.die.net&#x2F;man&#x2F;5&#x2F;ssh_config">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://small-planet.github.io/youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCE3f24505723b739bfe4098d0249ecf992%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://small-planet.github.io/youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCEac192c8da90ac247b2c4630dc85c4834%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://small-planet.github.io/youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCE03d459edf98a98be71008b05a3ac31cc%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://small-planet.github.io/youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCEe94b6aa26674ce6cb6f720923a29066c%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://small-planet.github.io/youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCEf632907a821c0928fb4609cb7d09fde6DTEBDDVTBE2WB%5BJQEC0UX@K.jpg">
+<meta property="og:image" content="https://small-planet.github.io/youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCE2c4fd67367efbd9c08c1c6ea88e67eb0%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://small-planet.github.io/youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCE09b3745dec82ff5df2913110aa3e9022%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://small-planet.github.io/youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCE3fa0203862d0e7967f4c000e9d4b9883%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://small-planet.github.io/youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCE694e4d56791c3d342be5b3b57399f46c%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://small-planet.github.io/youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCE843fcc5763d3f34735f7adb379ccd632%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://small-planet.github.io/youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCE92d27cf493af3af53f7d1fd8417fcd57%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://small-planet.github.io/youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCE427ae20db4b84a6006a38d67e920c0ec%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://small-planet.github.io/youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCE0dd7654df44a938ba473fb72cfe04ed9%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://small-planet.github.io/youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCE7c601bc58b9d3682ac8774885170e71e%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://small-planet.github.io/youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCEe4843393499da4f004c267b777df5b13%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://small-planet.github.io/youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCE85a403dc135b19ef03299e4f122f3aa9%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://small-planet.github.io/youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCE0ec82360480a6c891434cc45dc2325d6%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://s2.loli.net/2024/09/21/GkleiN95QFAbW4X.png">
+<meta property="og:image" content="https://small-planet.github.io/youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCEc03472d76496ded7c91cc815f6f5d531%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://small-planet.github.io/youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCE8680688ec8db4ecae4f221d6c06ca22b%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://s2.loli.net/2024/09/21/RuwqWvGNn4tBAzM.png">
+<meta property="og:image" content="https://s2.loli.net/2024/09/21/7pLfkQr46lMy2e1.png">
+<meta property="og:image" content="https://small-planet.github.io/youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCEb9c240f5861709c7a0110a54149387cf%E6%88%AA%E5%9B%BE.png">
+<meta property="og:image" content="https://s2.loli.net/2024/09/21/ozSksFdumWOJ1eC.png">
+<meta property="og:image" content="https://s2.loli.net/2024/09/21/j1BtDHfoJzVAgkO.png">
+<meta property="article:published_time" content="2024-09-21T07:20:28.521Z">
+<meta property="article:modified_time" content="2024-09-21T07:23:40.475Z">
+<meta property="article:author" content="small_planet">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://small-planet.github.io/youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCE3f24505723b739bfe4098d0249ecf992%E6%88%AA%E5%9B%BE.png">
+
+<link rel="canonical" href="https://small-planet.github.io/posts/6682.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>毕业设计 | 鼎芯码元</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">鼎芯码元</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">盼一树花开，等一个人来</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://small-planet.github.io/posts/6682.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo.png">
+      <meta itemprop="name" content="small_planet">
+      <meta itemprop="description" content="代码狂魔">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鼎芯码元">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          毕业设计
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-09-21 15:20:28 / 修改时间：15:23:40" itemprop="dateCreated datePublished" datetime="2024-09-21T15:20:28+08:00">2024-09-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">深度学习</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/" itemprop="url" rel="index"><span itemprop="name">边缘计算</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/6682.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/6682.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="Read-more-about-SSH-config-files-https-linux-die-net-man-5-ssh-config"><a href="#Read-more-about-SSH-config-files-https-linux-die-net-man-5-ssh-config" class="headerlink" title="Read more about SSH config files: https://linux.die.net/man/5/ssh_config"></a>Read more about SSH config files: <a target="_blank" rel="noopener" href="https://linux.die.net/man/5/ssh_config">https://linux.die.net/man/5/ssh_config</a></h1><span id="more"></span>
+
+<p>登录界面：<a target="_blank" rel="noopener" href="http://123.56.239.115/">http://123.56.239.115/</a></p>
+<p>前端UI：layui</p>
+<p>图片标注：imagelabel</p>
+<p><img src="/./youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCE3f24505723b739bfe4098d0249ecf992%E6%88%AA%E5%9B%BE.png"></p>
+<p>把本地摄像头推到rtsp本地服务器：</p>
+<p>1、下载ffmpeg</p>
+<p>2、下载EasyDarwin</p>
+<p>3、使用ffmpeg查询DirectShow 设备</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">ffmpeg</span> -list_devices <span class="literal">true</span> -f dshow -i dummy</span><br></pre></td></tr></table></figure>
+
+<p><img src="/./youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCEac192c8da90ac247b2c4630dc85c4834%E6%88%AA%E5%9B%BE.png"></p>
+<p>4、推流</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">把电脑摄像头推流</span><br><span class="line">ffmpeg -f dshow -<span class="selector-tag">i</span> video=<span class="string">&quot;Integrated Camera&quot;</span> -vcodec libx264 -preset:v ultrafast -tune:v zerolatency -rtsp_transport tcp -f rtsp rtsp:<span class="comment">//127.0.0.1/test1</span></span><br><span class="line">把本地视频推流</span><br><span class="line">ffmpeg -re -stream_loop -<span class="number">1</span> -<span class="selector-tag">i</span> C:\Users\<span class="number">72403</span>\Pictures\video\slagcartest<span class="selector-class">.mp4</span> -vcodec copy -codec copy -f rtsp rtsp:<span class="comment">//127.0.0.1:554/test2</span></span><br><span class="line">ffmpeg -re -stream_loop -<span class="number">1</span> -<span class="selector-tag">i</span> C:\Users\<span class="number">72403</span>\Pictures\video\slagcartest<span class="selector-class">.mp4</span> -vcodec libx264 -codec copy -f rtsp rtsp:<span class="comment">//127.0.0.1:554/test2</span></span><br><span class="line">ffmpeg -re -stream_loop -<span class="number">1</span> -<span class="selector-tag">i</span> C:\Users\<span class="number">72403</span>\Pictures\video\slagcartest<span class="selector-class">.mp4</span> -vcodec libx264 -f rtsp rtsp:<span class="comment">//127.0.0.1:554/test2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//TP-LINK rtsp流地址</span></span><br><span class="line">rtsp:<span class="comment">//admin:123456@192.168.1.110:554/stream1</span></span><br><span class="line">webrtc-streamer<span class="selector-class">.exe</span> -C config<span class="selector-class">.json</span>    http:<span class="comment">//localhost:8000/</span></span><br></pre></td></tr></table></figure>
+
+<p>EasyDrawin后台：<a target="_blank" rel="noopener" href="http://localhost:10008/">http://localhost:10008/</a> 	admin&#x2F;admin</p>
+<p><img src="/./youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCE03d459edf98a98be71008b05a3ac31cc%E6%88%AA%E5%9B%BE.png"></p>
+<p><img src="/./youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCEe94b6aa26674ce6cb6f720923a29066c%E6%88%AA%E5%9B%BE.png"></p>
+<p>板子mpp拉流感觉色彩通道会有问题：</p>
+<p><img src="/./youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCEf632907a821c0928fb4609cb7d09fde6DTEBDDVTBE2WB%5BJQEC0UX@K.jpg"></p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Host rk3399_develop </span><br><span class="line">    HostName <span class="number">192.168</span>.<span class="number">1.112</span>  </span><br><span class="line">    <span class="keyword">User</span> <span class="title">root</span></span><br><span class="line">    </span><br><span class="line">Host rk3588_zhiwei</span><br><span class="line">    HostName <span class="number">1.192</span>.<span class="number">217.120</span></span><br><span class="line">    Port <span class="number">7022</span></span><br><span class="line">    <span class="keyword">User</span> <span class="title">root</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>webrtc播放用ffmpeg把电脑摄像头转为rtsp的流：</p>
+<p><img src="/./youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCE2c4fd67367efbd9c08c1c6ea88e67eb0%E6%88%AA%E5%9B%BE.png"></p>
+<p>TP-LINK摄像头：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>vlc</th>
+<th>opencv(win)</th>
+<th>opencv(rk3399)</th>
+<th>mpp</th>
+<th>webrtc</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>超清stream1</td>
+<td>√</td>
+<td>×</td>
+<td>×</td>
+<td>×</td>
+<td>×</td>
+</tr>
+<tr>
+<td>超清stream2</td>
+<td>√</td>
+<td>×</td>
+<td>×</td>
+<td>×</td>
+<td>×</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>1920<em>1080:	1920</em>1088*2&#x3D;4177920</p>
+<p>1280<em>720:	1280</em>720*2&#x3D;1843200</p>
+<p>2560*1440:	?</p>
+<p>代码中增大栈空间：（失败）</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> get_system_stack()</span><br><span class="line">&#123;</span><br><span class="line">    FILE *fp = <span class="keyword">NULL</span>;</span><br><span class="line">    FILE *fpWrite = <span class="keyword">NULL</span>;</span><br><span class="line">    <span class="type">char</span> buf[<span class="number">20</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">    fp = popen(&quot;ulimit -s&quot;, &quot;r&quot;);</span><br><span class="line">    <span class="keyword">if</span> (fp)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> ret = fread(buf, <span class="number">1</span>, sizeof(buf) - <span class="number">1</span>, fp);</span><br><span class="line">        <span class="type">int</span> stack = atoi(buf);</span><br><span class="line">        <span class="keyword">if</span> (ret &gt; <span class="number">0</span> &amp;&amp; stack &lt; <span class="number">40000</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            LOGI(&quot;当前栈空间:%d,请执行 ulimit -s 81920 增大栈空间\n&quot;, stack);</span><br><span class="line">            fpWrite = popen(&quot;ulimit -s 81960&quot;, &quot;w&quot;);</span><br><span class="line">            // fwrite(buf, sizeof(<span class="type">char</span>), strlen(buf), fpWrite);</span><br><span class="line">            // fpWrite = popen(&quot;ls&quot;, &quot;w&quot;);</span><br><span class="line">            <span class="keyword">if</span> (fpWrite == <span class="keyword">NULL</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                LOGI(&quot;ulimit -s 81920 增大栈空间 failed!\n&quot;);</span><br><span class="line">                pclose(fp);</span><br><span class="line">                pclose(fpWrite);</span><br><span class="line">                <span class="keyword">exit</span>(<span class="number">0</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                LOGI(&quot;ulimit -s 81920 增大栈空间 success!\n&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        printf(&quot;获取栈空间大小失败\n&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    pclose(fp);</span><br><span class="line">    pclose(fpWrite);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>TP-LINK摄像头仅仅支持最多两个rtsp客户端连接：</p>
+<p><img src="/./youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCE09b3745dec82ff5df2913110aa3e9022%E6%88%AA%E5%9B%BE.png"></p>
+<p>使用mpp硬解码拉流：</p>
+<p><img src="/./youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCE3fa0203862d0e7967f4c000e9d4b9883%E6%88%AA%E5%9B%BE.png"></p>
+<p>使用opencv软解码拉流：</p>
+<p><img src="/./youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCE694e4d56791c3d342be5b3b57399f46c%E6%88%AA%E5%9B%BE.png"></p>
+<p><img src="/./youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCE843fcc5763d3f34735f7adb379ccd632%E6%88%AA%E5%9B%BE.png"></p>
+<p><img src="/./youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCE92d27cf493af3af53f7d1fd8417fcd57%E6%88%AA%E5%9B%BE.png"></p>
+<p><img src="/./youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCE427ae20db4b84a6006a38d67e920c0ec%E6%88%AA%E5%9B%BE.png"></p>
+<p><img src="/./youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCE0dd7654df44a938ba473fb72cfe04ed9%E6%88%AA%E5%9B%BE.png"></p>
+<p><img src="/./youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCE7c601bc58b9d3682ac8774885170e71e%E6%88%AA%E5%9B%BE.png"></p>
+<p><img src="/./youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCEe4843393499da4f004c267b777df5b13%E6%88%AA%E5%9B%BE.png"></p>
+<p><img src="/./youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCE85a403dc135b19ef03299e4f122f3aa9%E6%88%AA%E5%9B%BE.png"></p>
+<p><img src="/./youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCE0ec82360480a6c891434cc45dc2325d6%E6%88%AA%E5%9B%BE.png"></p>
+<p><img src="https://s2.loli.net/2024/09/21/GkleiN95QFAbW4X.png"></p>
+<p><img src="/./youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCEc03472d76496ded7c91cc815f6f5d531%E6%88%AA%E5%9B%BE.png"></p>
+<p><img src="/./youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCE8680688ec8db4ecae4f221d6c06ca22b%E6%88%AA%E5%9B%BE.png"></p>
+<p><img src="https://s2.loli.net/2024/09/21/RuwqWvGNn4tBAzM.png"></p>
+<p><img src="https://s2.loli.net/2024/09/21/7pLfkQr46lMy2e1.png"></p>
+<p><img src="/./youdaonote/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/images/WEBRESOURCEb9c240f5861709c7a0110a54149387cf%E6%88%AA%E5%9B%BE.png"></p>
+<p><img src="https://s2.loli.net/2024/09/21/ozSksFdumWOJ1eC.png"></p>
+<p>192.168.79.104</p>
+<p><img src="https://s2.loli.net/2024/09/21/j1BtDHfoJzVAgkO.png"></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/4e03.html" rel="prev" title="v4l2-ctl --list-devices">
+      <i class="fa fa-chevron-left"></i> v4l2-ctl --list-devices
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/posts/76b6.html" rel="next" title="边缘计算调试记录">
+      边缘计算调试记录 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Read-more-about-SSH-config-files-https-linux-die-net-man-5-ssh-config"><span class="nav-number">1.</span> <span class="nav-text">Read more about SSH config files: https:&#x2F;&#x2F;linux.die.net&#x2F;man&#x2F;5&#x2F;ssh_config</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="small_planet"
+      src="/images/logo.png">
+  <p class="site-author-name" itemprop="name">small_planet</p>
+  <div class="site-description" itemprop="description">代码狂魔</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">64</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://gitee.com/samll_planet" title="Gitee → https:&#x2F;&#x2F;gitee.com&#x2F;samll_planet" rel="noopener" target="_blank"><i class="fa gitee fa-fw"></i>Gitee</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/724032931@qq.com" title="E-Mail → 724032931@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://blog.csdn.net/small_planet" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;small_planet" rel="noopener" target="_blank"><i class="fa csdn fa-fw"></i>CSDN</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://m.bilibili.com/space/434066983" title="bili → https:&#x2F;&#x2F;m.bilibili.com&#x2F;space&#x2F;434066983" rel="noopener" target="_blank"><i class="fa bilibili fa-fw"></i>bili</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://wpa.qq.com/msgrd?v=3&uin=724032931&site=qq&menu=yes" title="qq → http:&#x2F;&#x2F;wpa.qq.com&#x2F;msgrd?v&#x3D;3&amp;uin&#x3D;724032931&amp;site&#x3D;qq&amp;menu&#x3D;yes" rel="noopener" target="_blank"><i class="fa qq fa-fw"></i>qq</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzI2NzY0NDA0MQ==&scene=124#wechat_redirect" title="wx → https:&#x2F;&#x2F;mp.weixin.qq.com&#x2F;mp&#x2F;profile_ext?action&#x3D;home&amp;__biz&#x3D;MzI2NzY0NDA0MQ&#x3D;&#x3D;&amp;scene&#x3D;124#wechat_redirect" rel="noopener" target="_blank"><i class="fa wx fa-fw"></i>wx</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.zhihu.com/people/jin-zhu-zhe-chi-37-12" title="zhihu → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;jin-zhu-zhe-chi-37-12" rel="noopener" target="_blank"><i class="fa zhihu fa-fw"></i>zhihu</a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">small_planet</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">100k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">1:31</span>
+</div>
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("08/21/2024 12:00:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+    setInterval("createtime()",250);
+</script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span><br></span>	
+
+<span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+</span>
+<span>总访客&nbsp<span id="busuanzi_value_site_uv"></span>&nbsp人</span>
+    <span class="post-meta-divider">|</span>
+<span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+</span>
+    <span>总访问量&nbsp<span id="busuanzi_value_site_pv"></span>&nbsp次</span>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : '5dmvYD1GhXuMggREBshLL5Mn-gzGzoHsz',
+      appKey     : '2mGdfyDnpoX5ic0wVgDgDH0J',
+      placeholder: "欢迎交流",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+</html>
