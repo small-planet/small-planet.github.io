@@ -294,11 +294,11 @@
 <p>使用vscode配置完远程仓库地址后，要先在本地创建一个本地仓库，才能正常的拉取推送操作  git checkout master</p>
 <h1 id="记一次在ubuntun上使用拉取github问题"><a href="#记一次在ubuntun上使用拉取github问题" class="headerlink" title="记一次在ubuntun上使用拉取github问题"></a>记一次在ubuntun上使用拉取github问题</h1><p>拉取github上的仓库一直提示我输入密码，关键怎么也输不对，我把公钥也配给github后台了，用而同样的方法gittee就没有问题。这个问题困扰我了好久，今天终于算是解决了，弄懂了背后的原因。</p>
 <p>ping github.com没有问题，ping ssh.github.com也没问题，但是：</p>
-<p>(base) jiabao@jiabao-vm:~&#x2F;.ssh$ ssh -T -p 443 <a href="mailto:&#103;&#x69;&#116;&#64;&#115;&#115;&#104;&#x2e;&#x67;&#105;&#116;&#x68;&#117;&#98;&#x2e;&#99;&#x6f;&#x6d;">&#103;&#x69;&#116;&#64;&#115;&#115;&#104;&#x2e;&#x67;&#105;&#116;&#x68;&#117;&#98;&#x2e;&#99;&#x6f;&#x6d;</a></p>
+<p>(base) jiabao@jiabao-vm:~&#x2F;.ssh$ ssh -T -p 443 <a href="mailto:&#103;&#x69;&#116;&#x40;&#x73;&#115;&#x68;&#46;&#103;&#x69;&#x74;&#x68;&#117;&#98;&#46;&#x63;&#111;&#x6d;">&#103;&#x69;&#116;&#x40;&#x73;&#115;&#x68;&#46;&#103;&#x69;&#x74;&#x68;&#117;&#98;&#46;&#x63;&#111;&#x6d;</a></p>
 <p>ssh: connect to host ssh.github.com port 443: Connection refused</p>
 <p>解决方案：在<a target="_blank" rel="noopener" href="https://ipaddress.com/website/ssh.github.com">https://ipaddress.com/website/ssh.github.com</a>网站找到ssh.github.com对应的ip地址，ssh -T -p 443 git@对应的ip地址 应该是没问题的，以后拉取推送总不能都把ssh.github.com替换成对应的ip地址吧，那样也太low了，可以在 ~&#x2F;.ssh&#x2F; 路径下新建一个config文件，编辑以下内容：</p>
 <p>Host github.com</p>
-<p>User <a href="mailto:&#x37;&#x32;&#x34;&#x30;&#51;&#x32;&#57;&#x33;&#x31;&#64;&#x71;&#113;&#x2e;&#99;&#111;&#109;">&#x37;&#x32;&#x34;&#x30;&#51;&#x32;&#57;&#x33;&#x31;&#64;&#x71;&#113;&#x2e;&#99;&#111;&#109;</a></p>
+<p>User <a href="mailto:&#55;&#50;&#52;&#x30;&#51;&#x32;&#x39;&#x33;&#49;&#64;&#x71;&#x71;&#46;&#x63;&#x6f;&#109;">&#55;&#50;&#52;&#x30;&#51;&#x32;&#x39;&#x33;&#49;&#64;&#x71;&#x71;&#46;&#x63;&#x6f;&#109;</a></p>
 <p>Hostname ssh.github.com    改为  140.82.113.35</p>
 <p>PreferredAuthentications publickey</p>
 <p>IdentityFile ~&#x2F;.ssh&#x2F;id_rsa</p>
